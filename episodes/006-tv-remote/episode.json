@@ -1,0 +1,121 @@
+{
+ "title": "What's inside a TV remote?",
+ "voice": "am_puck",
+ "speed": 1.0,
+ "segments": [
+  {
+   "text": "What's inside a TV remote?"
+  },
+  {
+   "text": "Let me explain."
+  },
+  {
+   "text": "Pop the back off:",
+   "scene": true
+  },
+  {
+   "text": "a rubber keypad and a thin circuit board.",
+   "split": [
+    3
+   ]
+  },
+  {
+   "text": "Flip a button over:",
+   "scene": true
+  },
+  {
+   "text": "underneath sits a black pad of conductive carbon.",
+   "split": [
+    2
+   ]
+  },
+  {
+   "text": "Press it,",
+   "scene": true,
+   "pause": 0.12
+  },
+  {
+   "text": "and the pad bridges two gold tracks on the board.",
+   "split": [
+    4
+   ]
+  },
+  {
+   "text": "The buttons are wired in a grid,",
+   "scene": true
+  },
+  {
+   "text": "so one chip can tell which one you pressed."
+  },
+  {
+   "text": "But here's the trick:",
+   "scene": true
+  },
+  {
+   "text": "at the front sits an LED you can't see.",
+   "split": [
+    4
+   ]
+  },
+  {
+   "text": "It shines infrared light."
+  },
+  {
+   "text": "The chip flashes it 38,000 times a second,",
+   "scene": true,
+   "say": "The chip flashes it thirty-eight thousand times a second,",
+   "split": [
+    4
+   ]
+  },
+  {
+   "text": "in bursts that spell a code.",
+   "split": []
+  },
+  {
+   "text": "Every button has its own pattern.",
+   "split": []
+  },
+  {
+   "text": "The TV's sensor only listens to that exact flicker,",
+   "scene": true,
+   "split": [
+    3
+   ]
+  },
+  {
+   "text": "so lamps and sunlight don't confuse it."
+  },
+  {
+   "text": "Want to see it?",
+   "scene": true
+  },
+  {
+   "text": "Point the remote at your phone's selfie camera and press a button.",
+   "split": [
+    3,
+    8
+   ]
+  },
+  {
+   "text": "The camera sees the flash."
+  },
+  {
+   "text": "The first wireless TV remote, in 1955,",
+   "scene": true,
+   "split": [
+    5
+   ]
+  },
+  {
+   "text": "was basically a flashlight."
+  },
+  {
+   "text": "Next time:",
+   "scene": true
+  },
+  {
+   "text": "what's inside a computer mouse?"
+  }
+ ]
+}

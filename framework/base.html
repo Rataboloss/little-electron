@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Little Electron — What's inside an LED bulb</title>
+<style>
+@font-face { font-family: 'Fredoka'; src: url('__FONT__'); font-weight: 300 700; }
+html, body { margin: 0; background: #1B1F3B; }
+#stage { width: 1080px; height: 1920px; position: relative; overflow: hidden; background: #1B1F3B; font-family: 'Fredoka', sans-serif; color: #fff; }
+svg.full { position: absolute; left: 0; top: 0; }
+svg text { font-family: 'Fredoka', sans-serif; }
+.ov { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; transform-origin: 540px 960px; }
+.ctr { position: absolute; left: 0; width: 1080px; text-align: center; }
+.chip { position: absolute; left: 0; top: 150px; width: 1080px; text-align: center; }
+.chip span { display: inline-block; font-size: 40px; font-weight: 600; color: #1B1F3B; background: #3DDCFF; padding: 8px 30px; border-radius: 999px; }
+.letters span { display: inline-block; }
+#cap { position: absolute; left: 80px; top: 1290px; width: 820px; text-align: center; font-size: 62px; line-height: 1.18; font-weight: 700; }
+#cap .chunk { display: none; }
+#cap .chunk span { display: inline-block; margin: 0 0.11em; }
+.lbl { position: absolute; margin: 0; font-weight: 600; }
+.pill { display: inline-flex; align-items: center; gap: 14px; font-size: 30px; font-weight: 600; color: #FF8FA3; border: 3px solid #FF8FA3; border-radius: 999px; padding: 10px 26px; }
+</style>
+</head>
+<body>
+<div id="stage">
+<svg class="full" viewBox="0 0 1080 1920" width="1080" height="1920">
+<defs>
+  <clipPath id="mb"><circle cx="200" cy="210" r="118"></circle></clipPath>
+  <clipPath id="mf"><rect x="-200" y="210" width="800" height="300"></rect></clipPath>
+  <symbol id="m" viewBox="0 0 400 400" overflow="visible">
+    <g transform="rotate(-18 200 210)"><ellipse cx="200" cy="210" rx="178" ry="56" fill="none" stroke="#3DDCFF" stroke-width="12"></ellipse></g>
+    <polygon points="214,40 184,86 202,86 190,118 228,68 208,68 222,40" fill="#3DDCFF"></polygon>
+    <circle cx="200" cy="210" r="118" fill="#F2B705"></circle>
+    <g clip-path="url(#mb)"><circle cx="188" cy="198" r="118" fill="#FFD23F"></circle></g>
+    <ellipse cx="165" cy="205" rx="15" ry="21" fill="#1B1F3B"></ellipse>
+    <ellipse cx="235" cy="205" rx="15" ry="21" fill="#1B1F3B"></ellipse>
+    <circle cx="170" cy="197" r="6" fill="#FFFFFF"></circle>
+    <circle cx="240" cy="197" r="6" fill="#FFFFFF"></circle>
+    <ellipse cx="136" cy="240" rx="16" ry="10" fill="#FF8FA3"></ellipse>
+    <ellipse cx="264" cy="240" rx="16" ry="10" fill="#FF8FA3"></ellipse>
+    <path d="M172 245 Q200 274 228 245" fill="none" stroke="#1B1F3B" stroke-width="9" stroke-linecap="round"></path>
+    <g transform="rotate(-18 200 210)"><ellipse cx="200" cy="210" rx="178" ry="56" fill="none" stroke="#3DDCFF" stroke-width="12" clip-path="url(#mf)"></ellipse><circle cx="80" cy="251" r="17" fill="#FFFFFF" stroke="#3DDCFF" stroke-width="6"></circle></g>
+  </symbol>
+  <symbol id="mw" viewBox="0 0 400 400" overflow="visible">
+    <g transform="rotate(-18 200 210)"><ellipse cx="200" cy="210" rx="178" ry="56" fill="none" stroke="#3DDCFF" stroke-width="12"></ellipse></g>
+    <polygon points="214,40 184,86 202,86 190,118 228,68 208,68 222,40" fill="#3DDCFF"></polygon>
+    <circle cx="200" cy="210" r="118" fill="#F2B705"></circle>
+    <g clip-path="url(#mb)"><circle cx="188" cy="198" r="118" fill="#FFD23F"></circle></g>
+    <circle cx="165" cy="195" r="24" fill="#FFFFFF"></circle>
+    <circle cx="235" cy="195" r="24" fill="#FFFFFF"></circle>
+    <circle cx="165" cy="198" r="13" fill="#1B1F3B"></circle>
+    <circle cx="235" cy="198" r="13" fill="#1B1F3B"></circle>
+    <ellipse cx="200" cy="262" rx="18" ry="22" fill="#1B1F3B"></ellipse>
+    <ellipse cx="132" cy="240" rx="16" ry="10" fill="#FF8FA3"></ellipse>
+    <ellipse cx="268" cy="240" rx="16" ry="10" fill="#FF8FA3"></ellipse>
+    <g transform="rotate(-18 200 210)"><ellipse cx="200" cy="210" rx="178" ry="56" fill="none" stroke="#3DDCFF" stroke-width="12" clip-path="url(#mf)"></ellipse><circle cx="80" cy="251" r="17" fill="#FFFFFF" stroke="#3DDCFF" stroke-width="6"></circle></g>
+  </symbol>
+<!--DEFS-->
+</defs>
+
+<g id="traces" fill="none" stroke="#2A3060" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M0 260 H160 L220 320 H300"></path>
+  <path d="M1080 520 H940 L880 580 H820"></path>
+  <path d="M0 1650 H200 L260 1590 H340"></path>
+  <path d="M1080 1760 H900 L840 1820 V1920"></path>
+</g>
+<g id="pads" fill="#2A3060"><circle cx="300" cy="320" r="12"></circle><circle cx="820" cy="580" r="12"></circle><circle cx="340" cy="1590" r="12"></circle></g>
+<!--SVG-->
+</svg>
+<!--OV-->
+<div id="cap"></div>
+</div>
+<script>
+const DATA = __TIMING__;
+const TIMING = DATA.chunks;
+const S = DATA.scenes;
+const END = DATA.end;
+const $ = (id) => document.getElementById(id);
+const clamp = (x) => Math.max(0, Math.min(1, x));
+const prog = (t, a, b) => clamp((t - a) / (b - a));
+const outBack = (x) => { const c1 = 1.70158, c3 = c1 + 1; return 1 + c3 * Math.pow(x - 1, 3) + c1 * Math.pow(x - 1, 2); };
+const outCubic = (x) => 1 - Math.pow(1 - x, 3);
+const smooth = (x) => x * x * (3 - 2 * x);
+const bump = (x) => Math.sin(Math.PI * clamp(x));
+const tf = (el, s) => el.setAttribute('transform', s);
+const about = (cx, cy, s) => `translate(${cx} ${cy}) scale(${s}) translate(${-cx} ${-cy})`;
+const pop = (el, k) => { el.style.opacity = k > 0 ? 1 : 0; el.style.transform = `scale(${outBack(k)})`; };
+const popS = (el, k, cx, cy) => { el.style.opacity = k > 0 ? 1 : 0; tf(el, about(cx, cy, Math.max(0.0001, outBack(k)))); };
+const fade = (el, k) => { el.style.opacity = k; };
+const lerp = (a, b, k) => a + (b - a) * k;
+const mixHex = (a, b, k) => { const p = (h) => [1, 3, 5].map((i) => parseInt(h.slice(i, i + 2), 16)); const A = p(a), B = p(b); return 'rgb(' + A.map((v, i) => Math.round(v + (B[i] - v) * k)).join(',') + ')'; };
+const BLUE = '#5B8CFF';
+
+const WORDS = [];
+TIMING.forEach((c) => c.words.forEach((w) => WORDS.push({ k: w.w.toLowerCase().replace(/^[^\w]+|[.,:?!]+$/g, ''), t: w.t })));
+function T(word, n = 1) { let c = 0; for (const w of WORDS) if (w.k === word && ++c === n) return w.t; throw new Error('anchor ' + word + n); }
+
+function letters(container, text) {
+  return [...text].map((ch) => { const s = document.createElement('span'); s.textContent = ch === ' ' ? '\u00a0' : ch; container.appendChild(s); return s; });
+}
+const L1 = letters($('t1'), "WHAT'S INSIDE?");
+const L10 = letters($('t10'), "WHAT'S INSIDE?");
+const L7 = letters($('big7'), "THE CATCH");
+const traces = [...document.querySelectorAll('#traces path')];
+traces.forEach((p) => { const L = p.getTotalLength(); p.style.strokeDasharray = L; p.dataset.len = L; });
+const NS = 'http://www.w3.org/2000/svg';
+const mk = (parent, tag, attrs) => { const e = document.createElementNS(NS, tag); for (const k in attrs) e.setAttribute(k, attrs[k]); parent.appendChild(e); return e; };
+const dash = (el) => { const L = el.getTotalLength(); el.style.strokeDasharray = L; el.dataset.len = L; };
+const draw = (el, k) => { el.style.strokeDashoffset = el.dataset.len * (1 - k); el.style.opacity = k > 0 ? 1 : 0; };
+function pathOf(fn, x0, x1, n, upto = 1) {
+  let d = '';
+  const m = Math.max(1, Math.round(n * upto));
+  for (let i = 0; i <= m; i++) { const xn = (i / n); const x = x0 + (x1 - x0) * xn; d += (i ? ' L' : 'M') + x.toFixed(1) + ' ' + fn(xn).toFixed(1); }
+  return d;
+}
+const rays = (g, cx, cy, n, r0, r1) => { for (let i = 0; i < n; i++) { const a = (i / n) * 2 * Math.PI - Math.PI / 2; mk(g, 'line', { x1: cx + r0 * Math.cos(a), y1: cy + r0 * Math.sin(a), x2: cx + r1 * Math.cos(a), y2: cy + r1 * Math.sin(a) }); } return [...g.children]; };
+<!--JS-->
+// captions
+const cap = $('cap');
+const CH = TIMING.map((c) => {
+  const div = document.createElement('div'); div.className = 'chunk'; cap.appendChild(div);
+  const spans = c.words.map((w) => { const s = document.createElement('span'); s.textContent = w.w; div.appendChild(s); return s; });
+  return { div, spans, c };
+});
+function captions(t) {
+  CH.forEach((ch, i) => {
+    const next = i + 1 < CH.length ? CH[i + 1].c.start : END + 1;
+    const on = t >= ch.c.start && t < next;
+    ch.div.style.display = on ? 'block' : 'none';
+    if (!on) return;
+    let cur = -1;
+    ch.c.words.forEach((w, j) => { if (t >= w.t) cur = j; });
+    ch.spans.forEach((s, j) => {
+      const w = ch.c.words[j];
+      const k = prog(t, w.t, w.t + 0.12);
+      s.style.opacity = t >= w.t ? 1 : 0;
+      s.style.color = j === cur ? '#FFD23F' : '#FFFFFF';
+      s.style.transform = `scale(${0.8 + 0.2 * outBack(k)})`;
+    });
+  });
+}
+<!--F-->
+function render(t) {
+  traces.forEach((p, i) => { const k = outCubic(prog(t, 0.05 * i, 0.7 + 0.05 * i)); p.style.strokeDashoffset = p.dataset.len * (1 - k); });
+  $('pads').style.opacity = prog(t, 0.6, 0.8);
+  for (let i = 0; i < S.length; i++) {
+    const a = S[i], b = i + 1 < S.length ? S[i + 1] : END + 10;
+    const on = t >= a && t < b;
+    const g = $('s' + (i + 1)), o = $('o' + (i + 1));
+    g.style.display = on ? 'inline' : 'none';
+    if (o) o.style.display = on ? 'block' : 'none';
+    if (!on) continue;
+    const u = t - a;
+    const e = i === 0 ? 1 : outCubic(prog(u, 0, 0.22));
+    const sc = 1.06 - 0.06 * e;
+    tf(g, about(540, 960, sc)); g.style.opacity = e;
+    if (o) { o.style.transform = `scale(${sc})`; o.style.opacity = e; }
+    F[i](u, t);
+  }
+  captions(t);
+}
+render(0);
+</script>
+</body>
+</html>

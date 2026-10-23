@@ -1,0 +1,117 @@
+{
+ "title": "What's inside a smoke detector?",
+ "voice": "am_puck",
+ "speed": 1.0,
+ "segments": [
+  {
+   "text": "What's inside a smoke detector?"
+  },
+  {
+   "text": "Let me explain."
+  },
+  {
+   "text": "Twist it off the ceiling and open it up.",
+   "scene": true,
+   "split": [
+    5
+   ]
+  },
+  {
+   "text": "In the middle:",
+   "pause": 0.15
+  },
+  {
+   "text": "a black plastic maze,"
+  },
+  {
+   "text": "the smoke chamber."
+  },
+  {
+   "text": "Inside:",
+   "scene": true,
+   "pause": 0.12
+  },
+  {
+   "text": "an infrared LED and a light sensor.",
+   "split": [
+    3
+   ]
+  },
+  {
+   "text": "But here's the trick:"
+  },
+  {
+   "text": "they don't face each other."
+  },
+  {
+   "text": "In clean air,",
+   "scene": true
+  },
+  {
+   "text": "the light never reaches the sensor."
+  },
+  {
+   "text": "When smoke drifts in,",
+   "scene": true
+  },
+  {
+   "text": "tiny particles scatter the light,"
+  },
+  {
+   "text": "and some of it bounces onto the sensor."
+  },
+  {
+   "text": "The chip sees it and sounds the alarm:",
+   "scene": true
+  },
+  {
+   "text": "a piezo disc buzzing thousands of times a second,"
+  },
+  {
+   "text": "at least 85 decibels.",
+   "say": "at least eighty-five decibels."
+  },
+  {
+   "text": "Here's the catch:",
+   "scene": true
+  },
+  {
+   "text": "the maze lets smoke in,"
+  },
+  {
+   "text": "but keeps daylight out."
+  },
+  {
+   "text": "To save the battery,",
+   "scene": true
+  },
+  {
+   "text": "the LED only flashes every few seconds."
+  },
+  {
+   "text": "Some alarms use a speck of radioactive americium instead.",
+   "scene": true,
+   "split": [
+    5
+   ]
+  },
+  {
+   "text": "Never open those."
+  },
+  {
+   "text": "Working smoke alarms cut the risk of dying in a home fire by about half.",
+   "scene": true,
+   "split": [
+    6,
+    12
+   ]
+  },
+  {
+   "text": "Next time:",
+   "scene": true
+  },
+  {
+   "text": "what's inside a TV remote?"
+  }
+ ]
+}

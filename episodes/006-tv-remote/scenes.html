@@ -1,0 +1,402 @@
+<!--@title-->Little Electron — What's inside a TV remote<!--@end-->
+<!--@defs-->
+  <g id="remG">
+    <rect x="410" y="520" width="260" height="640" rx="110" fill="#2B2F45" stroke="#3A4170" stroke-width="8"></rect>
+    <circle cx="540" cy="640" r="34" fill="#FF5C5C"></circle>
+    <circle cx="540" cy="790" r="78" fill="#3A4170"></circle>
+    <circle cx="540" cy="790" r="34" fill="#2B2F45"></circle>
+    <g fill="#8A90A6"><circle cx="480" cy="930" r="22"></circle><circle cx="540" cy="930" r="22"></circle><circle cx="600" cy="930" r="22"></circle><circle cx="480" cy="995" r="22"></circle><circle cx="540" cy="995" r="22"></circle><circle cx="600" cy="995" r="22"></circle><circle cx="480" cy="1060" r="22"></circle><circle cx="540" cy="1060" r="22"></circle><circle cx="600" cy="1060" r="22"></circle></g>
+    <rect x="510" y="510" width="60" height="22" rx="10" fill="#14172C"></rect>
+  </g>
+  <!-- interdigitated gold contact, centred on 0,0, radius 100 -->
+  <g id="combG" fill="none" stroke="#F2C14E" stroke-width="14" stroke-linecap="round">
+    <path d="M -70 -80 V 80 M -70 -60 H 50 M -70 0 H 50 M -70 60 H 50"></path>
+    <path d="M 70 -80 V 80 M 70 -30 H -50 M 70 30 H -50"></path>
+  </g>
+  <!-- small button bump -->
+  <g id="bumpG"><circle r="30" fill="#8A90A6"></circle><circle r="30" fill="none" stroke="#6D7390" stroke-width="5"></circle></g>
+  <!-- PCB pad -->
+  <g id="padG"><circle r="28" fill="#14172C"></circle><g fill="none" stroke="#F2C14E" stroke-width="5" stroke-linecap="round"><path d="M -16 -18 V 18 M -16 -10 H 10 M -16 8 H 10"></path><path d="M 16 -18 V 18 M 16 -1 H -10"></path></g></g>
+<!--@end-->
+<!--@svg-->
+<!-- Scene 1: hook -->
+<g id="s1">
+  <g id="c1">
+    <g id="m1"><use href="#m" x="0" y="0" width="400" height="400"></use></g>
+    <g id="ir1" fill="none" stroke="#FF5C5C" stroke-width="12" stroke-linecap="round"></g>
+    <use href="#remG"></use>
+  </g>
+</g>
+
+<!-- Scene 2: back off, keypad + board -->
+<g id="s2">
+  <g id="kp2">
+    <rect x="170" y="520" width="300" height="640" rx="110" fill="#B9C0CF"></rect>
+    <g id="kb2"></g>
+  </g>
+  <g id="pcb2">
+    <rect x="610" y="520" width="300" height="640" rx="40" fill="#1F8A6A"></rect>
+    <g fill="none" stroke="#2FB088" stroke-width="6" stroke-linecap="round"><path d="M 650 1100 V 600 M 870 1100 V 640 L 840 610"></path><path d="M 700 1110 H 820"></path></g>
+    <g id="pd2"></g>
+    <rect x="700" y="1080" width="100" height="60" rx="6" fill="#14172C"></rect>
+    <g><rect x="728" y="526" width="44" height="34" rx="6" fill="#B9C0CF"></rect><path d="M 728 526 V 506 A 22 22 0 0 1 772 506 V 526 Z" fill="#EEF0F7"></path></g>
+  </g>
+  <g id="sh2"><use href="#remG"></use></g>
+</g>
+
+<!-- Scene 3: flip a button: carbon pad -->
+<g id="s3">
+  <g id="fl3">
+    <g id="tp3"><circle cx="540" cy="800" r="230" fill="#8A90A6"></circle><circle cx="540" cy="800" r="230" fill="none" stroke="#6D7390" stroke-width="12"></circle><circle cx="510" cy="760" r="150" fill="#9AA0B6"></circle><text x="540" y="860" text-anchor="middle" font-size="190" font-weight="700" fill="#EEF0F7">5</text></g>
+    <g id="bt3"><circle cx="540" cy="800" r="230" fill="#B9C0CF"></circle><circle cx="540" cy="800" r="230" fill="none" stroke="#8A90A6" stroke-width="12"></circle><circle cx="540" cy="800" r="170" fill="#D5D9E6"></circle><circle id="cb3" cx="540" cy="800" r="110" fill="#14172C"></circle><g id="sp3" fill="#3A4170"></g></g>
+  </g>
+  <path id="ptr3" d="M 760 1060 L 630 900" fill="none" stroke="#3DDCFF" stroke-width="7" stroke-linecap="round"></path>
+</g>
+
+<!-- Scene 4: pad bridges two gold tracks -->
+<g id="s4">
+  <path d="M 120 800 H 330" fill="none" stroke="#F2C14E" stroke-width="14" stroke-linecap="round"></path>
+  <path d="M 750 800 H 960" fill="none" stroke="#F2C14E" stroke-width="14" stroke-linecap="round"></path>
+  <g transform="translate(540 800) scale(2.4)"><use href="#combG"></use></g>
+  <g id="dt4"></g>
+  <circle id="cp4" cx="540" cy="800" r="250" fill="#14172C"></circle>
+  <circle id="cr4" cx="540" cy="800" r="250" fill="none" stroke="#3A4170" stroke-width="8"></circle>
+  <g id="lt4"></g>
+</g>
+
+<!-- Scene 5: grid scan -->
+<g id="s5">
+  <g id="rw5" stroke-width="12" stroke-linecap="round"></g>
+  <g id="cl5" stroke-width="12" stroke-linecap="round"></g>
+  <g id="bn5"></g>
+  <g id="ic5"><rect x="110" y="1060" width="200" height="140" rx="14" fill="#14172C" stroke="#3A4170" stroke-width="6"></rect><text x="210" y="1145" text-anchor="middle" font-size="44" font-weight="700" fill="#3DDCFF">chip</text></g>
+</g>
+
+<!-- Scene 6: invisible LED -->
+<g id="s6">
+  <g id="tip6">
+    <rect x="300" y="760" width="480" height="700" rx="200" fill="#2B2F45" stroke="#3A4170" stroke-width="10"></rect>
+    <circle cx="540" cy="960" r="70" fill="#FF5C5C"></circle>
+    <rect x="490" y="720" width="100" height="70" rx="12" fill="#B9C0CF"></rect>
+    <path d="M 490 720 V 690 A 50 50 0 0 1 590 690 V 720 Z" fill="#EEF0F7"></path>
+  </g>
+  <g id="iw6" fill="none" stroke="#FF5C5C" stroke-width="12" stroke-linecap="round" stroke-dasharray="2 24"></g>
+  <g id="ey6">
+    <path d="M 700 520 Q 820 420 940 520 Q 820 620 700 520 Z" fill="#EEF0F7"></path>
+    <circle cx="820" cy="520" r="44" fill="#1B1F3B"></circle><circle cx="834" cy="506" r="12" fill="#FFFFFF"></circle>
+    <line id="ex6" x1="700" y1="610" x2="940" y2="430" stroke="#FF8FA3" stroke-width="16" stroke-linecap="round"></line>
+  </g>
+</g>
+
+<!-- Scene 7: 38,000 per second, in bursts -->
+<g id="s7">
+  <rect x="80" y="560" width="920" height="300" rx="30" fill="#14172C" stroke="#3A4170" stroke-width="6"></rect>
+  <path id="cw7" d="" fill="none" stroke="#FF5C5C" stroke-width="5"></path>
+  <g id="bits7" font-size="56" font-weight="700" text-anchor="middle"></g>
+  <g id="pat7">
+    <g id="pw7"><circle cx="160" cy="1030" r="46" fill="#FF5C5C"></circle><path d="M 160 1004 V 1030 M 140 1012 A 28 28 0 1 0 180 1012" fill="none" stroke="#FFFFFF" stroke-width="8" stroke-linecap="round"></path></g>
+    <g id="vl7"><circle cx="160" cy="1160" r="46" fill="#3A4170"></circle><path d="M 140 1160 H 180 M 160 1140 V 1180" stroke="#FFFFFF" stroke-width="9" stroke-linecap="round"></path></g>
+    <g id="pr7"></g>
+  </g>
+</g>
+
+<!-- Scene 8: TV sensor ignores lamps and sun -->
+<g id="s8">
+  <g id="tv8">
+    <rect x="520" y="560" width="480" height="320" rx="24" fill="#2B2F45" stroke="#3A4170" stroke-width="8"></rect>
+    <rect x="548" y="588" width="424" height="250" rx="10" fill="#3A4170"></rect>
+    <rect x="700" y="880" width="120" height="40" fill="#2B2F45"></rect><rect x="640" y="916" width="240" height="18" rx="9" fill="#2B2F45"></rect>
+    <circle id="sn8" cx="960" cy="860" r="12" fill="#FF5C5C"></circle>
+    <g id="pl8"><path d="M 735 670 L 800 713 L 735 756 Z" fill="#FFD23F"></path></g>
+  </g>
+  <g id="rm8" transform="rotate(-62 220 1080)"><rect x="160" y="880" width="120" height="330" rx="56" fill="#2B2F45" stroke="#3A4170" stroke-width="6"></rect><circle cx="220" cy="950" r="18" fill="#FF5C5C"></circle></g>
+  <g id="bd8"></g>
+  <g id="lamp8"><path d="M 120 520 H 260 L 230 440 H 150 Z" fill="#FFD23F"></path><rect x="184" y="520" width="12" height="120" fill="#8A90A6"></rect><rect x="140" y="636" width="100" height="16" rx="8" fill="#8A90A6"></rect></g>
+  <g id="sun8"><circle cx="560" cy="1120" r="60" fill="#FFD23F"></circle><g id="sr8" stroke="#FFD23F" stroke-width="9" stroke-linecap="round"></g></g>
+  <g id="lr8" stroke="#FFD23F" stroke-width="10" stroke-linecap="round" fill="none" stroke-dasharray="2 20"><path d="M 260 520 L 900 840"></path><path d="M 620 1080 L 940 890"></path></g>
+  <g id="lx8" stroke="#FF8FA3" stroke-width="14" stroke-linecap="round"><path d="M 800 765 l 36 36 m 0 -36 l -36 36"></path><path d="M 860 930 l 36 36 m 0 -36 l -36 36"></path></g>
+  <g id="ok8"><circle cx="960" cy="860" r="40" fill="#3DDCFF"></circle><path d="M 942 862 L 956 876 L 980 848" fill="none" stroke="#1B1F3B" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"></path></g>
+</g>
+
+<!-- Scene 9: phone camera sees the flash -->
+<g id="s9">
+  <g id="ph9">
+    <rect x="330" y="470" width="420" height="760" rx="60" fill="#2B2F45" stroke="#3A4170" stroke-width="10"></rect>
+    <rect x="356" y="500" width="368" height="700" rx="40" fill="#14172C"></rect>
+    <circle cx="540" cy="530" r="12" fill="#3A4170"></circle>
+    <g id="sc9">
+      <rect x="440" y="760" width="200" height="460" rx="90" fill="#2B2F45" stroke="#3A4170" stroke-width="6"></rect>
+      <rect x="515" y="748" width="50" height="22" rx="8" fill="#B9C0CF"></rect>
+      <circle cx="540" cy="840" r="22" fill="#FF5C5C"></circle>
+      <circle id="fg9" cx="540" cy="752" r="120" fill="#B48CFF"></circle>
+      <circle id="fc9" cx="540" cy="752" r="40" fill="#F2E6FF"></circle>
+    </g>
+  </g>
+  <g id="m9"><use href="#m" x="770" y="900" width="240" height="240"></use></g>
+</g>
+
+<!-- Scene 10: 1955, a flashlight -->
+<g id="s10">
+  <g id="otv10">
+    <line x1="760" y1="620" x2="700" y2="520" stroke="#8A90A6" stroke-width="8" stroke-linecap="round"></line><line x1="780" y1="620" x2="850" y2="520" stroke="#8A90A6" stroke-width="8" stroke-linecap="round"></line>
+    <rect x="600" y="620" width="380" height="320" rx="40" fill="#A0704A"></rect>
+    <rect x="630" y="650" width="250" height="250" rx="60" fill="#3A4170"></rect>
+    <circle cx="930" cy="700" r="18" fill="#F2C14E"></circle><circle cx="930" cy="760" r="18" fill="#F2C14E"></circle>
+    <circle id="ph10" cx="630" cy="660" r="26" fill="#14172C" stroke="#F2C14E" stroke-width="5"></circle>
+  </g>
+  <path id="bm10" d="M 380 945 L 590 620 L 690 700 Z" fill="#FFD23F"></path>
+  <g id="gun10" transform="rotate(-40 260 1050)">
+    <rect x="160" y="1010" width="230" height="80" rx="30" fill="#1F8A6A"></rect>
+    <rect x="370" y="1000" width="50" height="100" rx="14" fill="#2FB088"></rect>
+    <rect x="190" y="1070" width="60" height="140" rx="20" fill="#1F8A6A"></rect>
+    <circle cx="420" cy="1050" r="30" fill="#FFF3C4"></circle>
+  </g>
+</g>
+
+<!-- Scene 11: teaser, a computer mouse -->
+<g id="s11">
+  <g transform="translate(0 70)"><g id="sd11">
+    <path d="M 540 540 C 690 540 720 680 720 860 C 720 1060 640 1120 540 1120 C 440 1120 360 1060 360 860 C 360 680 390 540 540 540 Z" fill="#EEF0F7"></path>
+    <line x1="540" y1="540" x2="540" y2="760" stroke="#D5D9E6" stroke-width="8"></line>
+    <path d="M 362 760 H 718" stroke="#D5D9E6" stroke-width="8"></path>
+    <rect x="522" y="600" width="36" height="90" rx="18" fill="#8A90A6"></rect>
+    <path d="M 540 540 C 540 470 600 450 640 470" fill="none" stroke="#8A90A6" stroke-width="12" stroke-linecap="round"></path>
+    <text id="q11" x="540" y="1000" text-anchor="middle" font-size="200" font-weight="700" fill="#FFD23F">?</text>
+  </g></g>
+  <g id="m11"><use href="#m" x="40" y="960" width="300" height="300"></use></g>
+</g>
+<!--@end-->
+<!--@ov-->
+<div class="ov" id="o1">
+  <div id="t1" class="ctr letters" style="top: 240px; font-size: 116px; line-height: 1; font-weight: 700; color: #FFD23F"></div>
+  <div id="sub1" class="ctr" style="top: 374px; font-size: 56px; font-weight: 600; color: #3DDCFF">a TV remote</div>
+</div>
+<div class="ov" id="o2">
+  <p class="lbl" id="kL2" style="left: 120px; top: 410px; width: 400px; text-align: center; font-size: 50px; font-weight: 700; color: #B9C0CF">rubber keypad</p>
+  <p class="lbl" id="pL2" style="left: 560px; top: 410px; width: 400px; text-align: center; font-size: 50px; font-weight: 700; color: #2FB088">circuit board</p>
+</div>
+<div class="ov" id="o3">
+  <div class="chip"><span>1 · The buttons</span></div>
+  <div id="cL3" class="ctr" style="top: 1090px"><span class="pill" style="color: #3DDCFF; border-color: #3DDCFF; font-size: 44px; padding: 12px 34px">conductive carbon</span></div>
+</div>
+<div class="ov" id="o4">
+  <p class="lbl" id="gL4" style="left: 0; width: 1080px; text-align: center; top: 1100px; font-size: 60px; font-weight: 700; color: #F2C14E">two gold tracks</p>
+  <p id="ck4" class="lbl" style="left: 700px; top: 320px; font-size: 96px; font-weight: 700; color: #3DDCFF; transform-origin: 50% 50%">CLICK!</p>
+</div>
+<div class="ov" id="o5">
+  <div id="rc5" class="ctr" style="top: 250px; font-size: 80px; line-height: 1; font-weight: 700; color: #FFD23F">row 2 · column 3</div>
+</div>
+<div class="ov" id="o6">
+  <div class="chip"><span>2 · The light</span></div>
+  <div id="ir6" class="ctr" style="top: 250px; font-size: 104px; line-height: 1; font-weight: 700; color: #FF5C5C">infrared</div>
+</div>
+<div class="ov" id="o7">
+  <div class="chip"><span>3 · The code</span></div>
+  <div id="n7" class="ctr" style="top: 250px; font-size: 120px; line-height: 1; font-weight: 700; color: #FFD23F">38,000 / s</div>
+</div>
+<div class="ov" id="o8">
+  <div id="on8" class="ctr" style="top: 250px; font-size: 72px; line-height: 1.1; font-weight: 700; color: #3DDCFF">only that flicker</div>
+</div>
+<div class="ov" id="o9">
+  <div id="tr9" class="ctr" style="top: 250px; font-size: 104px; line-height: 1; font-weight: 700; color: #FFD23F">try it!</div>
+  <div id="sf9" class="ctr" style="top: 370px; font-size: 50px; font-weight: 600; color: #3DDCFF">selfie camera</div>
+</div>
+<div class="ov" id="o10">
+  <div id="y10" class="ctr" style="top: 230px; font-size: 150px; line-height: 1; font-weight: 700; color: #FFD23F">1955</div>
+  <div id="fl10" class="ctr" style="top: 400px; font-size: 56px; font-weight: 700; color: #FFD23F">basically a flashlight!</div>
+</div>
+<div class="ov" id="o11">
+  <div id="nx10" class="ctr" style="top: 170px; font-size: 52px; font-weight: 600; color: #3DDCFF">Next time:</div>
+  <div id="t10" class="ctr letters" style="top: 250px; font-size: 110px; line-height: 1; font-weight: 700; color: #FFD23F"></div>
+  <div id="sub10" class="ctr" style="top: 378px; font-size: 56px; font-weight: 600; color: #3DDCFF">a computer mouse</div>
+  <div id="big7" style="display:none"></div>
+</div>
+<!--@end-->
+<!--@js-->
+const IR = '#FF5C5C';
+const arcs = (g, cx, cy, n) => Array.from({ length: n }, (_, i) => { const r = 40 + 34 * i; return mk(g, 'path', { d: `M ${cx - r * 0.8} ${cy - r * 0.6} A ${r} ${r} 0 0 1 ${cx + r * 0.8} ${cy - r * 0.6}` }); });
+// scene 1
+const IR1 = arcs($('ir1'), 540, 500, 3);
+// scene 2: keypad bumps + pcb pads
+const KEYS = [[0, 640], [0, 790], [-60, 930], [0, 930], [60, 930], [-60, 995], [0, 995], [60, 995], [-60, 1060], [0, 1060], [60, 1060]];
+KEYS.forEach(([dx, y]) => { const u1 = mk($('kb2'), 'use', { href: '#bumpG' }); u1.setAttribute('transform', `translate(${320 + dx * 1.3} ${y})`); const u2 = mk($('pd2'), 'use', { href: '#padG' }); u2.setAttribute('transform', `translate(${760 + dx * 1.3} ${y})`); });
+// scene 3
+dash($('ptr3'));
+for (let i = 0; i < 26; i++) { const a = i * 2.39996, r = 85 * Math.sqrt(i / 26); mk($('sp3'), 'circle', { cx: 540 + r * Math.cos(a), cy: 800 + r * Math.sin(a), r: 5 }); }
+// scene 4: current dots along left track -> comb -> right track
+const D4 = Array.from({ length: 12 }, () => mk($('dt4'), 'circle', { cx: 0, cy: 800, r: 12, fill: '#3DDCFF' }));
+const LT4 = rays($('lt4'), 540, 800, 12, 270, 320);
+LT4.forEach((l) => { l.setAttribute('stroke', '#3DDCFF'); l.setAttribute('stroke-width', 9); l.setAttribute('stroke-linecap', 'round'); });
+// scene 5: 3x3 grid
+const GX = [480, 650, 820], GY = [600, 770, 940];
+const ROWS = GY.map((y) => mk($('rw5'), 'line', { x1: 260, y1: y, x2: 900, y2: y, stroke: '#3A4170' }));
+const COLS = GX.map((x) => mk($('cl5'), 'line', { x1: x, y1: 500, x2: x, y2: 1130, stroke: '#3A4170' }));
+ROWS.forEach(dash); COLS.forEach(dash);
+mk($('rw5'), 'path', { d: 'M 260 600 V 1060 M 230 770 H 260 V 1060', stroke: '#3A4170', fill: 'none' });
+const BTN5 = []; GY.forEach((y, r) => GX.forEach((x, c) => { const g = mk($('bn5'), 'circle', { cx: x, cy: y, r: 52, fill: '#8A90A6', stroke: '#6D7390', 'stroke-width': 6 }); BTN5.push({ g, r, c, x, y }); }));
+// scene 6
+const IW6 = arcs($('iw6'), 540, 650, 4);
+// scene 7: bits
+const BITS = [1, 0, 1, 1, 0, 1, 0, 0];
+const BX0 = 130, BW = 102;
+const BT7 = BITS.map((b, i) => { const t = mk($('bits7'), 'text', { x: BX0 + BW * i + 40, y: 950, fill: b ? '#FFD23F' : '#8A90A6' }); t.textContent = b; return t; });
+const PATS = [[1, 1, 0, 1, 0, 0, 1, 0], [0, 1, 1, 0, 1, 0, 1, 1]];
+const PR7 = PATS.map((p, k) => p.map((b, i) => mk($('pr7'), 'rect', { x: 260 + i * 90, y: (k ? 1160 : 1030) - 30, width: b ? 70 : 22, height: 60, rx: 10, fill: b ? IR : '#3A4170' })));
+// scene 8
+const BD8 = Array.from({ length: 8 }, () => mk($('bd8'), 'circle', { cx: 0, cy: 0, r: 10, fill: IR }));
+const SR8 = rays($('sr8'), 560, 1120, 10, 76, 100);
+// scene 10: counter not needed
+<!--@end-->
+<!--@f-->
+const A = {
+  pop: T('pop'), back: T('back'), keypad: T('keypad'), circuit: T('circuit'),
+  flip: T('flip'), over: T('over'), underneath: T('underneath'), black: T('black'), carbon: T('carbon'),
+  press: T('press'), bridges: T('bridges'), gold: T('gold'), tracks: T('tracks'),
+  grid: T('grid'), chip1: T('chip'), tell: T('tell'), pressed: T('pressed'),
+  trick: T('trick'), front: T('front'), led: T('led'), see: T('see'), infrared: T('infrared'),
+  flashes: T('flashes'), n38: T('38,000'), bursts: T('bursts'), code: T('code'), every: T('every'), pattern: T('pattern'),
+  sensor: T('sensor'), flicker: T('flicker'), lamps: T('lamps'), sunlight: T('sunlight'), confuse: T('confuse'),
+  want: T('want'), point: T('point'), selfie: T('selfie'), press2: T('press', 2), camera2: T('camera', 2), flash: T('flash'),
+  first: T('first'), y1955: T('1955'), basically: T('basically'), flashlight: T('flashlight'),
+  whats2: T("what's", 2), mouse: T('mouse'),
+};
+const F = [];
+F[0] = (u, t) => {
+  const s = 0.55 + 0.45 * outBack(prog(u, 0, 0.55));
+  const bob = Math.sin(u * 2.4) * 10 * prog(u, 0.5, 0.9);
+  tf($('c1'), `translate(540 ${960 + bob}) rotate(${-8 + 3 * Math.sin(u * 1.8)}) scale(${s}) translate(-540 -880)`);
+  const pk = outBack(prog(u, 1.0, 1.5));
+  tf($('m1'), `translate(${lerp(420, 640, pk)} ${700 - 20 * pk}) rotate(${12 * pk} 200 210) scale(0.6)`);
+  IR1.forEach((p, i) => { p.style.opacity = u < 0.5 ? 0 : ((Math.floor(u * 6) % 4 > i) ? 0.95 : 0.12); });
+  L1.forEach((el, i) => { const k = prog(u, 0.25 + i * 0.045, 0.55 + i * 0.045); el.style.transform = `translateY(${(1 - outCubic(k)) * 40}px) scale(${outBack(k)})`; el.style.opacity = k > 0 ? 1 : 0; });
+  const sk = outCubic(prog(u, 0.9, 1.25)); $('sub1').style.opacity = sk; $('sub1').style.transform = `translateY(${(1 - sk) * 30}px)`;
+};
+F[1] = (u, t) => {
+  const off = smooth(prog(t, A.pop - 0.1, A.back + 0.3));
+  tf($('sh2'), `translate(${-120 * off} ${700 * off}) rotate(${-25 * off} 540 840)`);
+  $('sh2').style.opacity = 1 - off;
+  const sp = smooth(prog(t, A.back, A.keypad + 0.2));
+  tf($('kp2'), `translate(${(1 - sp) * 220} 0)`); tf($('pcb2'), `translate(${(1 - sp) * -220} 0)`);
+  $('kp2').style.opacity = t > A.back - 0.05 ? 1 : 0; $('pcb2').style.opacity = t > A.back - 0.05 ? 1 : 0;
+  pop($('kL2'), prog(t, A.keypad - 0.1, A.keypad + 0.2));
+  pop($('pL2'), prog(t, A.circuit - 0.1, A.circuit + 0.2));
+};
+F[2] = (u, t) => {
+  const fk = smooth(prog(t, A.flip - 0.05, A.over + 0.2));
+  const sx = Math.abs(Math.cos(Math.PI * fk));
+  tf($('fl3'), `${about(540, 800, Math.max(0.0001, outBack(prog(u, 0, 0.35))))} translate(540 0) scale(${Math.max(0.02, sx)} 1) translate(-540 0)`);
+  $('tp3').style.display = fk < 0.5 ? 'inline' : 'none'; $('bt3').style.display = fk >= 0.5 ? 'inline' : 'none';
+  const ck = bump(prog(t, A.black - 0.1, A.black + 0.6));
+  tf($('cb3'), about(540, 800, 1 + 0.12 * ck));
+  draw($('ptr3'), outCubic(prog(t, A.carbon - 0.2, A.carbon + 0.1)));
+  pop($('cL3'), prog(t, A.carbon - 0.05, A.carbon + 0.2));
+};
+F[3] = (u, t) => {
+  const pk = outCubic(prog(t, A.press - 0.15, A.press + 0.2));
+  const sc = lerp(1.5, 1, pk);
+  tf($('cp4'), about(540, 800, sc)); tf($('cr4'), about(540, 800, sc));
+  $('cp4').style.opacity = pk * 0.62; $('cr4').style.opacity = pk;
+  const ck = prog(t, A.press + 0.1, A.press + 0.35);
+  $('ck4').style.opacity = ck > 0 ? 1 - smooth(prog(t, A.bridges, A.bridges + 0.3)) : 0; $('ck4').style.transform = `rotate(-8deg) scale(${outBack(ck)})`;
+  const on = t > A.bridges - 0.1;
+  D4.forEach((d, i) => { const x = 120 + ((i / D4.length) * 840 + u * 260) % 840; d.setAttribute('cx', x); d.setAttribute('cy', 800 + (x > 300 && x < 780 ? 30 * Math.sin((x - 300) / 480 * Math.PI * 3) : 0)); d.style.opacity = on ? 1 : 0; });
+  LT4.forEach((l, i) => { l.style.opacity = on ? 0.4 + 0.6 * Math.sin(u * 7 + i) : 0; });
+  pop($('gL4'), prog(t, A.gold - 0.1, A.gold + 0.2));
+};
+F[4] = (u, t) => {
+  const g = outCubic(prog(u, 0, 0.5));
+  ROWS.forEach((l, i) => draw(l, clamp(g * 1.4 - i * 0.15)));
+  COLS.forEach((l, i) => draw(l, clamp(g * 1.4 - i * 0.15 - 0.2)));
+  BTN5.forEach((b, i) => { popS(b.g, prog(u, 0.2 + i * 0.04, 0.45 + i * 0.04), b.x, b.y); });
+  popS($('ic5'), prog(t, A.chip1 - 0.1, A.chip1 + 0.2), 210, 1130);
+  const scan = t > A.chip1 ? Math.floor((t - A.chip1) * 6) % 3 : -1;
+  const pressed = t > A.tell - 0.2;
+  const found = t > A.pressed - 0.1;
+  ROWS.forEach((l, i) => l.setAttribute('stroke', found ? (i === 1 ? '#3DDCFF' : '#3A4170') : (i === scan ? '#3DDCFF' : '#3A4170')));
+  COLS.forEach((l, i) => l.setAttribute('stroke', (pressed && i === 2 && (found || scan === 1)) ? '#FFD23F' : '#3A4170'));
+  const pb = BTN5[5];
+  pb.g.setAttribute('fill', pressed ? '#FFD23F' : '#8A90A6');
+  if (pressed) tf(pb.g, about(pb.x, pb.y, 0.9 + 0.1 * outBack(prog(t, A.tell - 0.2, A.tell + 0.1))));
+  pop($('rc5'), prog(t, A.pressed - 0.1, A.pressed + 0.2));
+};
+F[5] = (u, t) => {
+  popS($('tip6'), prog(u, 0, 0.35), 540, 900);
+  const fk = prog(t, A.led - 0.1, A.led + 0.3);
+  IW6.forEach((p, i) => { p.style.opacity = fk > 0 ? 0.35 + 0.35 * Math.sin(u * 6 - i) : 0; p.style.strokeDashoffset = -u * 50; });
+  popS($('ey6'), prog(t, A.see - 0.6, A.see - 0.3), 820, 520);
+  const xk = prog(t, A.see - 0.15, A.see + 0.1);
+  $('ex6').setAttribute('x2', lerp(700, 940, xk)); $('ex6').setAttribute('y2', lerp(610, 430, xk)); $('ex6').style.opacity = xk > 0 ? 1 : 0;
+  pop($('ir6'), prog(t, A.infrared - 0.1, A.infrared + 0.2));
+};
+F[6] = (u, t) => {
+  pop($('n7'), prog(t, A.n38 - 0.15, A.n38 + 0.15));
+  const bk = prog(t, A.bursts - 0.2, A.bursts + 0.6);
+  const draw7 = prog(u, 0.2, 1.2);
+  let d = '';
+  const X0 = 110, X1 = 970, n = 860;
+  for (let k = 0; k <= n; k += 2) {
+    const x = X0 + k;
+    if (k / n > draw7) break;
+    const bi = Math.floor((x - BX0) / BW); const inBit = bi >= 0 && bi < BITS.length && ((x - BX0) % BW) < 80;
+    const gate = bk > 0 ? (inBit && BITS[bi] ? 1 : 0) : 1;
+    const y = 710 + (gate ? 90 * (Math.floor(k / 6) % 2 ? 1 : -1) : 0);
+    d += (d ? ' L' : 'M') + x + ' ' + y;
+  }
+  $('cw7').setAttribute('d', d);
+  BT7.forEach((b, i) => { popS(b, prog(t, A.code - 0.3 + i * 0.06, A.code + i * 0.06), BX0 + BW * i + 40, 930); });
+  const pk = prog(t, A.every - 0.1, A.pattern + 0.2);
+  popS($('pw7'), prog(t, A.every - 0.1, A.every + 0.2), 160, 1030);
+  popS($('vl7'), prog(t, A.every + 0.2, A.every + 0.5), 160, 1160);
+  PR7.forEach((row, k) => row.forEach((r, i) => { const kk = prog(t, A.every + k * 0.3 + i * 0.05, A.every + k * 0.3 + i * 0.05 + 0.2); popS(r, kk, 260 + i * 90 + 35, k ? 1160 : 1030); }));
+};
+F[7] = (u, t) => {
+  popS($('tv8'), prog(u, 0, 0.35), 760, 740);
+  popS($('rm8'), prog(u, 0.1, 0.4), 220, 1050);
+  if (u > 0.4) tf($('rm8'), 'rotate(-62 220 1080)'); else tf($('rm8'), `${about(220, 1050, Math.max(0.0001, outBack(prog(u, 0.1, 0.4))))} rotate(-62 220 1080)`);
+  const sx = 330, sy = 980, ex = 960, ey = 860;
+  BD8.forEach((d, i) => { const k = ((i / BD8.length) + u * 0.9) % 1; d.setAttribute('cx', lerp(sx, ex, k)); d.setAttribute('cy', lerp(sy, ey, k)); d.style.opacity = (Math.floor(k * 10) % 2 === 0) ? 1 : 0.15; });
+  $('sn8').setAttribute('fill', (Math.floor(u * 8) % 2) ? '#FF5C5C' : '#FFB3B3');
+  popS($('ok8'), prog(t, A.flicker - 0.1, A.flicker + 0.2), 960, 860);
+  pop($('on8'), prog(t, A.flicker - 0.15, A.flicker + 0.15));
+  popS($('lamp8'), prog(t, A.lamps - 0.15, A.lamps + 0.15), 190, 540);
+  popS($('sun8'), prog(t, A.sunlight - 0.15, A.sunlight + 0.15), 560, 1120);
+  SR8.forEach((r, i) => { r.style.opacity = 0.6 + 0.4 * Math.sin(u * 6 + i); });
+  const lr = [...$('lr8').children];
+  lr[0].style.opacity = prog(t, A.lamps, A.lamps + 0.2); lr[1].style.opacity = prog(t, A.sunlight, A.sunlight + 0.2);
+  lr.forEach((p) => { p.style.strokeDashoffset = -u * 60; });
+  const xk = prog(t, A.confuse - 0.1, A.confuse + 0.15);
+  [...$('lx8').children].forEach((p, i) => { p.style.opacity = xk > 0 ? 1 : 0; });
+  tf($('lx8'), about(850, 870, Math.max(0.0001, outBack(xk))));
+};
+F[8] = (u, t) => {
+  pop($('tr9'), prog(t, A.want - 0.1, A.want + 0.15));
+  popS($('ph9'), prog(t, A.point - 0.3, A.point + 0.1), 540, 850);
+  pop($('sf9'), prog(t, A.selfie - 0.1, A.selfie + 0.2));
+  const on = t > A.press2 && (Math.floor((t - A.press2) * 5) % 3 !== 2);
+  const big = smooth(prog(t, A.flash - 0.2, A.flash + 0.1));
+  $('fg9').style.opacity = on ? 0.5 + 0.3 * big : 0; $('fc9').style.opacity = on ? 1 : 0;
+  tf($('fg9'), about(540, 752, 0.8 + 0.6 * big));
+  popS($('m9'), prog(t, A.camera2 - 0.1, A.camera2 + 0.2), 890, 1020);
+};
+F[9] = (u, t) => {
+  const yk = prog(t, A.y1955 - 0.15, A.y1955 + 0.15);
+  pop($('y10'), yk);
+  popS($('otv10'), prog(u, 0, 0.35), 790, 780);
+  popS($('gun10'), prog(t, A.first - 0.1, A.first + 0.25), 260, 1050);
+  if (t > A.first + 0.25) tf($('gun10'), `rotate(-40 260 1050) rotate(${2 * Math.sin(u * 3)} 260 1050)`);
+  else tf($('gun10'), `${about(260, 1050, Math.max(0.0001, outBack(prog(t, A.first - 0.1, A.first + 0.25))))} rotate(-40 260 1050)`);
+  const bk = smooth(prog(t, A.basically - 0.1, A.basically + 0.3));
+  $('bm10').style.opacity = bk * (0.55 + 0.15 * Math.sin(u * 10));
+  $('ph10').setAttribute('fill', bk > 0.5 ? '#FFD23F' : '#14172C');
+  pop($('fl10'), prog(t, A.flashlight - 0.1, A.flashlight + 0.2));
+};
+F[10] = (u, t) => {
+  pop($('nx10'), prog(u, 0, 0.25));
+  popS($('sd11'), prog(u, 0.1, 0.5), 540, 840);
+  $('q11').setAttribute('font-size', 200 * (1 + 0.08 * Math.sin(u * 8)));
+  const mk2 = outBack(prog(u, 0.4, 0.8));
+  tf($('m11'), `translate(${-420 * (1 - mk2)} 0)`);
+  L10.forEach((el, i) => { const k = prog(t, A.whats2 - 0.05 + i * 0.03, A.whats2 + 0.15 + i * 0.03); el.style.transform = `scale(${outBack(k)})`; el.style.opacity = k > 0 ? 1 : 0; });
+  pop($('sub10'), prog(t, A.mouse - 0.5, A.mouse - 0.2));
+};
+<!--@end-->

@@ -1,0 +1,10 @@
+models/
+fonts/
+**/frames/
+**/*.wav
+**/full.html
+**/sheet.png
+**/snap*.png
+**/test_*.mp4
+episodes/*/little_electron_*.mp4
+__pycache__/

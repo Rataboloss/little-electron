@@ -1,0 +1,475 @@
+<!--@title-->Little Electron — What's inside a smoke detector<!--@end-->
+<!--@defs-->
+  <!-- smoke detector, top view (cover on) -->
+  <g id="detG">
+    <circle cx="540" cy="800" r="262" fill="#D5D9E6"></circle>
+    <circle cx="540" cy="782" r="262" fill="#EEF0F7"></circle>
+    <g stroke="#B9C0CF" stroke-width="16" stroke-linecap="round">
+      <line x1="718" y1="782" x2="768" y2="782"></line><line x1="704" y1="850" x2="750" y2="869"></line><line x1="666" y1="908" x2="701" y2="943"></line><line x1="608" y1="946" x2="627" y2="992"></line>
+      <line x1="540" y1="960" x2="540" y2="1010"></line><line x1="472" y1="946" x2="453" y2="992"></line><line x1="414" y1="908" x2="379" y2="943"></line><line x1="376" y1="850" x2="330" y2="869"></line>
+      <line x1="362" y1="782" x2="312" y2="782"></line><line x1="376" y1="714" x2="330" y2="695"></line><line x1="414" y1="656" x2="379" y2="621"></line><line x1="472" y1="618" x2="453" y2="572"></line>
+      <line x1="540" y1="604" x2="540" y2="554"></line><line x1="608" y1="618" x2="627" y2="572"></line><line x1="666" y1="656" x2="701" y2="621"></line><line x1="704" y1="714" x2="750" y2="695"></line>
+    </g>
+    <circle cx="540" cy="782" r="150" fill="#F7F8FC" stroke="#D5D9E6" stroke-width="6"></circle>
+    <circle cx="540" cy="782" r="52" fill="#EEF0F7" stroke="#D5D9E6" stroke-width="6"></circle>
+  </g>
+  <!-- big chamber cross-section used in scenes 3-5 -->
+  <g id="chG">
+    <circle cx="540" cy="820" r="330" fill="#14172C"></circle>
+    <circle cx="540" cy="820" r="330" fill="none" stroke="#3A4170" stroke-width="10"></circle>
+    <g id="bafG" fill="#2B2F45" stroke="#3A4170" stroke-width="4"></g>
+    <!-- light trap on the right -->
+    <path d="M 760 700 L 830 760 L 830 880 L 760 940" fill="none" stroke="#3A4170" stroke-width="14" stroke-linejoin="round"></path>
+    <!-- blocking blade between LED and sensor -->
+    <path d="M 390 930 L 460 870" stroke="#3A4170" stroke-width="16" stroke-linecap="round"></path>
+    <!-- IR LED (left, aiming right) -->
+    <g>
+      <rect x="250" y="752" width="70" height="56" rx="8" fill="#B9C0CF"></rect>
+      <path d="M 320 752 H 345 A 28 28 0 0 1 345 808 H 320 Z" fill="#EEF0F7"></path>
+      <line x1="262" y1="766" x2="230" y2="766" stroke="#8A90A6" stroke-width="7" stroke-linecap="round"></line>
+      <line x1="262" y1="794" x2="230" y2="794" stroke="#8A90A6" stroke-width="7" stroke-linecap="round"></line>
+    </g>
+    <!-- sensor (bottom, aiming up) -->
+    <g>
+      <rect x="500" y="1040" width="80" height="62" rx="8" fill="#B9C0CF"></rect>
+      <rect x="512" y="1028" width="56" height="20" rx="5" fill="#3A4170"></rect>
+      <line x1="520" y1="1100" x2="520" y2="1128" stroke="#8A90A6" stroke-width="7" stroke-linecap="round"></line>
+      <line x1="560" y1="1100" x2="560" y2="1128" stroke="#8A90A6" stroke-width="7" stroke-linecap="round"></line>
+    </g>
+  </g>
+  <!-- TV remote (teaser) -->
+  <g id="remG">
+    <rect x="410" y="520" width="260" height="640" rx="110" fill="#2B2F45" stroke="#3A4170" stroke-width="8"></rect>
+    <circle cx="540" cy="640" r="34" fill="#FF5C5C"></circle>
+    <circle cx="540" cy="790" r="78" fill="#3A4170"></circle>
+    <circle cx="540" cy="790" r="34" fill="#2B2F45"></circle>
+    <g fill="#8A90A6"><circle cx="480" cy="930" r="22"></circle><circle cx="540" cy="930" r="22"></circle><circle cx="600" cy="930" r="22"></circle><circle cx="480" cy="995" r="22"></circle><circle cx="540" cy="995" r="22"></circle><circle cx="600" cy="995" r="22"></circle><circle cx="480" cy="1060" r="22"></circle><circle cx="540" cy="1060" r="22"></circle><circle cx="600" cy="1060" r="22"></circle></g>
+    <rect x="510" y="510" width="60" height="22" rx="10" fill="#14172C"></rect>
+  </g>
+<!--@end-->
+<!--@svg-->
+<!-- Scene 1: hook -->
+<g id="s1">
+  <g id="wsp1" fill="none" stroke="#8A90A6" stroke-width="14" stroke-linecap="round"></g>
+  <g id="c1">
+    <g id="m1"><use href="#m" x="0" y="0" width="400" height="400"></use></g>
+    <use href="#detG"></use>
+    <circle id="led1" cx="650" cy="680" r="15" fill="#FF5C5C"></circle>
+  </g>
+</g>
+
+<!-- Scene 2: twist off, open, the chamber -->
+<g id="s2">
+  <g id="in2">
+    <circle cx="540" cy="800" r="262" fill="#D5D9E6"></circle>
+    <circle cx="540" cy="790" r="236" fill="#1F8A6A"></circle>
+    <g fill="none" stroke="#2FB088" stroke-width="7" stroke-linecap="round">
+      <path d="M 370 700 H 420 L 440 680"></path><path d="M 700 900 H 650 L 630 920"></path><path d="M 640 640 L 680 660 V 700"></path><path d="M 420 900 V 960"></path>
+    </g>
+    <!-- battery -->
+    <g id="bat2"><rect x="330" y="860" width="150" height="90" rx="12" fill="#2B2F45"></rect><rect x="330" y="860" width="44" height="90" rx="10" fill="#FFD23F"></rect><rect x="480" y="882" width="16" height="18" rx="3" fill="#8A90A6"></rect><rect x="480" y="912" width="16" height="18" rx="3" fill="#8A90A6"></rect></g>
+    <!-- piezo -->
+    <g id="pz2"><circle cx="700" cy="800" r="62" fill="#F2C14E"></circle><circle cx="700" cy="800" r="36" fill="#EEF0F7"></circle></g>
+    <!-- chip -->
+    <rect x="600" y="900" width="64" height="64" rx="6" fill="#14172C"></rect>
+    <!-- chamber -->
+    <g id="ch2">
+      <circle cx="530" cy="760" r="112" fill="#14172C"></circle>
+      <g id="baf2" fill="#2B2F45"></g>
+      <circle cx="530" cy="760" r="40" fill="#14172C"></circle>
+    </g>
+    <circle id="hl2" cx="530" cy="760" r="132" fill="none" stroke="#3DDCFF" stroke-width="9"></circle>
+    <path id="ptr2" d="M 640 1080 L 590 900" fill="none" stroke="#3DDCFF" stroke-width="7" stroke-linecap="round"></path>
+  </g>
+  <g id="cov2"><use href="#detG"></use><circle cx="650" cy="680" r="15" fill="#FF5C5C"></circle></g>
+  <g id="arr2" fill="none" stroke="#3DDCFF" stroke-width="12" stroke-linecap="round">
+    <path d="M 250 600 A 330 330 0 0 1 420 470"></path><path d="M 420 470 l -42 -6 M 420 470 l -22 34"></path>
+    <path d="M 830 1000 A 330 330 0 0 1 660 1130"></path><path d="M 660 1130 l 42 6 M 660 1130 l 22 -34"></path>
+  </g>
+</g>
+
+<!-- Scene 3: LED + sensor, not facing each other -->
+<g id="s3">
+  <use href="#chG"></use>
+  <g id="dir3" fill="none" stroke-width="10" stroke-linecap="round">
+    <path id="da3" d="M 380 780 H 700" stroke="#FF5C5C" stroke-dasharray="1 26"></path>
+    <path id="db3" d="M 540 1010 V 720" stroke="#3DDCFF" stroke-dasharray="1 26"></path>
+  </g>
+  <g id="hd3"><path d="M 700 780 l -36 -22 M 700 780 l -36 22" stroke="#FF5C5C" stroke-width="10" stroke-linecap="round"></path><path d="M 540 720 l -22 36 M 540 720 l 22 36" stroke="#3DDCFF" stroke-width="10" stroke-linecap="round"></path></g>
+  <g id="x3" stroke="#FF8FA3" stroke-width="16" stroke-linecap="round"><line x1="610" y1="900" x2="690" y2="980"></line><line x1="690" y1="900" x2="610" y2="980"></line></g>
+  <g id="m3"><use href="#mw" x="760" y="1000" width="230" height="230"></use></g>
+</g>
+
+<!-- Scene 4: clean air, light misses the sensor -->
+<g id="s4">
+  <use href="#chG"></use>
+  <g id="bm4"></g>
+  <circle id="lg4" cx="356" cy="780" r="44" fill="#FF5C5C" opacity="0.5"></circle>
+  <g id="zz4" fill="#8A90A6" font-size="54" font-weight="700"><text x="610" y="1060">z</text><text x="650" y="1010">z</text><text x="694" y="955">Z</text></g>
+</g>
+
+<!-- Scene 5: smoke scatters light onto the sensor -->
+<g id="s5">
+  <use href="#chG"></use>
+  <g id="bm5"></g>
+  <circle cx="356" cy="780" r="44" fill="#FF5C5C" opacity="0.5"></circle>
+  <g id="sk5"></g>
+  <g id="sc5" stroke="#FF8FA3" stroke-width="7" stroke-linecap="round"></g>
+  <circle id="sg5" cx="540" cy="1036" r="70" fill="#3DDCFF"></circle>
+  <rect id="sw5" x="512" y="1028" width="56" height="20" rx="5" fill="#3DDCFF"></rect>
+</g>
+
+<!-- Scene 6: chip + piezo alarm -->
+<g id="s6">
+  <g id="ic6">
+    <g stroke="#8A90A6" stroke-width="8" stroke-linecap="round"><line x1="215" y1="700" x2="190" y2="700"></line><line x1="215" y1="740" x2="190" y2="740"></line><line x1="215" y1="780" x2="190" y2="780"></line><line x1="345" y1="700" x2="370" y2="700"></line><line x1="345" y1="740" x2="370" y2="740"></line><line x1="345" y1="780" x2="370" y2="780"></line></g>
+    <rect x="215" y="670" width="130" height="140" rx="12" fill="#14172C" stroke="#3A4170" stroke-width="6"></rect>
+    <circle cx="245" cy="698" r="8" fill="#3A4170"></circle>
+    <text x="280" y="760" text-anchor="middle" font-size="34" font-weight="700" fill="#3DDCFF">chip</text>
+  </g>
+  <path id="wr6" d="M 370 740 H 470" stroke="#F2C14E" stroke-width="10" stroke-linecap="round" fill="none"></path>
+  <g id="dt6"></g>
+  <g id="pz6"><circle cx="640" cy="740" r="170" fill="#F2C14E"></circle><circle cx="640" cy="740" r="168" fill="none" stroke="#D9A21E" stroke-width="6"></circle><circle cx="640" cy="740" r="100" fill="#EEF0F7"></circle><circle cx="640" cy="740" r="100" fill="none" stroke="#D5D9E6" stroke-width="6"></circle></g>
+  <g id="sw6" fill="none" stroke="#3DDCFF" stroke-width="12" stroke-linecap="round"></g>
+  <g id="mt6">
+    <g id="mb6"></g>
+    <text id="db6" x="540" y="1180" text-anchor="middle" font-size="120" font-weight="700" fill="#FFD23F">85 dB</text>
+  </g>
+  <g id="m6"><use href="#mw" x="760" y="420" width="250" height="250"></use></g>
+</g>
+
+<!-- Scene 7: the maze lets smoke in, keeps light out -->
+<g id="s7">
+  <rect x="660" y="540" width="420" height="640" fill="#14172C"></rect>
+  <g id="wall7" fill="#3A4170" stroke="#5A63A0" stroke-width="5">
+    <path d="M 560 540 H 700 V 660 H 660 V 580 H 560 Z"></path>
+    <path d="M 500 700 H 620 V 740 H 540 V 820 H 500 Z"></path>
+    <path d="M 600 860 H 700 V 980 H 660 V 900 H 600 Z"></path>
+    <path d="M 500 1020 H 620 V 1060 H 540 V 1180 H 500 Z"></path>
+  </g>
+  <g id="sun7"><circle cx="190" cy="660" r="70" fill="#FFD23F"></circle><g id="sr7" stroke="#FFD23F" stroke-width="10" stroke-linecap="round"></g></g>
+  <g id="lr7" stroke="#FFD23F" stroke-width="12" stroke-linecap="round" fill="none"></g>
+  <g id="lx7" stroke="#FF8FA3" stroke-width="12" stroke-linecap="round"></g>
+  <path id="sp7" d="M 120 960 C 300 960 420 900 470 840 C 520 780 640 800 640 840 C 640 900 540 990 580 1010 C 640 1040 720 1000 820 1000 C 900 1000 940 960 980 940" fill="none" stroke="#8A90A6" stroke-width="10" stroke-linecap="round" stroke-dasharray="2 22"></path>
+  <g id="sk7"></g>
+  <g id="ok7"><circle cx="900" cy="760" r="54" fill="#3DDCFF"></circle><path d="M 876 762 L 894 780 L 928 742" fill="none" stroke="#1B1F3B" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"></path></g>
+</g>
+
+<!-- Scene 8: LED only flashes every few seconds -->
+<g id="s8">
+  <g id="bt8">
+    <rect x="200" y="560" width="230" height="380" rx="30" fill="#2B2F45" stroke="#3A4170" stroke-width="8"></rect>
+    <rect x="270" y="528" width="90" height="40" rx="10" fill="#3A4170"></rect>
+    <rect id="bl8" x="226" y="586" width="178" height="328" rx="18" fill="#3DDCFF"></rect>
+    <text x="315" y="800" text-anchor="middle" font-size="80" font-weight="700" fill="#1B1F3B">9V</text>
+  </g>
+  <g id="ld8">
+    <rect x="610" y="700" width="110" height="90" rx="12" fill="#B9C0CF"></rect>
+    <path d="M 720 700 H 760 A 45 45 0 0 1 760 790 H 720 Z" fill="#EEF0F7"></path>
+    <circle id="lg8" cx="770" cy="745" r="90" fill="#FF5C5C"></circle>
+  </g>
+  <line x1="120" y1="1120" x2="960" y2="1120" stroke="#3A4170" stroke-width="6"></line>
+  <path id="pl8" d="" fill="none" stroke="#FF5C5C" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"></path>
+  <circle id="hd8" cx="960" cy="1120" r="14" fill="#FF5C5C"></circle>
+</g>
+
+<!-- Scene 9: radioactive americium -->
+<g id="s9">
+  <g id="tf9">
+    <circle cx="540" cy="760" r="260" fill="#FFD23F"></circle>
+    <g fill="#1B1F3B"><path id="bl9a" d=""></path><path id="bl9b" d=""></path><path id="bl9c" d=""></path></g>
+    <circle cx="540" cy="760" r="44" fill="#1B1F3B"></circle>
+  </g>
+  <g id="m9"><use href="#mw" x="770" y="930" width="240" height="240"></use></g>
+</g>
+
+<!-- Scene 10: about half the risk -->
+<g id="s10">
+  <g id="hs10">
+    <path d="M 440 600 L 540 520 L 640 600 V 700 H 440 Z" fill="#EEF0F7"></path>
+    <rect x="520" y="640" width="40" height="60" rx="6" fill="#8A90A6"></rect>
+    <path d="M 512 600 c 0 -30 28 -34 28 -60 c 22 18 34 40 22 60 Z" fill="#FF8FA3"></path>
+  </g>
+  <line x1="200" y1="1160" x2="880" y2="1160" stroke="#3A4170" stroke-width="8" stroke-linecap="round"></line>
+  <rect id="ba10" x="270" y="1160" width="200" height="0" rx="18" fill="#FF8FA3"></rect>
+  <rect id="bb10" x="610" y="1160" width="200" height="0" rx="18" fill="#3DDCFF"></rect>
+  <text id="la10" x="370" y="1230" text-anchor="middle" font-size="40" font-weight="600" fill="#FF8FA3">no alarm</text>
+  <text id="lb10" x="710" y="1230" text-anchor="middle" font-size="40" font-weight="600" fill="#3DDCFF">working alarm</text>
+  <text id="hv10" x="710" y="850" text-anchor="middle" font-size="96" font-weight="700" fill="#FFD23F">½</text>
+</g>
+
+<!-- Scene 11: teaser -->
+<g id="s11">
+  <g transform="translate(0 70)"><g id="sd11">
+    <g id="ir11" fill="none" stroke="#FF5C5C" stroke-width="12" stroke-linecap="round"></g>
+    <use href="#remG"></use>
+    <text id="q11" x="540" y="900" text-anchor="middle" font-size="200" font-weight="700" fill="#FFD23F">?</text>
+  </g></g>
+  <g id="m11"><use href="#m" x="40" y="960" width="300" height="300"></use></g>
+</g>
+<!--@end-->
+<!--@ov-->
+<div class="ov" id="o1">
+  <div id="t1" class="ctr letters" style="top: 240px; font-size: 116px; line-height: 1; font-weight: 700; color: #FFD23F"></div>
+  <div id="sub1" class="ctr" style="top: 374px; font-size: 56px; font-weight: 600; color: #3DDCFF">a smoke detector</div>
+</div>
+<div class="ov" id="o2">
+  <div class="ctr" style="top: 170px"><span id="warn2" class="pill"><svg width="34" height="30" viewBox="0 0 34 30"><path d="M17 2 L32 28 H2 Z" fill="none" stroke="#FF8FA3" stroke-width="3.5" stroke-linejoin="round"></path><line x1="17" y1="11" x2="17" y2="19" stroke="#FF8FA3" stroke-width="3.5" stroke-linecap="round"></line><circle cx="17" cy="23.5" r="2" fill="#FF8FA3"></circle></svg>Take the battery out first</span></div>
+  <p class="lbl" id="mzL2" style="left: 0; width: 1080px; text-align: center; top: 1110px; font-size: 64px; font-weight: 700; color: #3DDCFF">smoke chamber</p>
+</div>
+<div class="ov" id="o3">
+  <div class="chip"><span>1 · The sensor</span></div>
+  <p class="lbl" id="irL3" style="left: 190px; top: 640px; font-size: 52px; font-weight: 700; color: #FF8FA3">IR LED</p>
+  <p class="lbl" id="snL3" style="left: 380px; top: 1150px; font-size: 52px; font-weight: 700; color: #3DDCFF">light sensor</p>
+</div>
+<div class="ov" id="o4">
+  <div id="ca4" class="ctr" style="top: 260px; font-size: 104px; line-height: 1; font-weight: 700; color: #3DDCFF">clean air</div>
+  <p class="lbl" id="mi4" style="left: 600px; top: 1120px; font-size: 48px; font-weight: 700; color: #8A90A6">no light here</p>
+</div>
+<div class="ov" id="o5">
+  <div class="chip"><span>2 · Smoke</span></div>
+  <div id="sm5" class="ctr" style="top: 250px; font-size: 104px; line-height: 1; font-weight: 700; color: #B9C0CF">SMOKE!</div>
+</div>
+<div class="ov" id="o6">
+  <div class="chip"><span>3 · The alarm</span></div>
+  <p id="bp6" class="lbl" style="left: 640px; top: 300px; font-size: 100px; font-weight: 700; color: #FF8FA3; transform-origin: 50% 50%">BEEP!</p>
+  <div id="hz6" class="ctr" style="top: 950px; font-size: 48px; font-weight: 600; color: #F2C14E">thousands of buzzes / second</div>
+</div>
+<div class="ov" id="o7">
+  <div id="big7" class="ctr letters" style="top: 230px; font-size: 120px; line-height: 1; font-weight: 700; color: #FFD23F"></div>
+  <p class="lbl" id="inL7" style="left: 140px; top: 1050px; font-size: 52px; font-weight: 700; color: #B9C0CF">smoke: in ✓</p>
+  <p class="lbl" id="ouL7" style="left: 80px; top: 430px; font-size: 52px; font-weight: 700; color: #FFD23F">light: out ✗</p>
+</div>
+<div class="ov" id="o8">
+  <div class="chip"><span>4 · Battery saver</span></div>
+  <div id="ev8" class="ctr" style="top: 1170px; font-size: 52px; font-weight: 700; color: #FF8FA3">flash… every few seconds</div>
+</div>
+<div class="ov" id="o9">
+  <div id="am9" class="ctr" style="top: 240px; font-size: 96px; line-height: 1; font-weight: 700; color: #FFD23F">americium</div>
+  <div id="sb9" class="ctr" style="top: 350px; font-size: 48px; font-weight: 600; color: #3DDCFF">a speck, in "ionization" alarms</div>
+  <div id="nv9" class="ctr" style="top: 1080px"><span class="pill" style="font-size: 46px; padding: 12px 34px">Never open those</span></div>
+</div>
+<div class="ov" id="o10">
+  <div id="rk10" class="ctr" style="top: 250px; font-size: 64px; line-height: 1.1; font-weight: 700; color: #FFFFFF">risk of dying<br>in a home fire</div>
+</div>
+<div class="ov" id="o11">
+  <div id="nx10" class="ctr" style="top: 170px; font-size: 52px; font-weight: 600; color: #3DDCFF">Next time:</div>
+  <div id="t10" class="ctr letters" style="top: 250px; font-size: 110px; line-height: 1; font-weight: 700; color: #FFD23F"></div>
+  <div id="sub10" class="ctr" style="top: 378px; font-size: 56px; font-weight: 600; color: #3DDCFF">a TV remote</div>
+</div>
+<!--@end-->
+<!--@js-->
+const SMOKE = '#B9C0CF', IR = '#FF5C5C';
+// scene 1: wisps
+const W1 = [0, 1, 2].map(() => mk($('wsp1'), 'path', { d: '' }));
+// scene 2: baffles of the small chamber
+for (let i = 0; i < 12; i++) { const a = i / 12 * 2 * Math.PI; const x = 530 + 78 * Math.cos(a), y = 760 + 78 * Math.sin(a); mk($('baf2'), 'rect', { x: x - 10, y: y - 26, width: 20, height: 52, rx: 4, transform: `rotate(${a * 180 / Math.PI + 30} ${x} ${y})` }); }
+dash($('ptr2'));
+// shared chamber baffles (in defs, built once)
+for (let i = 0; i < 18; i++) { const a = i / 18 * 2 * Math.PI; const x = 540 + 292 * Math.cos(a), y = 820 + 292 * Math.sin(a); mk($('bafG'), 'path', { d: `M ${x - 14} ${y - 40} h 28 v 50 h 30 v 22 h -58 Z`, transform: `rotate(${a * 180 / Math.PI - 90} ${x} ${y})` }); }
+// scene 4/5 beams
+const beam = (g) => Array.from({ length: 9 }, () => mk(g, 'circle', { cx: 0, cy: 780, r: 10, fill: IR }));
+const B4 = beam($('bm4')), B5 = beam($('bm5'));
+const runBeam = (B, u, on, x1 = 760) => B.forEach((d, i) => { const x = 380 + ((i / B.length) * (x1 - 380) + u * 420) % (x1 - 380); d.setAttribute('cx', x); d.style.opacity = on; });
+// scene 5 smoke particles
+const P5 = Array.from({ length: 16 }, (_, i) => ({ el: mk($('sk5'), 'circle', { cx: 0, cy: 0, r: 16 + (i % 3) * 6, fill: SMOKE }), y0: 600 + (i * 53) % 420, d: (i * 0.17) % 1.6, s: 0.8 + (i % 4) * 0.12 }));
+const SC5 = Array.from({ length: 14 }, () => mk($('sc5'), 'line', {}));
+// scene 6
+const D6 = Array.from({ length: 4 }, () => mk($('dt6'), 'circle', { cx: 370, cy: 740, r: 10, fill: '#3DDCFF' }));
+const SW6 = [0, 1, 2, 3].map(() => mk($('sw6'), 'path', { d: '' }));
+const MB6 = Array.from({ length: 10 }, (_, i) => mk($('mb6'), 'rect', { x: 250 + i * 60, y: 1060, width: 44, height: 0, rx: 8 }));
+// scene 7
+const SR7 = rays($('sr7'), 190, 660, 10, 88, 118);
+const LR7 = [[250, 620], [258, 700], [240, 760]].map(([x, y]) => mk($('lr7'), 'line', { x1: x, y1: y, x2: x, y2: y }));
+const LX7 = LR7.map(() => mk($('lx7'), 'path', { d: '' }));
+const SP7 = $('sp7'), LSP7 = SP7.getTotalLength();
+const P7 = Array.from({ length: 7 }, (_, i) => mk($('sk7'), 'circle', { cx: 0, cy: 0, r: 22 - (i % 3) * 4, fill: SMOKE }));
+// scene 9: trefoil blades
+['bl9a', 'bl9b', 'bl9c'].forEach((id, k) => {
+  const a0 = (-90 + 120 * k - 30) * Math.PI / 180, a1 = (-90 + 120 * k + 30) * Math.PI / 180, r0 = 70, r1 = 220, cx = 540, cy = 760;
+  const P = (r, a) => `${(cx + r * Math.cos(a)).toFixed(1)} ${(cy + r * Math.sin(a)).toFixed(1)}`;
+  $(id).setAttribute('d', `M ${P(r0, a0)} L ${P(r1, a0)} A ${r1} ${r1} 0 0 1 ${P(r1, a1)} L ${P(r0, a1)} A ${r0} ${r0} 0 0 0 ${P(r0, a0)} Z`);
+});
+// scene 11
+const IR11 = [0, 1, 2].map((i) => mk($('ir11'), 'path', { d: `M ${490 - 30 * i} ${470 - 40 * i} Q 540 ${440 - 50 * i} ${590 + 30 * i} ${470 - 40 * i}` }));
+<!--@end-->
+<!--@f-->
+const A = {
+  twist: T('twist'), ceiling: T('ceiling'), open: T('open'), middle: T('middle'), maze: T('maze'), chamber: T('chamber'),
+  infrared: T('infrared'), sensor1: T('sensor'), trick: T('trick'), face: T('face'), other: T('other'),
+  clean: T('clean'), never: T('never'), reaches: T('reaches'),
+  smoke3: T('smoke', 3), drifts: T('drifts'), particles: T('particles'), scatter: T('scatter'), bounces: T('bounces'), sensor4: T('sensor', 3),
+  chip: T('chip'), alarm: T('alarm'), piezo: T('piezo'), buzzing: T('buzzing'), thousands: T('thousands'), d85: T('85'), decibels: T('decibels'),
+  catch_: T('catch'), maze2: T('maze', 2), in3: T('in', 4), daylight: T('daylight'), out: T('out'),
+  battery: T('battery'), flashes: T('flashes'), few: T('few'),
+  speck: T('speck'), radioactive: T('radioactive'), americium: T('americium'), never2: T('never', 2),
+  working: T('working'), risk: T('risk'), dying: T('dying'), half: T('half'),
+  whats2: T("what's", 2), remote: T('remote'),
+};
+
+const F = [];
+F[0] = (u, t) => {
+  const s = 0.55 + 0.45 * outBack(prog(u, 0, 0.55));
+  const bob = Math.sin(u * 2.4) * 10 * prog(u, 0.5, 0.9);
+  tf($('c1'), `translate(540 ${880 + bob}) scale(${s}) translate(-540 -880)`);
+  const pk = outBack(prog(u, 1.0, 1.5));
+  tf($('m1'), `translate(${lerp(420, 700, pk)} ${560 - 30 * pk}) rotate(${12 * pk} 200 210) scale(0.6)`);
+  $('led1').style.opacity = Math.floor(u * 2.5) % 2 ? 0.25 : 1;
+  W1.forEach((p, i) => {
+    const ph = (u * 0.45 + i / 3) % 1, x0 = 330 + 210 * i;
+    let d = '';
+    for (let y = 0; y <= 260; y += 10) { const x = x0 + 26 * Math.sin(y / 40 + u * 3 + i); d += (y ? ' L' : 'M') + x.toFixed(1) + ' ' + (1300 - y - ph * 160).toFixed(1); }
+    p.setAttribute('d', d); p.style.opacity = prog(u, 0.3, 0.8) * 0.6 * (1 - ph);
+  });
+  L1.forEach((el, i) => { const k = prog(u, 0.25 + i * 0.045, 0.55 + i * 0.045); el.style.transform = `translateY(${(1 - outCubic(k)) * 40}px) scale(${outBack(k)})`; el.style.opacity = k > 0 ? 1 : 0; });
+  const sk = outCubic(prog(u, 0.9, 1.25)); $('sub1').style.opacity = sk; $('sub1').style.transform = `translateY(${(1 - sk) * 30}px)`;
+};
+F[1] = (u, t) => {
+  const tw = smooth(prog(t, A.twist, A.ceiling + 0.3));
+  const op = smooth(prog(t, A.open - 0.1, A.open + 0.6));
+  tf($('cov2'), `translate(${60 * op} ${-620 * op}) rotate(${40 * tw + 10 * op} 540 790)`);
+  $('cov2').style.opacity = 1 - op;
+  $('arr2').style.opacity = bump(prog(t, A.twist - 0.1, A.ceiling + 0.4));
+  tf($('arr2'), `rotate(${20 * tw} 540 790)`);
+  $('in2').style.opacity = t > A.open - 0.1 ? 1 : 0;
+  tf($('ch2'), about(530, 760, 1 + 0.12 * bump(prog(t, A.maze - 0.1, A.maze + 0.5))));
+  tf($('baf2'), `rotate(${u * 8} 530 760)`);
+  popS($('hl2'), prog(t, A.maze - 0.1, A.maze + 0.2), 530, 760);
+  $('hl2').setAttribute('stroke-width', 9 + 3 * Math.sin(u * 8));
+  draw($('ptr2'), outCubic(prog(t, A.chamber - 0.15, A.chamber + 0.15)));
+  pop($('mzL2'), prog(t, A.chamber, A.chamber + 0.25));
+  const w = outCubic(prog(t, A.open + 0.3, A.open + 0.6)); $('warn2').style.opacity = w; $('warn2').style.transform = `translateY(${(1 - w) * -20}px)`;
+};
+F[2] = (u, t) => {
+  pop($('irL3'), prog(t, A.infrared - 0.1, A.infrared + 0.2));
+  pop($('snL3'), prog(t, A.sensor1 - 0.1, A.sensor1 + 0.2));
+  const a = outCubic(prog(t, A.face - 0.2, A.face + 0.4));
+  $('da3').setAttribute('d', `M 380 780 H ${380 + 320 * a}`); $('db3').setAttribute('d', `M 540 1010 V ${1010 - 290 * a}`);
+  $('dir3').style.opacity = a > 0 ? 1 : 0;
+  $('da3').style.strokeDashoffset = -u * 60; $('db3').style.strokeDashoffset = -u * 60;
+  $('hd3').style.opacity = prog(t, A.face + 0.3, A.face + 0.4);
+  popS($('x3'), prog(t, A.other - 0.1, A.other + 0.2), 650, 940);
+  popS($('m3'), prog(t, A.trick - 0.1, A.trick + 0.25), 875, 1115);
+};
+F[3] = (u, t) => {
+  pop($('ca4'), prog(t, A.clean - 0.1, A.clean + 0.2));
+  runBeam(B4, u, t > A.clean ? 1 : 0);
+  $('lg4').style.opacity = t > A.clean ? 0.35 + 0.15 * Math.sin(u * 9) : 0;
+  pop($('mi4'), prog(t, A.reaches - 0.1, A.reaches + 0.2));
+  [...$('zz4').children].forEach((z, i) => { z.style.opacity = prog(t, A.never + i * 0.25, A.never + i * 0.25 + 0.2) * (0.6 + 0.4 * Math.sin(u * 4 + i)); });
+};
+F[4] = (u, t) => {
+  runBeam(B5, u, 1);
+  pop($('sm5'), prog(t, A.drifts - 0.15, A.drifts + 0.15));
+  fade($('sm5'), $('sm5').style.opacity * (1 - smooth(prog(t, A.particles + 0.4, A.particles + 0.8))));
+  P5.forEach((p, i) => {
+    const e = t - A.smoke3 + 0.2 - p.d * 0.75;
+    const x = 400 + (Math.max(0, e) * 90 * p.s) % 360 + 14 * Math.sin(u * 2 + i), y = 780 + (p.y0 - 780) * 0.75 + 14 * Math.sin(u * 1.7 + i * 2);
+    p.el.setAttribute('cx', x); p.el.setAttribute('cy', y); p.el.style.opacity = e > 0 ? 0.75 * Math.min(1, e * 3) : 0;
+    p.x = x; p.y = y; p.on = e > 0;
+  });
+  const sk = t > A.scatter - 0.1, bk = smooth(prog(t, A.bounces - 0.2, A.bounces + 0.4));
+  SC5.forEach((l, i) => {
+    const p = P5[i % P5.length];
+    if (!sk || !p.on || Math.abs(p.y - 780) > 140) { l.style.opacity = 0; return; }
+    const toS = i % 3 === 0 && bk > 0;
+    const a = (i * 2.4) % (2 * Math.PI), len = 50 + 30 * Math.sin(u * 6 + i);
+    const tx = toS ? lerp(p.x + len * Math.cos(a), 540, bk) : p.x + len * Math.cos(a), ty = toS ? lerp(p.y + len * Math.sin(a), 1028, bk) : p.y + len * Math.sin(a);
+    l.setAttribute('x1', p.x); l.setAttribute('y1', p.y); l.setAttribute('x2', tx); l.setAttribute('y2', ty);
+    l.style.opacity = 0.5 + 0.5 * Math.sin(u * 10 + i);
+  });
+  const on = smooth(prog(t, A.sensor4 - 0.3, A.sensor4 + 0.1));
+  $('sg5').style.opacity = on * (0.35 + 0.1 * Math.sin(u * 9)); $('sw5').style.opacity = on;
+};
+F[5] = (u, t) => {
+  popS($('ic6'), prog(u, 0, 0.3), 280, 740);
+  const lit = t > A.chip;
+  $('wr6').setAttribute('stroke', lit ? '#3DDCFF' : '#F2C14E');
+  D6.forEach((d, i) => { d.setAttribute('cx', 370 + ((i / 4) * 100 + u * 160) % 100); d.style.opacity = t > A.alarm - 0.2 ? 1 : 0; });
+  popS($('pz6'), prog(u, 0.15, 0.45), 640, 740);
+  const vib = t > A.alarm - 0.1 ? 1 + 0.03 * Math.sin(u * 90) : 1;
+  tf($('pz6'), about(640, 740, Math.max(0.0001, outBack(prog(u, 0.15, 0.45))) * vib));
+  SW6.forEach((p, i) => {
+    const ph = (u * 1.4 + i / 4) % 1, r = 190 + 200 * ph;
+    const a0 = -0.6, a1 = 0.6;
+    p.setAttribute('d', `M ${640 + r * Math.cos(a0)} ${740 + r * Math.sin(a0)} A ${r} ${r} 0 0 1 ${640 + r * Math.cos(a1)} ${740 + r * Math.sin(a1)}`);
+    p.style.opacity = t > A.alarm - 0.1 ? 1 - ph : 0;
+  });
+  const bp = prog(t, A.alarm - 0.1, A.alarm + 0.15);
+  $('bp6').style.opacity = bp > 0 ? 1 : 0; $('bp6').style.transform = `rotate(-8deg) scale(${outBack(bp) * (1 + 0.05 * Math.sin(u * 20))})`;
+  fade($('bp6'), $('bp6').style.opacity * (1 - smooth(prog(t, A.d85 - 0.4, A.d85 - 0.1))));
+  popS($('m6'), prog(t, A.alarm, A.alarm + 0.3), 885, 545);
+  pop($('hz6'), prog(t, A.thousands - 0.1, A.thousands + 0.2));
+  fade($('hz6'), $('hz6').style.opacity * (1 - smooth(prog(t, A.d85 - 0.4, A.d85 - 0.1))));
+  const mk6 = prog(t, A.d85 - 0.2, A.d85 + 0.8);
+  MB6.forEach((b, i) => { const h = (40 + i * 14) * outBack(clamp(mk6 * 1.6 - i * 0.06)); b.setAttribute('y', 1060 - h); b.setAttribute('height', Math.max(0, h)); b.setAttribute('fill', i < 6 ? '#3DDCFF' : i < 8 ? '#FFD23F' : '#FF8FA3'); });
+  popS($('db6'), prog(t, A.d85 - 0.1, A.d85 + 0.2), 540, 1140);
+};
+F[6] = (u, t) => {
+  L7.forEach((el, i) => { const k = prog(u, i * 0.035, 0.3 + i * 0.035); el.style.transform = `scale(${outBack(k)})`; el.style.opacity = k > 0 ? 1 : 0; });
+  popS($('wall7'), prog(u, 0.1, 0.4), 600, 860);
+  const sm = prog(t, A.maze2 - 0.1, A.out);
+  SP7.style.opacity = sm > 0 ? 0.6 : 0;
+  P7.forEach((c, i) => { const k = clamp(sm * 1.4 - i * 0.07); const p = SP7.getPointAtLength(LSP7 * k); c.setAttribute('cx', p.x); c.setAttribute('cy', p.y); c.style.opacity = k > 0 && k < 1 ? 0.8 : 0; });
+  pop($('inL7'), prog(t, A.in3 - 0.1, A.in3 + 0.2));
+  popS($('sun7'), prog(t, A.daylight - 0.4, A.daylight - 0.1), 190, 660);
+  SR7.forEach((r, i) => { r.style.opacity = 0.6 + 0.4 * Math.sin(u * 6 + i); });
+  const lk = outCubic(prog(t, A.daylight - 0.1, A.daylight + 0.3));
+  const stops = [560, 500, 500];
+  LR7.forEach((l, i) => { const [x, y] = [[250, 620], [258, 700], [240, 760]][i]; const ex = lerp(x, stops[i], lk); l.setAttribute('x2', ex); l.setAttribute('y2', y + (i === 0 ? -20 : i === 1 ? 10 : 30) * lk); l.style.opacity = lk > 0 ? 1 : 0; });
+  const xk = prog(t, A.out - 0.1, A.out + 0.15);
+  LX7.forEach((p, i) => { const x = stops[i] - 20, y = [600, 710, 790][i]; p.setAttribute('d', `M ${x - 18} ${y - 18} L ${x + 18} ${y + 18} M ${x + 18} ${y - 18} L ${x - 18} ${y + 18}`); p.style.opacity = xk > 0 ? 1 : 0; tf(p, about(x, y, Math.max(0.0001, outBack(xk)))); });
+  pop($('ouL7'), prog(t, A.out, A.out + 0.2));
+  popS($('ok7'), prog(t, A.in3, A.in3 + 0.3), 900, 760);
+};
+F[7] = (u, t) => {
+  popS($('bt8'), prog(u, 0, 0.3), 315, 750);
+  popS($('ld8'), prog(t, A.battery - 0.1, A.battery + 0.2), 700, 745);
+  const period = 1.1, sp = 380;
+  const start = A.flashes - 0.3;
+  let d = '';
+  for (let x = 120; x <= 960; x += 6) {
+    const tt = t - (960 - x) / sp;
+    const ph = ((tt - start) % period + period) % period;
+    const y = tt > start && ph < 0.08 ? 1120 - 110 : 1120;
+    d += (x === 120 ? 'M' : ' L') + x + ' ' + y;
+  }
+  $('pl8').setAttribute('d', d); $('pl8').style.opacity = prog(t, start - 0.3, start);
+  const ph = ((t - start) % period + period) % period;
+  const flash = t > start && ph < 0.12 ? 1 : 0;
+  $('lg8').style.opacity = flash * 0.55;
+  $('hd8').style.opacity = t > start ? 1 : 0;
+  pop($('ev8'), prog(t, A.few - 0.1, A.few + 0.2));
+  $('bl8').setAttribute('height', 328); $('bl8').setAttribute('y', 586);
+};
+F[8] = (u, t) => {
+  const k = prog(t, A.radioactive - 0.2, A.radioactive + 0.15);
+  popS($('tf9'), k, 540, 760);
+  if (k >= 1) tf($('tf9'), `rotate(${u * 18} 540 760)`);
+  pop($('am9'), prog(t, A.americium - 0.1, A.americium + 0.2));
+  pop($('sb9'), prog(t, A.americium + 0.3, A.americium + 0.6));
+  pop($('nv9'), prog(t, A.never2 - 0.1, A.never2 + 0.15));
+  popS($('m9'), prog(t, A.never2 - 0.05, A.never2 + 0.25), 890, 1050);
+};
+F[9] = (u, t) => {
+  popS($('hs10'), prog(u, 0, 0.3), 540, 620);
+  pop($('rk10'), prog(t, A.risk - 0.1, A.risk + 0.2));
+  const ka = outCubic(prog(t, A.dying - 0.1, A.dying + 0.5));
+  $('ba10').setAttribute('height', 300 * ka); $('ba10').setAttribute('y', 1160 - 300 * ka);
+  pop($('la10'), prog(t, A.dying - 0.1, A.dying + 0.2));
+  const kb = outCubic(prog(t, A.half - 0.5, A.half + 0.1));
+  $('bb10').setAttribute('height', 150 * kb); $('bb10').setAttribute('y', 1160 - 150 * kb);
+  pop($('lb10'), prog(t, A.half - 0.5, A.half - 0.2));
+  popS($('hv10'), prog(t, A.half - 0.1, A.half + 0.2), 710, 820);
+};
+F[10] = (u, t) => {
+  pop($('nx10'), prog(u, 0, 0.25));
+  popS($('sd11'), prog(u, 0.1, 0.5), 540, 840);
+  $('q11').setAttribute('font-size', 200 * (1 + 0.08 * Math.sin(u * 8)));
+  IR11.forEach((p, i) => { p.style.opacity = (Math.floor(u * 4) % 3 >= i) ? 0.9 : 0.15; });
+  const mk2 = outBack(prog(u, 0.4, 0.8));
+  tf($('m11'), `translate(${-420 * (1 - mk2)} 0)`);
+  L10.forEach((el, i) => { const k = prog(t, A.whats2 - 0.05 + i * 0.03, A.whats2 + 0.15 + i * 0.03); el.style.transform = `scale(${outBack(k)})`; el.style.opacity = k > 0 ? 1 : 0; });
+  pop($('sub10'), prog(t, A.remote - 0.5, A.remote - 0.2));
+};
+<!--@end-->
