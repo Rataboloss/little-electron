@@ -6,6 +6,9 @@ for quality, structure and art direction: read both `scenes.html` files before w
 
 ## Daily run (scheduled task)
 
+0. **Repo** — if `/home/claude/little-electron` doesn't exist, attach `Rataboloss/little-electron`
+   (push access) and clone it there; work from the repo root. The voice is Kokoro `am_puck`.
+
 1. **Setup** — from the repo root: `bash framework/setup.sh` (installs Kokoro, downloads the
    voice model and the Fredoka font from GitHub; ~1 min).
 2. **Topic** — take the first unchecked item in `topics.md`. The previous episode's teaser
