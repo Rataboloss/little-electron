@@ -1,0 +1,140 @@
+{
+ "title": "What's inside a computer mouse?",
+ "voice": "am_puck",
+ "speed": 1.0,
+ "segments": [
+  {
+   "text": "What's inside a computer mouse?"
+  },
+  {
+   "text": "Let me explain."
+  },
+  {
+   "text": "Open the shell:",
+   "scene": true,
+   "pause": 0.15
+  },
+  {
+   "text": "a small circuit board, two switches and a wheel.",
+   "split": [
+    4
+   ]
+  },
+  {
+   "text": "Under each button:",
+   "scene": true,
+   "pause": 0.15
+  },
+  {
+   "text": "a tiny switch."
+  },
+  {
+   "text": "Press it,",
+   "pause": 0.12
+  },
+  {
+   "text": "and a metal leaf snaps onto a contact.",
+   "split": [
+    4
+   ]
+  },
+  {
+   "text": "The wheel turns an encoder.",
+   "scene": true
+  },
+  {
+   "text": "Each notch sends a pulse to the chip.",
+   "split": [
+    3
+   ]
+  },
+  {
+   "text": "But here's the trick:",
+   "scene": true
+  },
+  {
+   "text": "flip it over."
+  },
+  {
+   "text": "A red LED lights the desk at a low angle,",
+   "say": "A red L E D lights the desk at a low angle,",
+   "split": [
+    4
+   ]
+  },
+  {
+   "text": "so every bump casts a shadow.",
+   "split": []
+  },
+  {
+   "text": "Above it, a tiny camera",
+   "scene": true,
+   "pause": 0.1
+  },
+  {
+   "text": "snaps the desk over a thousand times a second.",
+   "split": [
+    3
+   ]
+  },
+  {
+   "text": "A chip compares each picture with the last.",
+   "scene": true,
+   "split": [
+    3
+   ]
+  },
+  {
+   "text": "The shadows slide:",
+   "pause": 0.15
+  },
+  {
+   "text": "that's your movement."
+  },
+  {
+   "text": "Here's the catch:",
+   "scene": true
+  },
+  {
+   "text": "on clear glass, there's nothing to see.",
+   "split": [
+    3
+   ]
+  },
+  {
+   "text": "The mouse gets lost."
+  },
+  {
+   "text": "And those photos are tiny:",
+   "scene": true,
+   "pause": 0.15
+  },
+  {
+   "text": "often just 18 by 18 pixels.",
+   "say": "often just eighteen by eighteen pixels.",
+   "split": []
+  },
+  {
+   "text": "The first mouse, in 1964,",
+   "say": "The first mouse, in nineteen sixty-four,",
+   "scene": true
+  },
+  {
+   "text": "was a wooden box with two metal wheels.",
+   "split": [
+    4
+   ]
+  },
+  {
+   "text": "Its cord looked like a tail.",
+   "split": []
+  },
+  {
+   "text": "Next time:",
+   "scene": true
+  },
+  {
+   "text": "what's inside wireless earbuds?"
+  }
+ ]
+}

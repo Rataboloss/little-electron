@@ -1,0 +1,454 @@
+<!--@title-->Little Electron — What's inside a computer mouse<!--@end-->
+<!--@defs-->
+  <!-- mouse, top view, centred on x 540, y 540..1120 -->
+  <g id="mouseG">
+    <path d="M 540 540 C 540 470 600 450 640 470 C 690 440 720 400 700 360" fill="none" stroke="#8A90A6" stroke-width="12" stroke-linecap="round"></path>
+    <path d="M 540 540 C 690 540 720 680 720 860 C 720 1060 640 1120 540 1120 C 440 1120 360 1060 360 860 C 360 680 390 540 540 540 Z" fill="#EEF0F7"></path>
+    <line x1="540" y1="540" x2="540" y2="760" stroke="#D5D9E6" stroke-width="8"></line>
+    <path d="M 362 760 H 718" stroke="#D5D9E6" stroke-width="8"></path>
+    <rect x="522" y="600" width="36" height="90" rx="18" fill="#8A90A6"></rect>
+  </g>
+  <path id="bodyP" d="M 540 540 C 690 540 720 680 720 860 C 720 1060 640 1120 540 1120 C 440 1120 360 1060 360 860 C 360 680 390 540 540 540 Z"></path>
+  <!-- mouse, side view (cut), sits on y = 1000 -->
+  <g id="sideG">
+    <path d="M 170 1000 C 180 780 380 660 600 660 C 790 660 900 790 910 1000 Z" fill="#2B2F45" stroke="#3A4170" stroke-width="10"></path>
+    <rect x="490" y="840" width="100" height="56" rx="10" fill="#14172C" stroke="#3DDCFF" stroke-width="5"></rect>
+    <circle cx="540" cy="935" r="26" fill="#3DDCFF"></circle>
+    <circle cx="530" cy="926" r="8" fill="#EEF0F7"></circle>
+    <path d="M 300 930 a 34 34 0 0 1 68 0 v 22 h -68 Z" fill="#FF5C5C"></path>
+  </g>
+<!--@end-->
+<!--@svg-->
+<!-- Scene 1: hook -->
+<g id="s1">
+  <g id="c1">
+    <g id="m1"><use href="#m" x="0" y="0" width="400" height="400"></use></g>
+    <use href="#mouseG"></use>
+    <g id="cl1" fill="none" stroke="#3DDCFF" stroke-width="10" stroke-linecap="round"></g>
+  </g>
+</g>
+
+<!-- Scene 2: open the shell -->
+<g id="s2">
+  <g id="in2">
+    <use href="#bodyP" fill="#2B2F45" stroke="#3A4170" stroke-width="10"></use>
+    <rect x="410" y="640" width="260" height="420" rx="50" fill="#1F8A6A"></rect>
+    <g fill="none" stroke="#2FB088" stroke-width="6" stroke-linecap="round"><path d="M 460 720 V 820 H 500 M 620 720 V 820 H 580 M 540 940 V 1010 M 450 1000 H 630"></path></g>
+    <g id="sw2"><rect x="428" y="668" width="70" height="44" rx="8" fill="#14172C"></rect><rect x="452" y="656" width="22" height="16" rx="4" fill="#EEF0F7"></rect>
+      <rect x="582" y="668" width="70" height="44" rx="8" fill="#14172C"></rect><rect x="606" y="656" width="22" height="16" rx="4" fill="#EEF0F7"></rect></g>
+    <g id="wh2"><rect x="516" y="590" width="48" height="140" rx="22" fill="#3A4170"></rect><g id="rd2" stroke="#8A90A6" stroke-width="6"></g></g>
+    <rect x="495" y="840" width="90" height="80" rx="10" fill="#14172C"></rect>
+    <circle cx="540" cy="880" r="18" fill="#3DDCFF"></circle>
+    <circle id="led2" cx="465" cy="955" r="14" fill="#FF5C5C"></circle>
+  </g>
+  <g id="pt2" fill="none" stroke="#3DDCFF" stroke-width="6" stroke-linecap="round">
+    <path id="pw2" d="M 330 600 L 510 640"></path>
+    <path id="ps2" d="M 760 640 L 660 685"></path>
+    <path id="pb2" d="M 330 980 L 410 960"></path>
+  </g>
+  <g id="sh2"><use href="#mouseG"></use></g>
+</g>
+
+<!-- Scene 3: microswitch -->
+<g id="s3">
+  <g id="ms3">
+    <rect x="240" y="640" width="560" height="360" rx="34" fill="#14172C" stroke="#3A4170" stroke-width="10"></rect>
+    <rect x="300" y="760" width="44" height="210" rx="8" fill="#F2C14E"></rect>
+    <rect x="680" y="890" width="90" height="44" rx="8" fill="#F2C14E"></rect>
+    <rect x="700" y="930" width="40" height="40" fill="#F2C14E"></rect>
+    <path id="lf3" d="" fill="none" stroke="#F2C14E" stroke-width="16" stroke-linecap="round"></path>
+    <g id="pl3"><rect x="495" y="560" width="90" height="140" rx="18" fill="#EEF0F7"></rect></g>
+    <g fill="#F2C14E"><rect x="306" y="1000" width="32" height="80" rx="6"></rect><rect x="704" y="1000" width="32" height="80" rx="6"></rect></g>
+    <path id="wr3" d="M 322 1080 V 1170 H 720 V 1080" fill="none" stroke="#3A4170" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"></path>
+    <g id="dt3"></g>
+  </g>
+  <path id="ar3" d="M 540 400 V 520 M 505 485 L 540 525 L 575 485" fill="none" stroke="#3DDCFF" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"></path>
+  <path id="pl3p" d="M 250 600 L 420 770" fill="none" stroke="#F2C14E" stroke-width="6" stroke-linecap="round"></path>
+</g>
+
+<!-- Scene 4: wheel + encoder -->
+<g id="s4">
+  <path id="wi4" d="M 340 770 H 760" fill="none" stroke="#3A4170" stroke-width="12" stroke-linecap="round"></path>
+  <g id="pd4"></g>
+  <g id="wl4">
+    <circle cx="340" cy="770" r="200" fill="#2B2F45" stroke="#3A4170" stroke-width="10"></circle>
+    <g id="rg4" fill="#3A4170"></g>
+    <circle cx="340" cy="770" r="110" fill="#14172C"></circle>
+    <g id="th4" fill="#F2C14E"></g>
+    <circle cx="340" cy="770" r="70" fill="#F2C14E"></circle>
+    <circle cx="340" cy="770" r="26" fill="#14172C"></circle>
+  </g>
+  <path id="sp4" d="M 340 560 L 340 618" stroke="#B9C0CF" stroke-width="14" stroke-linecap="round"></path>
+  <g id="ic4"><rect x="760" y="700" width="200" height="140" rx="14" fill="#14172C" stroke="#3A4170" stroke-width="6"></rect><text x="860" y="785" text-anchor="middle" font-size="44" font-weight="700" fill="#3DDCFF">chip</text></g>
+  <g id="sc4"><rect x="100" y="1030" width="880" height="190" rx="26" fill="#14172C" stroke="#3A4170" stroke-width="6"></rect>
+    <path id="wv4" d="" fill="none" stroke="#3DDCFF" stroke-width="8" stroke-linejoin="round"></path></g>
+</g>
+
+<!-- Scene 5: flip it over, low-angle light -->
+<g id="s5">
+  <g id="fa5">
+    <g id="tp5"><use href="#mouseG"></use></g>
+    <g id="bt5">
+      <use href="#bodyP" fill="#B9C0CF"></use>
+      <rect x="470" y="580" width="140" height="40" rx="20" fill="#8A90A6"></rect>
+      <rect x="450" y="1060" width="180" height="36" rx="18" fill="#8A90A6"></rect>
+      <ellipse cx="540" cy="860" rx="70" ry="90" fill="#14172C"></ellipse>
+      <circle id="gl5" cx="540" cy="860" r="120" fill="#FF5C5C"></circle>
+      <circle cx="540" cy="860" r="34" fill="#FF5C5C"></circle>
+    </g>
+  </g>
+  <g id="sv5">
+    <path d="M 110 990 H 970 L 1020 1100 H 60 Z" fill="#B88457"></path>
+    <rect x="60" y="1100" width="960" height="60" rx="8" fill="#8A5E3C"></rect>
+    <g id="sd5" fill="#5A3D28"></g>
+    <g id="bp5" fill="#D9A06A"></g>
+    <g id="ry5" fill="none" stroke="#FF5C5C" stroke-width="7" stroke-linecap="round" stroke-dasharray="4 18"></g>
+    <g id="le5"><rect x="70" y="910" width="110" height="74" rx="14" fill="#2B2F45" stroke="#3A4170" stroke-width="6"></rect><circle cx="176" cy="947" r="30" fill="#FF5C5C"></circle><circle cx="176" cy="947" r="62" fill="#FF5C5C" opacity="0.25"></circle></g>
+    <path id="an5" d="M 380 947 A 200 200 0 0 1 375 990" fill="none" stroke="#3DDCFF" stroke-width="6" stroke-linecap="round"></path>
+  </g>
+</g>
+
+<!-- Scene 6: the camera -->
+<g id="s6">
+  <rect x="60" y="1000" width="960" height="70" rx="12" fill="#A0704A"></rect>
+  <g fill="#B88457"><circle cx="460" cy="1000" r="16"></circle><circle cx="560" cy="1000" r="22"></circle><circle cx="640" cy="1000" r="12"></circle></g>
+  <use href="#sideG"></use>
+  <path id="ry6" d="M 345 960 L 520 1000 L 540 962" fill="none" stroke="#FF5C5C" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4 16"></path>
+  <circle id="fl6" cx="540" cy="935" r="60" fill="#FFFFFF"></circle>
+  <g id="ph6"></g>
+</g>
+
+<!-- Scene 7: compare pictures -->
+<g id="s7">
+  <g id="pa7"><rect x="120" y="500" width="380" height="380" rx="24" fill="#14172C" stroke="#3A4170" stroke-width="6"></rect><g id="ga7"></g></g>
+  <g id="pb7"><rect x="580" y="500" width="380" height="380" rx="24" fill="#14172C" stroke="#3A4170" stroke-width="6"></rect><g id="gb7"></g></g>
+  <rect id="ha7" x="0" y="0" width="0" height="0" fill="none" stroke="#FFD23F" stroke-width="7" rx="10"></rect>
+  <rect id="hb7" x="0" y="0" width="0" height="0" fill="none" stroke="#FFD23F" stroke-width="7" rx="10"></rect>
+  <path id="sa7" d="" fill="none" stroke="#3DDCFF" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"></path>
+  <g id="sc7">
+    <rect x="300" y="960" width="480" height="270" rx="24" fill="#2B2F45" stroke="#3A4170" stroke-width="8"></rect>
+    <rect x="324" y="984" width="432" height="222" rx="10" fill="#3A4170"></rect>
+    <path id="cu7" d="M 0 0 L 0 56 L 14 42 L 26 66 L 36 61 L 24 38 L 44 38 Z" fill="#EEF0F7" stroke="#14172C" stroke-width="4" stroke-linejoin="round"></path>
+  </g>
+</g>
+
+<!-- Scene 8: catch, clear glass -->
+<g id="s8">
+  <rect x="80" y="1000" width="920" height="54" rx="10" fill="#3DDCFF" opacity="0.22"></rect>
+  <rect x="80" y="1000" width="920" height="54" rx="10" fill="none" stroke="#3DDCFF" stroke-width="5"></rect>
+  <path d="M 120 1012 L 160 1042 M 420 1012 L 460 1042 M 860 1012 L 900 1042" stroke="#EEF0F7" stroke-width="6" stroke-linecap="round" opacity="0.6"></path>
+  <path id="ry8" d="M 330 950 L 610 1230" fill="none" stroke="#FF5C5C" stroke-width="8" stroke-linecap="round" stroke-dasharray="4 16"></path>
+  <g id="ms8"><g transform="translate(110 290) scale(0.7)"><use href="#sideG"></use></g></g>
+  <g id="vw8"><rect x="120" y="450" width="300" height="220" rx="20" fill="#14172C" stroke="#3A4170" stroke-width="6"></rect><text id="vq8" x="270" y="610" text-anchor="middle" font-size="150" font-weight="700" fill="#FFD23F">?</text></g>
+  <g id="qq8" font-size="90" font-weight="700" fill="#FF8FA3" text-anchor="middle"><text x="260" y="760">?</text><text x="760" y="640">?</text><text x="560" y="590">?</text></g>
+  <g id="m8"><use href="#mw" x="760" y="740" width="270" height="270"></use></g>
+</g>
+
+<!-- Scene 9: 18 x 18 pixels -->
+<g id="s9">
+  <rect x="222" y="508" width="636" height="636" rx="20" fill="#14172C" stroke="#3A4170" stroke-width="6"></rect>
+  <g id="px9"></g>
+  <g id="m9"><use href="#m" x="855" y="1030" width="210" height="210"></use></g>
+</g>
+
+<!-- Scene 10: 1964 -->
+<g id="s10">
+  <g id="ea10"><circle cx="640" cy="625" r="46" fill="#FF8FA3"></circle><circle cx="710" cy="640" r="40" fill="#FF8FA3"></circle></g>
+  <path id="cd10" d="" fill="none" stroke="#8A90A6" stroke-width="14" stroke-linecap="round"></path>
+  <g id="bx10">
+    <rect x="360" y="620" width="380" height="320" rx="44" fill="#A0704A" stroke="#7A5236" stroke-width="8"></rect>
+    <g stroke="#8A6040" stroke-width="5" stroke-linecap="round"><path d="M 400 700 H 560 M 420 780 H 690 M 400 860 H 600"></path></g>
+    <rect x="470" y="600" width="90" height="34" rx="10" fill="#FF5C5C"></rect>
+    <g fill="#B9C0CF" stroke="#8A90A6" stroke-width="8"><circle cx="460" cy="950" r="42"></circle><circle cx="640" cy="950" r="42"></circle></g>
+  </g>
+  <g id="fc10"><circle cx="690" cy="730" r="16" fill="#1B1F3B"></circle><circle cx="695" cy="724" r="5" fill="#FFFFFF"></circle><circle cx="742" cy="800" r="16" fill="#FF8FA3"></circle></g>
+</g>
+
+<!-- Scene 11: teaser, wireless earbuds -->
+<g id="s11">
+  <g id="eb11">
+    <g transform="rotate(-14 420 760)"><rect x="392" y="760" width="56" height="260" rx="28" fill="#EEF0F7"></rect><circle cx="420" cy="740" r="80" fill="#EEF0F7"></circle><circle cx="395" cy="720" r="30" fill="#8A90A6"></circle></g>
+    <g transform="rotate(14 660 760)"><rect x="632" y="760" width="56" height="260" rx="28" fill="#EEF0F7"></rect><circle cx="660" cy="740" r="80" fill="#EEF0F7"></circle><circle cx="685" cy="720" r="30" fill="#8A90A6"></circle></g>
+    <text id="q11" x="540" y="1170" text-anchor="middle" font-size="200" font-weight="700" fill="#FFD23F">?</text>
+  </g>
+  <g id="m11"><use href="#m" x="20" y="960" width="290" height="290"></use></g>
+</g>
+<!--@end-->
+<!--@ov-->
+<div class="ov" id="o1">
+  <div id="t1" class="ctr letters" style="top: 240px; font-size: 116px; line-height: 1; font-weight: 700; color: #FFD23F"></div>
+  <div id="sub1" class="ctr" style="top: 374px; font-size: 56px; font-weight: 600; color: #3DDCFF">a computer mouse</div>
+</div>
+<div class="ov" id="o2">
+  <p class="lbl" id="wL2" style="left: 60px; top: 540px; width: 280px; text-align: center; font-size: 50px; font-weight: 700; color: #B9C0CF">wheel</p>
+  <p class="lbl" id="sL2" style="left: 750px; top: 580px; width: 300px; text-align: center; font-size: 50px; font-weight: 700; color: #EEF0F7">switches</p>
+  <p class="lbl" id="bL2" style="left: 30px; top: 1000px; width: 340px; text-align: center; font-size: 50px; font-weight: 700; color: #2FB088">circuit board</p>
+</div>
+<div class="ov" id="o3">
+  <div class="chip"><span>1 · The buttons</span></div>
+  <p id="ck3" class="lbl" style="left: 0; width: 1080px; text-align: center; top: 250px; font-size: 110px; line-height: 1; font-weight: 700; color: #FF8FA3; transform-origin: 50% 50%">CLICK!</p>
+  <p class="lbl" id="lL3" style="left: 40px; top: 520px; width: 300px; text-align: center; font-size: 46px; font-weight: 700; color: #F2C14E">metal leaf</p>
+  <p class="lbl" id="cL3" style="left: 810px; top: 880px; width: 240px; text-align: center; font-size: 46px; font-weight: 700; color: #F2C14E">contact</p>
+</div>
+<div class="ov" id="o4">
+  <div class="chip"><span>2 · The wheel</span></div>
+  <div id="np4" class="ctr" style="top: 250px; font-size: 84px; line-height: 1; font-weight: 700; color: #FFD23F">1 notch = 1 pulse</div>
+  <p class="lbl" id="eL4" style="left: 0; top: 460px; width: 680px; text-align: center; font-size: 50px; font-weight: 700; color: #F2C14E">encoder</p>
+</div>
+<div class="ov" id="o5">
+  <div class="chip"><span>3 · The light</span></div>
+  <div id="sh5" class="ctr" style="top: 250px; font-size: 104px; line-height: 1; font-weight: 700; color: #FFD23F">shadows!</div>
+  <p class="lbl" id="aL5" style="left: 230px; top: 860px; width: 300px; font-size: 44px; font-weight: 700; color: #3DDCFF">low angle</p>
+</div>
+<div class="ov" id="o6">
+  <div class="chip"><span>4 · The camera</span></div>
+  <div id="n6" class="ctr" style="top: 250px; font-size: 120px; line-height: 1; font-weight: 700; color: #FFD23F">1,000+ / s</div>
+  <p class="lbl" id="cL6" style="left: 140px; top: 560px; width: 400px; text-align: center; font-size: 50px; font-weight: 700; color: #3DDCFF">tiny camera</p>
+</div>
+<div class="ov" id="o7">
+  <div id="cp7" class="ctr" style="top: 250px; font-size: 96px; line-height: 1; font-weight: 700; color: #3DDCFF">spot the shift</div>
+  <p class="lbl" id="aL7" style="left: 120px; top: 430px; width: 380px; text-align: center; font-size: 44px; font-weight: 600; color: #B9C0CF">last picture</p>
+  <p class="lbl" id="bL7" style="left: 580px; top: 430px; width: 380px; text-align: center; font-size: 44px; font-weight: 600; color: #B9C0CF">new picture</p>
+</div>
+<div class="ov" id="o8">
+  <div id="gl8" class="ctr" style="top: 250px; font-size: 110px; line-height: 1; font-weight: 700; color: #FF8FA3">clear glass</div>
+</div>
+<div class="ov" id="o9">
+  <div id="n9" class="ctr" style="top: 240px; font-size: 140px; line-height: 1; font-weight: 700; color: #FFD23F">18 × 18</div>
+  <div id="px9t" class="ctr" style="top: 390px; font-size: 56px; font-weight: 600; color: #3DDCFF">pixels</div>
+</div>
+<div class="ov" id="o10">
+  <div id="y10" class="ctr" style="top: 230px; font-size: 150px; line-height: 1; font-weight: 700; color: #FFD23F">1964</div>
+  <div id="wb10" class="ctr" style="top: 400px; font-size: 56px; font-weight: 700; color: #3DDCFF">a wooden box</div>
+  <p class="lbl" id="mw10" style="left: 700px; top: 1010px; width: 340px; text-align: center; font-size: 46px; font-weight: 700; color: #B9C0CF">metal wheels</p>
+  <p class="lbl" id="tl10" style="left: 40px; top: 1130px; width: 300px; text-align: center; font-size: 60px; font-weight: 700; color: #FF8FA3">a tail!</p>
+</div>
+<div class="ov" id="o11">
+  <div id="nx10" class="ctr" style="top: 170px; font-size: 52px; font-weight: 600; color: #3DDCFF">Next time:</div>
+  <div id="t10" class="ctr letters" style="top: 250px; font-size: 110px; line-height: 1; font-weight: 700; color: #FFD23F"></div>
+  <div id="sub10" class="ctr" style="top: 378px; font-size: 56px; font-weight: 600; color: #3DDCFF">wireless earbuds</div>
+  <div id="big7" style="display:none"></div>
+</div>
+<!--@end-->
+<!--@js-->
+// deterministic pseudo-random
+let SEED = 7; const rnd = () => { SEED = (SEED * 16807) % 2147483647; return (SEED - 1) / 2147483646; };
+// scene 1: click arcs above the left button
+const CL1 = [0, 1, 2].map((i) => { const r = 30 + 26 * i; return mk($('cl1'), 'path', { d: `M ${450 - r * 0.7} ${640 - r * 0.7} A ${r} ${r} 0 0 1 ${450 + r * 0.7} ${640 - r * 0.7}` }); });
+// scene 2
+for (let i = 0; i < 6; i++) mk($('rd2'), 'line', { x1: 524, y1: 606 + i * 22, x2: 556, y2: 606 + i * 22 });
+['pw2', 'ps2', 'pb2'].forEach((id) => dash($(id)));
+// scene 3
+dash($('pl3p'));
+const D3 = Array.from({ length: 9 }, () => mk($('dt3'), 'circle', { cx: 0, cy: 0, r: 11, fill: '#3DDCFF' }));
+const W3 = [[322, 1080], [322, 1170], [720, 1170], [720, 1080]];
+const along = (pts, k) => { const seg = []; let tot = 0; for (let i = 1; i < pts.length; i++) { const l = Math.hypot(pts[i][0] - pts[i - 1][0], pts[i][1] - pts[i - 1][1]); seg.push(l); tot += l; } let d = k * tot; for (let i = 0; i < seg.length; i++) { if (d <= seg[i]) { const f = d / seg[i]; return [lerp(pts[i][0], pts[i + 1][0], f), lerp(pts[i][1], pts[i + 1][1], f)]; } d -= seg[i]; } return pts[pts.length - 1]; };
+// scene 4: rubber ridges + encoder teeth
+const RG4 = Array.from({ length: 28 }, (_, i) => { const r = mk($('rg4'), 'rect', { x: 330, y: 562, width: 20, height: 34, rx: 6 }); r.setAttribute('transform', `rotate(${i * 360 / 28} 340 770)`); return r; });
+for (let i = 0; i < 12; i++) { const r = mk($('th4'), 'rect', { x: 326, y: 652, width: 28, height: 40, rx: 6 }); r.setAttribute('transform', `rotate(${i * 30} 340 770)`); }
+const PD4 = Array.from({ length: 5 }, () => mk($('pd4'), 'circle', { cx: 0, cy: 770, r: 14, fill: '#3DDCFF' }));
+// scene 5: bumps, rays, shadows
+const LX = 176, LY = 947, DESK = 1045;
+const BUMPS = [[370, 42], [560, 52], [750, 38], [900, 46]];
+const SD5 = [], RY5 = [], BP5 = [];
+BUMPS.forEach(([x, r]) => {
+  const L = Math.min(2.6 * r + 60, 1000 - x);
+  SD5.push(mk($('sd5'), 'path', { d: `M ${x} ${DESK - r * 0.45} Q ${x + L * 0.6} ${DESK - r * 0.35} ${x + L} ${DESK} Q ${x + L * 0.6} ${DESK + r * 0.35} ${x} ${DESK + r * 0.45} Z`, opacity: 0.9 }));
+  RY5.push(mk($('ry5'), 'line', { x1: LX + 34, y1: LY, x2: x - r * 0.3, y2: DESK - r * 0.95 }));
+  BP5.push(mk($('bp5'), 'path', { d: `M ${x - r} ${DESK + 6} A ${r} ${r} 0 0 1 ${x + r} ${DESK + 6} Z` }));
+});
+dash($('an5'));
+// scene 6: snapshots
+const PH6 = Array.from({ length: 8 }, (_, i) => { const g = mk($('ph6'), 'g', {}); mk(g, 'rect', { x: -44, y: -44, width: 88, height: 88, rx: 10, fill: '#14172C', stroke: '#3DDCFF', 'stroke-width': 5 }); for (let k = 0; k < 4; k++) mk(g, 'circle', { cx: -26 + rnd() * 52, cy: -26 + rnd() * 52, r: 6 + rnd() * 8, fill: '#8A90A6' }); return g; });
+// scene 7: two 10x10 pictures, second shifted by (2,1)
+const N7 = 10, C7 = 34, OX = [140, 600], OY = 520;
+const blob = (i, j) => { const v = Math.sin(i * 1.3 + 0.4) * Math.cos(j * 1.1 - 0.8) + 0.6 * Math.sin((i + j) * 0.7 + 1.2) + 0.4 * Math.cos(i * 2.1 - j * 1.7); return v; };
+const shade = (v) => v > 0.7 ? '#EEF0F7' : v > 0.2 ? '#B9C0CF' : v > -0.3 ? '#8A90A6' : v > -0.8 ? '#3A4170' : '#2B2F45';
+const GA7 = [], GB7 = [];
+for (let r = 0; r < N7; r++) for (let c = 0; c < N7; c++) {
+  GA7.push(mk($('ga7'), 'rect', { x: OX[0] + c * C7, y: OY + r * C7, width: C7 - 3, height: C7 - 3, rx: 4, fill: shade(blob(c + 3, r + 3)) }));
+  GB7.push(mk($('gb7'), 'rect', { x: OX[1] + c * C7, y: OY + r * C7, width: C7 - 3, height: C7 - 3, rx: 4, fill: shade(blob(c + 1, r + 2)) }));
+}
+// highlight box: 3x3 block at col 3,row 3 in A -> col 5,row 4 in B
+const HC = 3, HR = 3, DC = 2, DR = 1;
+// scene 9: 18 x 18 pixel picture
+const N9 = 18, C9 = 34, X9 = 234, Y9 = 520;
+const PX9 = [];
+for (let r = 0; r < N9; r++) for (let c = 0; c < N9; c++) {
+  const v = 0.9 * Math.sin(c * 0.55 + 0.3) * Math.cos(r * 0.45 - 1) + 0.5 * Math.sin((c - r) * 0.4) + 0.25 * (rnd() - 0.5);
+  PX9.push({ el: mk($('px9'), 'rect', { x: X9 + c * C9, y: Y9 + r * C9, width: C9 - 2, height: C9 - 2, rx: 3, fill: shade(v) }), r, c });
+}
+// scene 10: cord
+const cord = (w) => `M 362 780 C 260 ${780 + 20 * w} 250 ${900 - 30 * w} 190 ${940 + 20 * w} C 120 ${990 - 30 * w} ${140 + 20 * w} 1080 230 ${1090 - 20 * w}`;
+<!--@end-->
+<!--@f-->
+const A = {
+  open: T('open'), shell: T('shell'), circuit: T('circuit'), board: T('board'), switches: T('switches'), wheel1: T('wheel'),
+  under: T('under'), button: T('button'), switch1: T('switch'), press: T('press'), metal: T('metal'), leaf: T('leaf'), snaps: T('snaps'), contact: T('contact'),
+  wheel2: T('wheel', 2), turns: T('turns'), encoder: T('encoder'), notch: T('notch'), pulse: T('pulse'), chip1: T('chip'),
+  trick: T('trick'), flip: T('flip'), over: T('over'), red: T('red'), led: T('led'), lights: T('lights'), low: T('low'), angle: T('angle'), bump: T('bump'), shadow: T('shadow'),
+  above: T('above'), camera: T('camera'), snaps2: T('snaps', 2), thousand: T('thousand'), second: T('second'),
+  chip2: T('chip', 2), compares: T('compares'), picture: T('picture'), last: T('last'), shadows: T('shadows'), slide: T('slide'), movement: T('movement'),
+  catch: T('catch'), glass: T('glass'), nothing: T('nothing'), see: T('see'), lost: T('lost'),
+  photos: T('photos'), tiny3: T('tiny', 3), n18: T('18'), n18b: T('18', 2), pixels: T('pixels'),
+  first: T('first'), y1964: T('1964'), wooden: T('wooden'), box: T('box'), metal2: T('metal', 2), wheels: T('wheels'), cord: T('cord'), tail: T('tail'),
+  whats2: T("what's", 2), earbuds: T('earbuds'),
+};
+const F = [];
+F[0] = (u, t) => {
+  const s = 0.55 + 0.45 * outBack(prog(u, 0, 0.55));
+  const bob = Math.sin(u * 2.4) * 10 * prog(u, 0.5, 0.9);
+  tf($('c1'), `translate(540 ${960 + bob}) rotate(${-8 + 3 * Math.sin(u * 1.8)}) scale(${s}) translate(-540 -830)`);
+  const pk = outBack(prog(u, 1.0, 1.5));
+  tf($('m1'), `translate(${lerp(420, 640, pk)} ${650 - 20 * pk}) rotate(${12 * pk} 200 210) scale(0.6)`);
+  CL1.forEach((p, i) => { p.style.opacity = u < 0.6 ? 0 : ((Math.floor(u * 5) % 4 > i) ? 0.95 : 0.12); });
+  L1.forEach((el, i) => { const k = prog(u, 0.25 + i * 0.045, 0.55 + i * 0.045); el.style.transform = `translateY(${(1 - outCubic(k)) * 40}px) scale(${outBack(k)})`; el.style.opacity = k > 0 ? 1 : 0; });
+  const sk = outCubic(prog(u, 0.9, 1.25)); $('sub1').style.opacity = sk; $('sub1').style.transform = `translateY(${(1 - sk) * 30}px)`;
+};
+F[1] = (u, t) => {
+  const off = smooth(prog(t, A.open - 0.05, A.shell + 0.35));
+  tf($('sh2'), `translate(${160 * off} ${-760 * off}) rotate(${22 * off} 540 830)`);
+  $('sh2').style.opacity = 1 - off;
+  $('led2').setAttribute('fill', (Math.floor(u * 4) % 2) ? '#FF5C5C' : '#FF9C9C');
+  pop($('bL2'), prog(t, A.circuit - 0.1, A.circuit + 0.2)); draw($('pb2'), outCubic(prog(t, A.circuit, A.board + 0.2)));
+  pop($('sL2'), prog(t, A.switches - 0.1, A.switches + 0.2)); draw($('ps2'), outCubic(prog(t, A.switches, A.switches + 0.3)));
+  pop($('wL2'), prog(t, A.wheel1 - 0.1, A.wheel1 + 0.2)); draw($('pw2'), outCubic(prog(t, A.wheel1, A.wheel1 + 0.3)));
+  const sw = bump(prog(t, A.switches - 0.05, A.switches + 0.4)); tf($('sw2'), about(540, 690, 1 + 0.08 * sw));
+  tf($('rd2'), `translate(0 ${(u * 40) % 22})`);
+};
+F[2] = (u, t) => {
+  popS($('ms3'), prog(u, 0, 0.35), 520, 860);
+  const k = t < A.press ? 0 : (t < A.snaps - 0.05 ? 0.25 * prog(t, A.press, A.press + 0.3) : 0.25 + 0.75 * outBack(prog(t, A.snaps - 0.05, A.snaps + 0.05)));
+  const kk = Math.min(1, k);
+  tf($('pl3'), `translate(0 ${70 * kk})`);
+  $('lf3').setAttribute('d', `M 322 790 Q 540 ${lerp(735, 805, kk)} 724 ${lerp(790, 884, k)}`);
+  const ak = prog(t, A.press - 0.35, A.press); $('ar3').style.opacity = ak > 0 && t < A.snaps + 0.4 ? 1 : 0; tf($('ar3'), `translate(0 ${-40 * (1 - outCubic(ak)) + 50 * kk})`);
+  pop($('lL3'), prog(t, A.metal - 0.1, A.metal + 0.2)); draw($('pl3p'), outCubic(prog(t, A.leaf - 0.1, A.leaf + 0.2)));
+  pop($('cL3'), prog(t, A.contact - 0.1, A.contact + 0.2));
+  const ck = prog(t, A.snaps - 0.05, A.snaps + 0.2);
+  $('ck3').style.opacity = ck > 0 ? 1 : 0; $('ck3').style.transform = `rotate(-6deg) scale(${outBack(ck)})`;
+  const on = t > A.snaps;
+  $('wr3').setAttribute('stroke', on ? '#3DDCFF' : '#3A4170');
+  D3.forEach((d, i) => { const p = along(W3, ((i / D3.length) + u * 0.5) % 1); d.setAttribute('cx', p[0]); d.setAttribute('cy', p[1]); d.style.opacity = on ? 1 : 0; });
+};
+F[3] = (u, t) => {
+  popS($('wl4'), prog(u, 0, 0.35), 340, 770);
+  popS($('ic4'), prog(t, A.chip1 - 0.15, A.chip1 + 0.15), 860, 770);
+  popS($('sc4'), prog(t, A.notch - 0.2, A.notch + 0.1), 540, 1125);
+  pop($('eL4'), prog(t, A.encoder - 0.1, A.encoder + 0.2));
+  pop($('np4'), prog(t, A.pulse - 0.15, A.pulse + 0.15));
+  const st = A.turns - 0.1, rate = 2.6;
+  const x = Math.max(0, (t - st) * rate); const n = Math.floor(x), f = x - n;
+  const ang = 30 * (n + smooth(clamp(f / 0.45)));
+  tf($('wl4'), `${about(340, 770, Math.max(0.0001, outBack(prog(u, 0, 0.35))))} rotate(${ang} 340 770)`);
+  const sp = f < 0.45 && t > st ? Math.sin(Math.PI * f / 0.45) : 0;
+  tf($('sp4'), `translate(0 ${-18 * sp})`);
+  // pulses: one per notch
+  const wireOn = t > A.chip1 - 0.1;
+  $('wi4').setAttribute('stroke', wireOn ? '#2FB088' : '#3A4170');
+  PD4.forEach((d, i) => { const age = x - (n - i) - 0.45; const ok = wireOn && n - i >= 0 && age >= 0 && age < 1; d.setAttribute('cx', lerp(440, 760, clamp(age))); d.style.opacity = ok ? 1 : 0; });
+  const shown = t > A.notch ? Math.min(14, Math.floor((t - A.notch) * rate) + 1) : 0;
+  let d = 'M 130 1170'; const W = 840 / 14;
+  for (let i = 0; i < 14; i++) { const x0 = 130 + i * W; if (i < shown) d += ` H ${x0 + W * 0.3} V 1080 H ${x0 + W * 0.7} V 1170`; else break; }
+  if (shown) d += ` H ${130 + shown * W}`;
+  $('wv4').setAttribute('d', shown ? d : '');
+};
+F[4] = (u, t) => {
+  const side = t > A.lights - 0.15;
+  $('fa5').style.display = 'inline'; $('sv5').style.display = side ? 'inline' : 'none';
+  const fk = smooth(prog(t, A.flip - 0.05, A.over + 0.25));
+  const sy = Math.abs(Math.cos(Math.PI * fk));
+  const zk = smooth(prog(t, A.lights - 0.15, A.lights + 0.3));
+  tf($('fa5'), `translate(0 ${-190 * zk}) ${about(540, 830, lerp(1, 0.45, zk))} ${about(540, 830, Math.max(0.0001, outBack(prog(u, 0, 0.35))))} translate(0 830) scale(1 ${Math.max(0.02, sy)}) translate(0 -830)`);
+  $('tp5').style.display = fk < 0.5 ? 'inline' : 'none'; $('bt5').style.display = fk >= 0.5 ? 'inline' : 'none';
+  const gk = prog(t, A.red - 0.15, A.red + 0.1);
+  $('gl5').style.opacity = gk > 0 ? 0.25 + 0.15 * Math.sin(u * 8) : 0;
+  if (side) {
+    const k = prog(t, A.lights - 0.15, A.lights + 0.25);
+    popS($('sv5'), k, 540, 960);
+    RY5.forEach((r, i) => { r.style.opacity = prog(t, A.lights + 0.1 + i * 0.06, A.lights + 0.3 + i * 0.06); r.style.strokeDashoffset = -u * 60; });
+    draw($('an5'), outCubic(prog(t, A.angle - 0.2, A.angle + 0.2)));
+    pop($('aL5'), prog(t, A.low - 0.1, A.low + 0.2));
+    BP5.forEach((b, i) => { popS(b, prog(t, A.bump - 0.2 + i * 0.05, A.bump + 0.05 + i * 0.05), BUMPS[i][0], DESK); });
+    SD5.forEach((s, i) => { const kk = prog(t, A.shadow - 0.35 + i * 0.07, A.shadow + 0.05 + i * 0.07); s.style.opacity = 0.9 * kk; tf(s, `translate(${BUMPS[i][0]} ${DESK}) scale(${kk} 1) translate(${-BUMPS[i][0]} ${-DESK})`); });
+    pop($('sh5'), prog(t, A.shadow - 0.1, A.shadow + 0.2));
+  } else { $('sh5').style.opacity = 0; $('aL5').style.opacity = 0; }
+};
+F[5] = (u, t) => {
+  pop($('cL6'), prog(t, A.camera - 0.15, A.camera + 0.15));
+  const flashOn = t > A.snaps2 - 0.05;
+  const ph = flashOn ? ((t - A.snaps2) * 5) % 1 : 1;
+  $('fl6').style.opacity = flashOn ? Math.max(0, 0.8 - ph * 2) : 0;
+  PH6.forEach((g, i) => {
+    const t0 = A.snaps2 + i * 0.2; const k = outCubic(prog(t, t0, t0 + 0.4));
+    const tx = 760 + (i % 4) * 66, ty = 480 + Math.floor(i / 4) * 0 + (i % 4) * 0;
+    const ex = 640 + i * 52, ey = 520 + (i % 2) * 40;
+    g.setAttribute('transform', `translate(${lerp(540, ex, k)} ${lerp(900, ey, k)}) scale(${lerp(0.2, 0.9, k)}) rotate(${(i % 2 ? 6 : -6) * k})`);
+    g.style.opacity = t > t0 ? 1 : 0;
+  });
+  const nk = prog(t, A.snaps2, A.thousand + 0.1);
+  const v = Math.round(1000 * outCubic(nk));
+  $('n6').textContent = nk >= 1 ? '1,000+ / s' : (v >= 1000 ? '1,000' : String(v));
+  $('n6').style.opacity = t > A.snaps2 - 0.1 ? 1 : 0;
+  $('n6').style.transform = `scale(${1 + 0.12 * bump(prog(t, A.second - 0.1, A.second + 0.3))})`;
+  $('ry6').style.strokeDashoffset = -u * 60;
+};
+F[6] = (u, t) => {
+  popS($('pa7'), prog(u, 0, 0.3), 310, 690);
+  popS($('pb7'), prog(t, A.picture - 0.2, A.picture + 0.1), 770, 690);
+  pop($('aL7'), prog(u, 0.1, 0.4)); pop($('bL7'), prog(t, A.picture - 0.1, A.picture + 0.2));
+  pop($('cp7'), prog(t, A.compares - 0.1, A.compares + 0.2));
+  const hk = prog(t, A.last - 0.1, A.last + 0.2);
+  const ax = OX[0] + HC * C7 - 6, ay = OY + HR * C7 - 6, bx = OX[1] + (HC + DC) * C7 - 6, by = OY + (HR + DR) * C7 - 6, sz = 3 * C7 + 9;
+  [[$('ha7'), ax, ay], [$('hb7'), bx, by]].forEach(([el, x, y]) => { el.setAttribute('x', x); el.setAttribute('y', y); el.setAttribute('width', sz); el.setAttribute('height', sz); el.style.opacity = hk > 0 ? (0.6 + 0.4 * Math.sin(u * 8)) : 0; });
+  const sk = outCubic(prog(t, A.slide - 0.3, A.slide + 0.2));
+  const x0 = OX[1] + (HC + 1.5) * C7, y0 = OY + (HR + 1.5) * C7, x1 = x0 + DC * C7 * sk, y1 = y0 + DR * C7 * sk;
+  $('sa7').setAttribute('d', sk > 0 ? `M ${x0} ${y0} L ${x1} ${y1}` : '');
+  popS($('sc7'), prog(t, A.shadows - 0.2, A.shadows + 0.1), 540, 1095);
+  const mk7 = smooth(prog(t, A.movement - 0.2, A.movement + 0.5));
+  tf($('cu7'), `translate(${lerp(380, 640, mk7)} ${lerp(1010, 1110, mk7)})`);
+};
+F[7] = (u, t) => {
+  popS($('ms8'), prog(u, 0, 0.3), 450, 900);
+  pop($('gl8'), prog(t, A.glass - 0.15, A.glass + 0.15));
+  const rk = prog(t, A.clear, A.glass + 0.3);
+  $('ry8').style.opacity = rk; $('ry8').style.strokeDashoffset = -u * 60;
+  popS($('vw8'), prog(t, A.nothing - 0.2, A.nothing + 0.1), 270, 560);
+  $('vq8').style.opacity = t > A.see - 0.1 ? 1 : 0;
+  popS($('m8'), prog(t, A.see - 0.2, A.see + 0.1), 895, 875);
+  const lk = t > A.lost - 0.15;
+  const jx = lk ? 10 * Math.sin(u * 40) : 0;
+  tf($('ms8'), lk ? `translate(${jx} 0)` : about(450, 900, Math.max(0.0001, outBack(prog(u, 0, 0.3)))));
+  [...$('qq8').children].forEach((q, i) => { const k = prog(t, A.lost - 0.2 + i * 0.1, A.lost + 0.1 + i * 0.1); q.style.opacity = k > 0 ? 1 : 0; q.setAttribute('transform', `translate(0 ${-10 * Math.sin(u * 5 + i)})`); });
+};
+F[8] = (u, t) => {
+  PX9.forEach(({ el, r, c }) => { const k = prog(t, A.photos - 0.4 + (r + c) * 0.025, A.photos - 0.15 + (r + c) * 0.025); el.style.opacity = k; });
+  pop($('n9'), prog(t, A.n18 - 0.15, A.n18 + 0.15));
+  pop($('px9t'), prog(t, A.pixels - 0.15, A.pixels + 0.15));
+  popS($('m9'), prog(t, A.tiny3 - 0.2, A.tiny3 + 0.1), 960, 1135);
+  const zk = bump(prog(t, A.pixels - 0.1, A.pixels + 0.6));
+  tf($('px9'), about(540, 826, 1 + 0.04 * zk));
+};
+F[9] = (u, t) => {
+  pop($('y10'), prog(t, A.y1964 - 0.15, A.y1964 + 0.15));
+  popS($('bx10'), prog(t, A.first - 0.2, A.first + 0.15), 550, 800);
+  pop($('wb10'), prog(t, A.wooden - 0.1, A.wooden + 0.2));
+  pop($('mw10'), prog(t, A.metal2 - 0.1, A.metal2 + 0.2));
+  const ck = prog(t, A.cord - 0.25, A.cord + 0.1);
+  const tk = t > A.tail - 0.15;
+  $('cd10').setAttribute('d', cord(tk ? Math.sin(u * 7) : 0)); $('cd10').style.opacity = ck > 0 ? 1 : 0;
+  if (ck > 0) { dash($('cd10')); draw($('cd10'), outCubic(ck)); }
+  const ek = prog(t, A.tail - 0.15, A.tail + 0.15);
+  popS($('ea10'), ek, 680, 650); popS($('fc10'), ek, 710, 760);
+  pop($('tl10'), prog(t, A.tail - 0.05, A.tail + 0.25));
+};
+F[10] = (u, t) => {
+  pop($('nx10'), prog(u, 0, 0.25));
+  popS($('eb11'), prog(u, 0.1, 0.5), 540, 860);
+  $('q11').setAttribute('font-size', 200 * (1 + 0.08 * Math.sin(u * 8)));
+  const mk2 = outBack(prog(u, 0.4, 0.8));
+  tf($('m11'), `translate(${-420 * (1 - mk2)} 0)`);
+  L10.forEach((el, i) => { const k = prog(t, A.whats2 - 0.05 + i * 0.03, A.whats2 + 0.15 + i * 0.03); el.style.transform = `scale(${outBack(k)})`; el.style.opacity = k > 0 ? 1 : 0; });
+  pop($('sub10'), prog(t, A.earbuds - 0.5, A.earbuds - 0.2));
+};
+<!--@end-->
