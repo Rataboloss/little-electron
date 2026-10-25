@@ -1,5 +1,7 @@
 import sys, os
 exec(open(os.path.join(os.path.dirname(os.path.abspath(__file__)),'..','..','..','framework','sfxlib.py')).read())
+_wh=whoosh
+def whoosh(d=0.38): return lp(_wh(d),0.35)*0.35
 for s in S[1:]: add(whoosh(),s-0.12,0.45)
 add(pop(),0.1,0.5); add(pop(),T('android')-0.3,0.5); add(clac(),T('wrong'),0.6); add(chime(),T('different'),0.35)
 for w in ['chip','modem','cooling','software']: add(pop(),T(w)-0.2,0.45)

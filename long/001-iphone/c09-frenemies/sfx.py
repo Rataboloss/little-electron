@@ -1,5 +1,7 @@
 import sys, os
 exec(open(os.path.join(os.path.dirname(os.path.abspath(__file__)),'..','..','..','framework','sfxlib.py')).read())
+_wh=whoosh
+def whoosh(d=0.38): return lp(_wh(d),0.35)*0.35
 for s in S[1:]: add(whoosh(),s-0.12,0.45)
 add(pop(),0.15,0.4); add(pop(),0.3,0.4); add(pop(),0.45,0.4); add(pop(),0.6,0.4)
 add(pop(),S[1]+0.05,0.5); add(rise(0.5,500,1200),T('tech'),0.25); add(boop(300),T('who')-0.1,0.5)
