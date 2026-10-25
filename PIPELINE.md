@@ -13,10 +13,11 @@ for quality, structure and art direction: read both `scenes.html` files before w
    voice model and the Fredoka font from GitHub; ~1 min).
 2. **Topic** — take the first unchecked item in `topics.md`. The previous episode's teaser
    ("Next time: what's inside a …?") already names it: always follow the teaser.
-3. **Script** (English, 140–155 words, must stay under 59 s) — same arc as episodes 5–6:
-   hook "What's inside a X? Let me explain." → open it up → part 1 → "But here's the trick:" →
-   part 2 → "Here's the catch:" → one surprising number or comparison → one history fact →
-   "Next time: what's inside a Y?" (Y = the next item in `topics.md`).
+3. **Script** (English, 95–120 words, target 30–45 s, hard max 50 s) — rule from 25/10/2026:
+   the FIRST sentence is the most surprising fact of the episode, stated as a claim about the viewer's
+   own object (e.g. "Your TV remote blinks 38,000 times a second."). No "What's inside a X? Let me
+   explain." and no slow intro. Then: open it up → part 1 → "But here's the trick:" → part 2 →
+   one history fact or punchline → "Next time: what's inside a Y?" (Y = next item in `topics.md`).
    Short sentences, one idea each, concrete numbers. Add a safety line when opening the object
    could be dangerous (mains voltage, capacitors, lithium cells, microwave ovens: say NOT to open).
 4. **Fact-check** every number, date and name with web searches. Keep a `facts.md` in the episode
@@ -24,7 +25,7 @@ for quality, structure and art direction: read both `scenes.html` files before w
 5. **Voice** — write `episodes/NNN-slug/episode.json` (format documented at the top of
    `framework/voice.py`; mark the first segment of each of ~10 scenes with `"scene": true`, use
    `"say"` for numbers/acronyms), then `python3 framework/voice.py episodes/NNN-slug`.
-   If it warns > 59 s, raise `speed` (max 1.08) or cut words.
+   If it is over 50 s, cut words (do not just raise `speed`, max 1.05).
 6. **Animation** — write `episodes/NNN-slug/scenes.html` (blocks @title @defs @svg @ov @js @f,
    one `<g id="sN">` + `<div class="ov" id="oN">` + `F[N-1]` per scene), then
    `python3 framework/build.py …` and `python3 framework/snap.py … <12-16 times>`; **look at
@@ -40,6 +41,8 @@ for quality, structure and art direction: read both `scenes.html` files before w
    `full.html`) and push. Public URL of the video:
    `https://raw.githubusercontent.com/<owner>/<repo>/main/videos/little_electron_<slug>.mp4`
 10. **Ask the owner** — send the MP4 (SendUserFile, status proactive) with the title,
+    (Title rule, 25/10/2026: a curiosity hook, not "What's inside a X? #electronics". Example:
+    "Your white LED bulb is secretly blue". Under 60 characters, the object named, one hashtag max.)
     description and tags, and ask in one line: "OK to publish?" Then stop and wait.
     Do NOT publish without an explicit yes. If they ask for changes, apply them and resend.
 11. **Publish** (only after yes) — Metricool brand id `7594471`, timezone Europe/Paris:
