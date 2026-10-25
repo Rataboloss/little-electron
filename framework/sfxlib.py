@@ -19,8 +19,9 @@ def lp(x,a):
     for i in range(len(x)): s+=a[i]*(x[i]-s); y[i]=s
     return y
 def whoosh(d=0.38):
+    # softened on 25/10/2026 (user found transitions too loud): darker filter, ~4x quieter
     tt=t(d); n=rng.standard_normal(len(tt)); env=np.sin(np.pi*tt/d)**2
-    return lp(n,0.02+0.25*np.sin(np.pi*tt/d))*env*1.2
+    return lp(lp(n,0.02+0.25*np.sin(np.pi*tt/d))*env*1.2,0.35)*0.35
 def pop():
     tt=t(0.09); f=300+700*tt/0.09; ph=2*np.pi*np.cumsum(f)/sr; return np.sin(ph)*np.exp(-tt*40)*0.8
 def tick():

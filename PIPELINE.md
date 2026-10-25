@@ -54,6 +54,9 @@ for quality, structure and art direction: read both `scenes.html` files before w
 12. **Close the loop** — tick the topic in `topics.md` (with the date), add a line to `log.md`,
     commit and push.
 
+## Sound
+- Transition whooshes must stay soft (user feedback 25/10/2026): use `whoosh()` from sfxlib as is, gain ≤ 0.5, never boost it.
+
 ## Art direction (do not drift)
 - 1080×1920, background `#1B1F3B`, circuit traces in `#2A3060`; font Fredoka (600/700).
 - Palette: yellow `#FFD23F` (titles, highlights), cyan `#3DDCFF` (labels, current, chips),

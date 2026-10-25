@@ -1,7 +1,7 @@
 """Write sfx.py into every chapter folder, then run them all. usage: python3 sfx_all.py"""
 import os, subprocess
 here = os.path.dirname(os.path.abspath(__file__))
-HEAD = "import sys, os\nexec(open(os.path.join(os.path.dirname(os.path.abspath(__file__)),'..','..','..','framework','sfxlib.py')).read())\n_wh=whoosh\ndef whoosh(d=0.38): return lp(_wh(d),0.35)*0.35\nfor s in S[1:]: add(whoosh(),s-0.12,0.45)\n"
+HEAD = "import sys, os\nexec(open(os.path.join(os.path.dirname(os.path.abspath(__file__)),'..','..','..','framework','sfxlib.py')).read())\nfor s in S[1:]: add(whoosh(),s-0.12,0.45)\n"
 FX = {
 'c00-intro': """add(pop(),0.1,0.6); add(chime(),0.5,0.3); add(pop(),T('twelve')-0.2,0.6); add(ding(1320,0.6),T('dollars'),0.4)
 add(boop(300),T('today')-0.1,0.5); add(clac(),T('open')-0.05,0.8)
