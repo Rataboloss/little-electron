@@ -1,0 +1,85 @@
+{
+ "title": "What's inside an iPhone? \u2014 c03-board",
+ "voice": "am_puck",
+ "speed": 0.96,
+ "segments": [
+  {
+   "text": "How do you fit a whole computer in your pocket?",
+   "scene": true,
+   "split": [
+    5
+   ]
+  },
+  {
+   "text": "Look at the motherboard.",
+   "scene": true
+  },
+  {
+   "text": "It's not one board."
+  },
+  {
+   "text": "It's two,",
+   "pause": 0.2
+  },
+  {
+   "text": "stacked like a lasagna."
+  },
+  {
+   "text": "Two boards soldered on top of each other,",
+   "scene": true,
+   "split": [
+    4
+   ]
+  },
+  {
+   "text": "with a frame in between."
+  },
+  {
+   "text": "Apple started this with the iPhone X, in 2017.",
+   "say": "Apple started this with the iPhone ten, in twenty seventeen.",
+   "split": [
+    4
+   ]
+  },
+  {
+   "text": "Stacked, it takes about thirty percent less room.",
+   "scene": true,
+   "split": [
+    3
+   ]
+  },
+  {
+   "text": "More space for the battery."
+  },
+  {
+   "text": "On the iPhone 18 Pro,",
+   "scene": true
+  },
+  {
+   "text": "the storage chip hides inside the sandwich,",
+   "split": [
+    3
+   ]
+  },
+  {
+   "text": "and the main chip sits on top,"
+  },
+  {
+   "text": "right against the cooling."
+  },
+  {
+   "text": "The catch?",
+   "scene": true,
+   "pause": 0.25
+  },
+  {
+   "text": "Repairing a lasagna is messy."
+  },
+  {
+   "text": "To fix the storage, you have to split the layers.",
+   "split": [
+    4
+   ]
+  }
+ ]
+}

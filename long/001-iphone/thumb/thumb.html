@@ -1,0 +1,51 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+@font-face { font-family: 'Fredoka'; src: url('../../../fonts/Fredoka.ttf'); font-weight: 300 700; }
+html, body { margin: 0; }
+#t { width: 1280px; height: 720px; position: relative; overflow: hidden; background: #1B1F3B; font-family: 'Fredoka', sans-serif; }
+.h { position: absolute; font-weight: 700; line-height: 0.95; }
+</style></head>
+<body><div id="t">
+<svg width="1280" height="720" viewBox="0 0 1280 720" style="position:absolute;left:0;top:0">
+  <defs>
+    <clipPath id="mb"><circle cx="200" cy="210" r="118"></circle></clipPath>
+    <clipPath id="mf"><rect x="-200" y="210" width="800" height="300"></rect></clipPath>
+  </defs>
+  <g fill="none" stroke="#2A3060" stroke-width="8" stroke-linecap="round"><path d="M0 90 H140 L190 140 H260"></path><path d="M1280 640 H1120 L1070 590 H1000"></path><path d="M0 620 H90 L140 570 H200"></path></g>
+  <!-- glow -->
+  <circle cx="330" cy="370" r="300" fill="#232A55"></circle>
+  <!-- phone open: frame with internals -->
+  <g transform="translate(330 380) rotate(-8)">
+    <rect x="-170" y="-330" width="340" height="660" rx="64" fill="#8A90A6"></rect>
+    <rect x="-158" y="-318" width="316" height="636" rx="54" fill="#14172C"></rect>
+    <rect x="-130" y="-290" width="260" height="210" rx="22" fill="#1F8A6A"></rect>
+    <g transform="translate(-40 -185)"><g stroke="#F2C14E" stroke-width="8" stroke-linecap="round"><path d="M -35 -52 v -16 M 0 -52 v -16 M 35 -52 v -16 M -35 52 v 16 M 0 52 v 16 M 35 52 v 16 M -52 -35 h -16 M -52 0 h -16 M -52 35 h -16 M 52 -35 h 16 M 52 0 h 16 M 52 35 h 16"></path></g><rect x="-52" y="-52" width="104" height="104" rx="14" fill="#14172C" stroke="#3DDCFF" stroke-width="6"></rect><rect x="-30" y="-30" width="60" height="60" rx="6" fill="#3A4170"></rect></g>
+    <g fill="#14172C" stroke="#8A90A6" stroke-width="7"><circle cx="75" cy="-240" r="32"></circle><circle cx="75" cy="-160" r="32"></circle></g>
+    <rect x="-130" y="-60" width="260" height="330" rx="26" fill="#B9C0CF"></rect>
+    <rect x="-130" y="40" width="260" height="90" fill="#3DDCFF"></rect>
+    <path d="M 0 60 V 110 M -25 85 H 25" stroke="#14172C" stroke-width="12" stroke-linecap="round"></path>
+  </g>
+  <!-- the back glass flying off -->
+  <g transform="translate(610 260) rotate(18)">
+    <rect x="-130" y="-250" width="260" height="500" rx="50" fill="#3A4170" stroke="#8A90A6" stroke-width="10"></rect>
+    <rect x="-118" y="-238" width="236" height="130" rx="40" fill="#2B2F45"></rect>
+    <g fill="#14172C" stroke="#8A90A6" stroke-width="6"><circle cx="-70" cy="-200" r="28"></circle><circle cx="-70" cy="-142" r="28"></circle><circle cx="-18" cy="-171" r="28"></circle></g>
+  </g>
+  <!-- mascot shocked -->
+  <g transform="translate(520 450) scale(0.72)">
+    <g transform="rotate(-18 200 210)"><ellipse cx="200" cy="210" rx="178" ry="56" fill="none" stroke="#3DDCFF" stroke-width="12"></ellipse></g>
+    <polygon points="214,40 184,86 202,86 190,118 228,68 208,68 222,40" fill="#3DDCFF"></polygon>
+    <circle cx="200" cy="210" r="118" fill="#F2B705"></circle>
+    <g clip-path="url(#mb)"><circle cx="188" cy="198" r="118" fill="#FFD23F"></circle></g>
+    <circle cx="165" cy="195" r="24" fill="#FFFFFF"></circle><circle cx="235" cy="195" r="24" fill="#FFFFFF"></circle>
+    <circle cx="165" cy="198" r="13" fill="#1B1F3B"></circle><circle cx="235" cy="198" r="13" fill="#1B1F3B"></circle>
+    <ellipse cx="200" cy="262" rx="18" ry="22" fill="#1B1F3B"></ellipse>
+    <ellipse cx="132" cy="240" rx="16" ry="10" fill="#FF8FA3"></ellipse><ellipse cx="268" cy="240" rx="16" ry="10" fill="#FF8FA3"></ellipse>
+    <g transform="rotate(-18 200 210)"><ellipse cx="200" cy="210" rx="178" ry="56" fill="none" stroke="#3DDCFF" stroke-width="12" clip-path="url(#mf)"></ellipse><circle cx="80" cy="251" r="17" fill="#FFFFFF" stroke="#3DDCFF" stroke-width="6"></circle></g>
+  </g>
+</svg>
+<div class="h" style="left: 770px; top: 70px; font-size: 120px; color: #FFD23F; transform: rotate(-3deg)">WHAT'S<br>INSIDE?</div>
+<div class="h" style="left: 850px; top: 350px; font-size: 92px; color: #EEF0F7; text-decoration: line-through; text-decoration-color: #FF5C5C; text-decoration-thickness: 10px">$1,199</div>
+<div class="h" style="left: 850px; top: 470px; font-size: 130px; color: #FF8FA3">$410?</div>
+</div></body></html>

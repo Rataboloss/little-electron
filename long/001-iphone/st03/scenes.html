@@ -1,0 +1,29 @@
+<!--@title-->Little Electron — chapter card<!--@end-->
+<!--@defs--><!--@end-->
+<!--@svg-->
+<g id="s1">
+  <rect id="bar" x="0" y="532" width="1920" height="16" fill="#3DDCFF"></rect>
+  <g id="mm"><use href="#m" x="0" y="0" width="400" height="400"></use></g>
+</g>
+<!--@end-->
+<!--@ov-->
+<div class="ov" id="o1">
+  <div class="big" id="num" style="top: 330px; font-size: 150px; color: #FFD23F">03</div>
+  <div class="big" id="ttl" style="top: 590px; font-size: 76px; color: #EEF0F7">The lasagna board</div>
+  <div class="sub" id="ch" style="top: 270px; font-size: 34px; letter-spacing: 8px">CHAPTER</div>
+</div>
+<!--@end-->
+<!--@js-->
+CHAPTER = { num: '', name: 'WHAT\'S INSIDE AN IPHONE' };
+<!--@end-->
+<!--@f-->
+const F = [];
+F[0] = (u, t) => {
+  const a = outCubic(prog(u, 0, 0.35)), b = outCubic(prog(u, 0.1, 0.45)), out = smooth(prog(u, END - 0.35, END - 0.05));
+  $('num').style.transform = `translateX(${(1 - a) * -900 + out * 900}px)`; $('num').style.opacity = 1 - out;
+  $('ttl').style.transform = `translateX(${(1 - b) * 900 - out * 900}px)`; $('ttl').style.opacity = 1 - out;
+  $('ch').style.opacity = prog(u, 0.15, 0.4) * (1 - out);
+  tf($('bar'), `translate(${(1 - a) * -1920 + out * 1920} 0)`);
+  tf($('mm'), `translate(${lerp(1980, 1500, outBack(prog(u, 0.2, 0.6))) + out * 600} ${390 - 30 * Math.abs(Math.sin(u * 7))}) scale(0.5)`);
+};
+<!--@end-->

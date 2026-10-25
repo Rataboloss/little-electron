@@ -1,0 +1,79 @@
+{
+ "title": "What's inside an iPhone? \u2014 c02-brain",
+ "voice": "am_puck",
+ "speed": 0.96,
+ "segments": [
+  {
+   "text": "Who makes the brain of an iPhone?",
+   "scene": true
+  },
+  {
+   "text": "Apple does.",
+   "pause": 0.3
+  },
+  {
+   "text": "Kind of."
+  },
+  {
+   "text": "The A20 Pro chip is designed by Apple,",
+   "scene": true,
+   "split": [
+    4
+   ]
+  },
+  {
+   "text": "and built by TSMC in Taiwan,",
+   "say": "and built by T S M C in Taiwan,"
+  },
+  {
+   "text": "with a two-nanometer process."
+  },
+  {
+   "text": "Apple has designed its own processor cores since 2012.",
+   "scene": true,
+   "say": "Apple has designed its own processor cores since twenty twelve.",
+   "split": [
+    4
+   ]
+  },
+  {
+   "text": "Most Android phones do it differently:",
+   "scene": true
+  },
+  {
+   "text": "they buy their brain off the shelf."
+  },
+  {
+   "text": "MediaTek and Qualcomm make most of the world's phone chips.",
+   "split": [
+    3,
+    7
+   ]
+  },
+  {
+   "text": "And Apple keeps going:",
+   "scene": true
+  },
+  {
+   "text": "its own modem, its own wireless chip...",
+   "split": [
+    3
+   ]
+  },
+  {
+   "text": "Well. Almost.",
+   "scene": true,
+   "pause": 0.3
+  },
+  {
+   "text": "The US iPhone 18 Pro Max still uses a Qualcomm modem.",
+   "say": "The U S iPhone 18 Pro Max still uses a Qualcomm modem.",
+   "split": [
+    6
+   ]
+  },
+  {
+   "text": "Breakups take time."
+  }
+ ]
+}

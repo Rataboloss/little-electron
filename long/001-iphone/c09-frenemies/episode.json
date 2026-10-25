@@ -1,0 +1,68 @@
+{
+ "title": "What's inside an iPhone? \u2014 c09-frenemies",
+ "voice": "am_puck",
+ "speed": 0.96,
+ "segments": [
+  {
+   "text": "What's the most surprising part inside an iPhone?",
+   "scene": true,
+   "split": [
+    4
+   ]
+  },
+  {
+   "text": "The screen.",
+   "scene": true
+  },
+  {
+   "text": "Not because of the tech:"
+  },
+  {
+   "text": "because of who makes it."
+  },
+  {
+   "text": "The iPhone 18 Pro's screens come from Samsung and LG.",
+   "scene": true,
+   "split": [
+    5
+   ]
+  },
+  {
+   "text": "Yes. Samsung."
+  },
+  {
+   "text": "Apple's biggest rival builds its screen.",
+   "split": [
+    3
+   ]
+  },
+  {
+   "text": "Awkward family dinner."
+  },
+  {
+   "text": "And the charging port?",
+   "scene": true
+  },
+  {
+   "text": "Apple used Lightning from 2012...",
+   "say": "Apple used Lightning from twenty twelve..."
+  },
+  {
+   "text": "until Europe voted for USB-C in 2022.",
+   "say": "until Europe voted for U S B C in twenty twenty-two."
+  },
+  {
+   "text": "The iPhone 15 switched the next year."
+  },
+  {
+   "text": "So inside every iPhone,",
+   "scene": true
+  },
+  {
+   "text": "there's a bit of Samsung..."
+  },
+  {
+   "text": "and a bit of Brussels."
+  }
+ ]
+}

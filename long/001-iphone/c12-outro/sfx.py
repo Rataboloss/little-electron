@@ -1,0 +1,11 @@
+import sys, os
+exec(open(os.path.join(os.path.dirname(os.path.abspath(__file__)),'..','..','..','framework','sfxlib.py')).read())
+for s in S[1:]: add(whoosh(),s-0.12,0.45)
+add(pop(),0.1,0.5); add(pop(),T('android')-0.3,0.5); add(clac(),T('wrong'),0.6); add(chime(),T('different'),0.35)
+for w in ['chip','modem','cooling','software']: add(pop(),T(w)-0.2,0.45)
+add(hum(1.2),T('together'),0.25); add(chime(),T('together')+0.3,0.3)
+[add(pop(),S[2]+0.1+i*0.08,0.35) for i in range(5)]; add(pop(),T('bigger'),0.4); add(pop(),T('brands'),0.4); add(pop(),T('freedom'),0.4)
+add(pop(),S[3]+0.05,0.5); add(chime(),T('philosophies'),0.35)
+add(pop(),T('subscribe')-0.2,0.6); add(ding(1568,0.4),T('subscribe')+0.1,0.5); add(ding(1568,0.4),T('subscribe')+0.35,0.4); add(rise(0.8,400,1200),T('grow')-0.4,0.3)
+add(pop(),T('foldable')-0.4,0.6); add(chime(),T('see'),0.45)
+finish()

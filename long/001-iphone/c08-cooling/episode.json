@@ -1,0 +1,79 @@
+{
+ "title": "What's inside an iPhone? \u2014 c08-cooling",
+ "voice": "am_puck",
+ "speed": 0.96,
+ "segments": [
+  {
+   "text": "How do you cool a phone with no fan?",
+   "scene": true
+  },
+  {
+   "text": "With water.",
+   "pause": 0.3
+  },
+  {
+   "text": "Yes. Water."
+  },
+  {
+   "text": "Since the iPhone 17 Pro, there's a vapor chamber:",
+   "scene": true,
+   "split": [
+    5
+   ]
+  },
+  {
+   "text": "a flat metal pocket with a little pure water sealed inside,",
+   "split": [
+    5
+   ]
+  },
+  {
+   "text": "laser-welded into the frame."
+  },
+  {
+   "text": "The chip heats the water,",
+   "scene": true
+  },
+  {
+   "text": "it turns into vapor,"
+  },
+  {
+   "text": "spreads out, cools down,"
+  },
+  {
+   "text": "turns back into water..."
+  },
+  {
+   "text": "and starts again."
+  },
+  {
+   "text": "On the iPhone 18 Pro, it's three times bigger.",
+   "scene": true,
+   "split": [
+    5
+   ]
+  },
+  {
+   "text": "Apple says that's forty percent more speed when things get hot.",
+   "split": [
+    4,
+    8
+   ]
+  },
+  {
+   "text": "Fun fact: gaming Android phones had one back in 2018.",
+   "scene": true,
+   "say": "Fun fact: gaming Android phones had one back in twenty eighteen.",
+   "split": [
+    4
+   ]
+  },
+  {
+   "text": "Apple: late to the party...",
+   "scene": true
+  },
+  {
+   "text": "but it brought a very nice cake."
+  }
+ ]
+}

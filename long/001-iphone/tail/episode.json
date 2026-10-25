@@ -1,0 +1,11 @@
+{
+ "title": "shorts tail",
+ "voice": "am_puck",
+ "speed": 0.96,
+ "segments": [
+  {
+   "text": "Full teardown on the channel!",
+   "scene": true
+  }
+ ]
+}

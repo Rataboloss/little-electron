@@ -1,0 +1,11 @@
+import sys, os
+exec(open(os.path.join(os.path.dirname(os.path.abspath(__file__)),'..','..','..','framework','sfxlib.py')).read())
+for s in S[1:]: add(whoosh(),s-0.12,0.45)
+add(pop(),0.1,0.5); add(hum(1.5),0.3,0.3); add(clac(),T('fan'),0.5)
+add(pop(),T('water')-0.2,0.7); add(ding(1568,0.5),T('water',2),0.4)
+add(pop(),T('chamber')-0.2,0.5); [add(pop(),T('pure')+i*0.1,0.3) for i in range(7)]; add(zzzt(1.4),T('laser-welded')-0.3,0.25); add(sizzle(1.3),T('laser-welded')-0.2,0.3)
+add(sizzle(1.0),T('heats')-0.2,0.25); add(whoosh(0.8),T('vapor',2),0.35); add(ding(880,0.6),T('cools'),0.3); add(boop(500),T('back'),0.35); add(chime(),T('starts'),0.3)
+add(pop(),T('three')-0.2,0.5); add(rise(0.9,300,1000),T('forty')-0.3,0.35); add(ding(1568,0.5),T('hot'),0.35)
+add(pop(),S[4]+0.05,0.5); add(beep(0.15,880),T('2018')-0.2,0.25); add(beep(0.15,1320),T('2018'),0.25)
+add(pop(),T('party'),0.5); add(chime(),T('cake'),0.5); add(pop(),T('cake')-0.3,0.6)
+finish()

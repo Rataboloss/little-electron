@@ -1,0 +1,81 @@
+{
+ "title": "What's inside an iPhone? \u2014 c10-parts",
+ "voice": "am_puck",
+ "speed": 0.96,
+ "segments": [
+  {
+   "text": "Can you repair an iPhone with any spare part?",
+   "scene": true,
+   "split": [
+    4
+   ]
+  },
+  {
+   "text": "Technically, yes.",
+   "scene": true
+  },
+  {
+   "text": "But your iPhone will notice."
+  },
+  {
+   "text": "The battery, the screen, the cameras and the logic board",
+   "scene": true,
+   "split": [
+    3,
+    6
+   ]
+  },
+  {
+   "text": "are all tracked."
+  },
+  {
+   "text": "Put in a part that's not genuine,",
+   "scene": true
+  },
+  {
+   "text": "and Settings says:",
+   "pause": 0.15
+  },
+  {
+   "text": "Unknown Part."
+  },
+  {
+   "text": "You get a notification when you unlock it...",
+   "scene": true,
+   "split": [
+    3
+   ]
+  },
+  {
+   "text": "and another one five days later."
+  },
+  {
+   "text": "Just in case you forgot."
+  },
+  {
+   "text": "Even genuine parts must be calibrated,",
+   "scene": true
+  },
+  {
+   "text": "with data stored on Apple's servers."
+  },
+  {
+   "text": "Apple says it's about quality and security.",
+   "scene": true,
+   "split": [
+    3
+   ]
+  },
+  {
+   "text": "Critics say it's about control."
+  },
+  {
+   "text": "Either way:",
+   "scene": true,
+   "pause": 0.15
+  },
+  {
+   "text": "your battery has a passport."
+  }
+ ]
+}

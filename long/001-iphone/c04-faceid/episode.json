@@ -1,0 +1,93 @@
+{
+ "title": "What's inside an iPhone? \u2014 c04-faceid",
+ "voice": "am_puck",
+ "speed": 0.96,
+ "segments": [
+  {
+   "text": "How does an iPhone recognize your face in the dark?",
+   "scene": true,
+   "split": [
+    4
+   ]
+  },
+  {
+   "text": "Up top, there's a tiny projector.",
+   "scene": true
+  },
+  {
+   "text": "It throws more than thirty thousand invisible dots on your face.",
+   "say": "It throws more than thirty thousand invisible dots on your face.",
+   "split": [
+    4,
+    8
+   ]
+  },
+  {
+   "text": "Infrared dots."
+  },
+  {
+   "text": "An infrared camera reads them,",
+   "scene": true
+  },
+  {
+   "text": "and builds a 3D map of your face.",
+   "say": "and builds a three D map of your face.",
+   "split": [
+    2
+   ]
+  },
+  {
+   "text": "Apple says the odds that a stranger unlocks it",
+   "scene": true,
+   "split": [
+    5
+   ]
+  },
+  {
+   "text": "are one in a million."
+  },
+  {
+   "text": "Unless you have an evil twin.",
+   "scene": true,
+   "pause": 0.2
+  },
+  {
+   "text": "Seriously: Apple warns that twins can fool it.",
+   "split": [
+    3
+   ]
+  },
+  {
+   "text": "On the 18 Pro, the infrared camera even hides under the screen.",
+   "scene": true,
+   "split": [
+    4,
+    8
+   ]
+  },
+  {
+   "text": "Most Android phones use the normal selfie camera:",
+   "scene": true
+  },
+  {
+   "text": "a flat, 2D photo.",
+   "say": "a flat, two D photo."
+  },
+  {
+   "text": "In a test by Which?,",
+   "scene": true,
+   "say": "In a test by Which magazine,",
+   "pause": 0.15
+  },
+  {
+   "text": "133 phones out of 208",
+   "say": "a hundred thirty-three phones out of two hundred and eight"
+  },
+  {
+   "text": "were unlocked... with a printed photo."
+  },
+  {
+   "text": "Use your fingerprint, people."
+  }
+ ]
+}

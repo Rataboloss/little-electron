@@ -1,0 +1,64 @@
+{
+ "title": "What's inside an iPhone? \u2014 c12-outro",
+ "voice": "am_puck",
+ "speed": 0.96,
+ "segments": [
+  {
+   "text": "So, is an iPhone better than an Android?",
+   "scene": true
+  },
+  {
+   "text": "Wrong question.",
+   "pause": 0.25
+  },
+  {
+   "text": "It's different."
+  },
+  {
+   "text": "Apple designs the chip, the modem, the cooling and the software,",
+   "scene": true,
+   "split": [
+    4,
+    8
+   ]
+  },
+  {
+   "text": "and makes them work together."
+  },
+  {
+   "text": "Android gives you choice:",
+   "scene": true
+  },
+  {
+   "text": "bigger batteries, more brands, more freedom.",
+   "split": [
+    2
+   ]
+  },
+  {
+   "text": "Same electrons.",
+   "scene": true
+  },
+  {
+   "text": "Different philosophies."
+  },
+  {
+   "text": "If you learned something, subscribe:",
+   "scene": true
+  },
+  {
+   "text": "it helps a tiny electron grow."
+  },
+  {
+   "text": "Next time:",
+   "scene": true,
+   "pause": 0.15
+  },
+  {
+   "text": "what's inside a foldable phone?"
+  },
+  {
+   "text": "See you inside!"
+  }
+ ]
+}

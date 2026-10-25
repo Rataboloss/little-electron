@@ -1,0 +1,71 @@
+{
+ "title": "What's inside an iPhone? \u2014 c11-price",
+ "voice": "am_puck",
+ "speed": 0.96,
+ "segments": [
+  {
+   "text": "How much are the parts inside an iPhone really worth?",
+   "scene": true,
+   "split": [
+    4
+   ]
+  },
+  {
+   "text": "Counterpoint Research estimated the parts of an iPhone 17 Pro Max",
+   "scene": true,
+   "split": [
+    3,
+    6
+   ]
+  },
+  {
+   "text": "at about 410 dollars.",
+   "say": "at about four hundred and ten dollars."
+  },
+  {
+   "text": "It sold for 1,199.",
+   "say": "It sold for eleven ninety-nine."
+  },
+  {
+   "text": "So where does the rest go?",
+   "scene": true
+  },
+  {
+   "text": "Design, software, research, shipping, marketing,",
+   "split": [
+    3
+   ]
+  },
+  {
+   "text": "those very nice wooden tables in the Apple Store...",
+   "split": [
+    4
+   ]
+  },
+  {
+   "text": "and yes, a big profit."
+  },
+  {
+   "text": "But this year, memory prices exploded.",
+   "scene": true
+  },
+  {
+   "text": "TrendForce estimates the 18 Pro's parts cost about 38 percent more.",
+   "say": "Trend Force estimates the 18 Pro's parts cost about thirty-eight percent more.",
+   "split": [
+    2,
+    6
+   ]
+  },
+  {
+   "text": "And the price?",
+   "scene": true
+  },
+  {
+   "text": "Up a hundred dollars."
+  },
+  {
+   "text": "Funny how that works."
+  }
+ ]
+}

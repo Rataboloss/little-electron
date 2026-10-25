@@ -1,0 +1,32 @@
+<!--@title-->Little Electron — end screen<!--@end-->
+<!--@defs--><!--@end-->
+<!--@svg-->
+<g id="s1">
+  <g fill="none" stroke="#3A4170" stroke-width="6" stroke-dasharray="18 14">
+    <rect id="v1" x="140" y="330" width="640" height="360" rx="24"></rect>
+    <rect id="v2" x="1140" y="330" width="640" height="360" rx="24"></rect>
+    <circle id="sc" cx="960" cy="510" r="130"></circle>
+  </g>
+  <g id="mm"><use href="#m" x="0" y="0" width="400" height="400"></use></g>
+</g>
+<!--@end-->
+<!--@ov-->
+<div class="ov" id="o1">
+  <div class="big" id="ty" style="top: 110px; font-size: 76px">Thanks for watching!</div>
+  <p class="lbl" id="l1" style="left: 140px; width: 640px; text-align: center; top: 720px; color: #3DDCFF; font-size: 36px">watch next</p>
+  <p class="lbl" id="l2" style="left: 1140px; width: 640px; text-align: center; top: 720px; color: #3DDCFF; font-size: 36px">more teardowns</p>
+  <p class="lbl" id="l3" style="left: 760px; width: 400px; text-align: center; top: 660px; color: #FFD23F; font-size: 36px">subscribe</p>
+</div>
+<!--@end-->
+<!--@js-->
+CHAPTER = { num: '', name: 'THANKS FOR WATCHING' };
+<!--@end-->
+<!--@f-->
+const F = [];
+F[0] = (u, t) => {
+  pop($('ty'), prog(u, 0.1, 0.5));
+  ['v1', 'v2', 'sc'].forEach((id, i) => { $(id).style.opacity = prog(u, 0.4 + i * 0.15, 0.8 + i * 0.15); $(id).style.strokeDashoffset = -u * 20; });
+  ['l1', 'l2', 'l3'].forEach((id, i) => pop($(id), prog(u, 0.6 + i * 0.15, 0.9 + i * 0.15)));
+  tf($('mm'), `translate(${960 - 90} ${175 + 10 * Math.sin(u * 2.2)}) rotate(${8 * Math.sin(u * 3)} 200 210) scale(0.45)`);
+};
+<!--@end-->

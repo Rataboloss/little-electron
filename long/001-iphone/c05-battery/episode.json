@@ -1,0 +1,103 @@
+{
+ "title": "What's inside an iPhone? \u2014 c05-battery",
+ "voice": "am_puck",
+ "speed": 0.96,
+ "segments": [
+  {
+   "text": "Does an iPhone have a big battery?",
+   "scene": true
+  },
+  {
+   "text": "Not really."
+  },
+  {
+   "text": "The iPhone 18 Pro has 4,288 milliamp-hours.",
+   "scene": true,
+   "say": "The iPhone 18 Pro has four thousand two hundred eighty-eight milliamp hours.",
+   "split": [
+    4
+   ]
+  },
+  {
+   "text": "The OnePlus 15?",
+   "pause": 0.2
+  },
+  {
+   "text": "7,300.",
+   "say": "seven thousand three hundred."
+  },
+  {
+   "text": "Ouch."
+  },
+  {
+   "text": "In the US, there's no SIM tray anymore,",
+   "scene": true,
+   "say": "In the U S, there's no SIM tray anymore,",
+   "split": [
+    4
+   ]
+  },
+  {
+   "text": "and that space goes to the battery."
+  },
+  {
+   "text": "But capacity isn't everything.",
+   "scene": true
+  },
+  {
+   "text": "In Tom's Guide's test, an iPhone 17 Pro Max",
+   "split": [
+    4
+   ]
+  },
+  {
+   "text": "lasted almost two hours longer than a Galaxy S26 Ultra",
+   "say": "lasted almost two hours longer than a Galaxy S twenty-six Ultra",
+   "split": [
+    5
+   ]
+  },
+  {
+   "text": "with about the same battery."
+  },
+  {
+   "text": "Apple designs the chip and the software together.",
+   "split": [
+    4
+   ]
+  },
+  {
+   "text": "OK, the OnePlus still wins: twenty-five hours.",
+   "scene": true,
+   "split": [
+    4
+   ]
+  },
+  {
+   "text": "Fair is fair."
+  },
+  {
+   "text": "And the coolest part?",
+   "scene": true
+  },
+  {
+   "text": "The glue."
+  },
+  {
+   "text": "The battery is stuck with a glue that lets go with electricity.",
+   "split": [
+    5
+   ]
+  },
+  {
+   "text": "Twelve volts, about ninety seconds...",
+   "scene": true
+  },
+  {
+   "text": "and it just releases."
+  },
+  {
+   "text": "Glue with an off switch."
+  }
+ ]
+}

@@ -1,0 +1,86 @@
+{
+ "title": "What's inside an iPhone? \u2014 c01-open",
+ "voice": "am_puck",
+ "speed": 0.96,
+ "segments": [
+  {
+   "text": "How do you open an iPhone?",
+   "scene": true
+  },
+  {
+   "text": "Step one:",
+   "scene": true,
+   "pause": 0.15
+  },
+  {
+   "text": "find a weird screwdriver."
+  },
+  {
+   "text": "Apple uses pentalobe screws:",
+   "pause": 0.15
+  },
+  {
+   "text": "five rounded lobes."
+  },
+  {
+   "text": "Your normal screwdriver? Useless."
+  },
+  {
+   "text": "They've been on iPhones since the iPhone 4.",
+   "split": [
+    4
+   ]
+  },
+  {
+   "text": "Step two:",
+   "scene": true,
+   "pause": 0.15
+  },
+  {
+   "text": "heat the screen, like a croissant."
+  },
+  {
+   "text": "About seventy degrees, to soften the glue.",
+   "say": "About seventy degrees, to soften the glue.",
+   "split": [
+    3
+   ]
+  },
+  {
+   "text": "On the iPhone 18 Pro,",
+   "scene": true
+  },
+  {
+   "text": "every big repair goes through the screen,",
+   "split": [
+    4
+   ]
+  },
+  {
+   "text": "the most expensive part to break."
+  },
+  {
+   "text": "The back glass opens too...",
+   "scene": true
+  },
+  {
+   "text": "but behind it, there's only the charging coil.",
+   "split": [
+    4
+   ]
+  },
+  {
+   "text": "iFixit opened four of them.",
+   "scene": true
+  },
+  {
+   "text": "The frame around the screen cracked three times.",
+   "split": [
+    4
+   ]
+  },
+  {
+   "text": "So... maybe don't try this at home."
+  }
+ ]
+}

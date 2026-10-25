@@ -8,3 +8,6 @@ fonts/
 **/test_*.mp4
 episodes/*/little_electron_*.mp4
 __pycache__/
+**/chapter.mkv
+**/sheet_short.png
+long/*/out/

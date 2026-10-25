@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Little Electron long-form</title>
+<style>
+@font-face { font-family: 'Fredoka'; src: url('__FONT__'); font-weight: 300 700; }
+html, body { margin: 0; background: #1B1F3B; }
+/* 1920x1080 stage. The 9:16 Short is the centre column x 656..1264 (608 px), scaled x1.776.
+   Keep everything that matters inside x 680..1240. Captions sit at y 740..860 (above the Shorts UI). */
+#stage { width: 1920px; height: 1080px; position: relative; overflow: hidden; background: #1B1F3B; font-family: 'Fredoka', sans-serif; color: #fff; }
+svg.full { position: absolute; left: 0; top: 0; }
+svg text { font-family: 'Fredoka', sans-serif; }
+.ov { position: absolute; left: 0; top: 0; width: 1920px; height: 1080px; transform-origin: 960px 540px; }
+.ctr { position: absolute; left: 0; width: 1920px; text-align: center; }
+.big { position: absolute; left: 0; width: 1920px; text-align: center; font-size: 76px; line-height: 1; font-weight: 700; color: #FFD23F; }
+.sub { position: absolute; left: 0; width: 1920px; text-align: center; font-size: 40px; font-weight: 600; color: #3DDCFF; }
+.chip { position: absolute; left: 0; top: 62px; width: 1920px; text-align: center; }
+.chip span { display: inline-block; font-size: 28px; font-weight: 600; color: #1B1F3B; background: #3DDCFF; padding: 6px 22px; border-radius: 999px; }
+.letters span { display: inline-block; }
+#cap { position: absolute; left: 700px; top: 748px; width: 520px; text-align: center; font-size: 44px; line-height: 1.16; font-weight: 700; }
+#cap .chunk { display: none; }
+#cap .chunk span { display: inline-block; margin: 0 0.11em; }
+.lbl { position: absolute; margin: 0; font-weight: 700; font-size: 32px; }
+.note { position: absolute; width: 300px; padding: 22px 24px; background: #FFD23F; color: #1B1F3B; font-size: 30px; font-weight: 600; line-height: 1.15; border-radius: 10px; transform-origin: 50% 0; box-shadow: 0 10px 0 #14172C; }
+.note b { display: block; font-size: 22px; letter-spacing: 2px; margin-bottom: 8px; color: #3A4170; }
+.card { position: absolute; padding: 18px 22px; border-radius: 22px; background: #2B2F45; border: 4px solid #3A4170; font-size: 30px; font-weight: 600; color: #EEF0F7; }
+.stamp { position: absolute; font-size: 54px; font-weight: 700; color: #FF8FA3; border: 7px solid #FF8FA3; border-radius: 16px; padding: 4px 20px; transform-origin: 50% 50%; }
+#wingL { position: absolute; left: 60px; top: 300px; width: 560px; text-align: center; font-size: 340px; line-height: 1; font-weight: 700; color: #222749; }
+#wingR { position: absolute; right: 40px; top: 990px; white-space: nowrap; text-align: right; font-size: 22px; letter-spacing: 5px; font-weight: 600; color: #2E3566; }
+#guide { position: absolute; left: 656px; top: 0; width: 608px; height: 1080px; outline: 3px dashed rgba(255,92,92,0.7); display: none; pointer-events: none; }
+</style>
+</head>
+<body>
+<div id="stage">
+<div id="wingL"></div><div id="wingR"></div>
+<svg class="full" viewBox="0 0 1920 1080" width="1920" height="1080">
+<defs>
+  <clipPath id="mb"><circle cx="200" cy="210" r="118"></circle></clipPath>
+  <clipPath id="mf"><rect x="-200" y="210" width="800" height="300"></rect></clipPath>
+  <symbol id="m" viewBox="0 0 400 400" overflow="visible">
+    <g transform="rotate(-18 200 210)"><ellipse cx="200" cy="210" rx="178" ry="56" fill="none" stroke="#3DDCFF" stroke-width="12"></ellipse></g>
+    <polygon points="214,40 184,86 202,86 190,118 228,68 208,68 222,40" fill="#3DDCFF"></polygon>
+    <circle cx="200" cy="210" r="118" fill="#F2B705"></circle>
+    <g clip-path="url(#mb)"><circle cx="188" cy="198" r="118" fill="#FFD23F"></circle></g>
+    <ellipse cx="165" cy="205" rx="15" ry="21" fill="#1B1F3B"></ellipse>
+    <ellipse cx="235" cy="205" rx="15" ry="21" fill="#1B1F3B"></ellipse>
+    <circle cx="170" cy="197" r="6" fill="#FFFFFF"></circle>
+    <circle cx="240" cy="197" r="6" fill="#FFFFFF"></circle>
+    <ellipse cx="136" cy="240" rx="16" ry="10" fill="#FF8FA3"></ellipse>
+    <ellipse cx="264" cy="240" rx="16" ry="10" fill="#FF8FA3"></ellipse>
+    <path d="M172 245 Q200 274 228 245" fill="none" stroke="#1B1F3B" stroke-width="9" stroke-linecap="round"></path>
+    <g transform="rotate(-18 200 210)"><ellipse cx="200" cy="210" rx="178" ry="56" fill="none" stroke="#3DDCFF" stroke-width="12" clip-path="url(#mf)"></ellipse><circle cx="80" cy="251" r="17" fill="#FFFFFF" stroke="#3DDCFF" stroke-width="6"></circle></g>
+  </symbol>
+  <symbol id="mw" viewBox="0 0 400 400" overflow="visible">
+    <g transform="rotate(-18 200 210)"><ellipse cx="200" cy="210" rx="178" ry="56" fill="none" stroke="#3DDCFF" stroke-width="12"></ellipse></g>
+    <polygon points="214,40 184,86 202,86 190,118 228,68 208,68 222,40" fill="#3DDCFF"></polygon>
+    <circle cx="200" cy="210" r="118" fill="#F2B705"></circle>
+    <g clip-path="url(#mb)"><circle cx="188" cy="198" r="118" fill="#FFD23F"></circle></g>
+    <circle cx="165" cy="195" r="24" fill="#FFFFFF"></circle>
+    <circle cx="235" cy="195" r="24" fill="#FFFFFF"></circle>
+    <circle cx="165" cy="198" r="13" fill="#1B1F3B"></circle>
+    <circle cx="235" cy="198" r="13" fill="#1B1F3B"></circle>
+    <ellipse cx="200" cy="262" rx="18" ry="22" fill="#1B1F3B"></ellipse>
+    <ellipse cx="132" cy="240" rx="16" ry="10" fill="#FF8FA3"></ellipse>
+    <ellipse cx="268" cy="240" rx="16" ry="10" fill="#FF8FA3"></ellipse>
+    <g transform="rotate(-18 200 210)"><ellipse cx="200" cy="210" rx="178" ry="56" fill="none" stroke="#3DDCFF" stroke-width="12" clip-path="url(#mf)"></ellipse><circle cx="80" cy="251" r="17" fill="#FFFFFF" stroke="#3DDCFF" stroke-width="6"></circle></g>
+  </symbol>
+  <!-- smug mascot: half-closed eyes -->
+  <symbol id="ms" viewBox="0 0 400 400" overflow="visible">
+    <g transform="rotate(-18 200 210)"><ellipse cx="200" cy="210" rx="178" ry="56" fill="none" stroke="#3DDCFF" stroke-width="12"></ellipse></g>
+    <polygon points="214,40 184,86 202,86 190,118 228,68 208,68 222,40" fill="#3DDCFF"></polygon>
+    <circle cx="200" cy="210" r="118" fill="#F2B705"></circle>
+    <g clip-path="url(#mb)"><circle cx="188" cy="198" r="118" fill="#FFD23F"></circle></g>
+    <path d="M148 202 Q165 190 182 202" fill="none" stroke="#1B1F3B" stroke-width="9" stroke-linecap="round"></path>
+    <path d="M218 202 Q235 190 252 202" fill="none" stroke="#1B1F3B" stroke-width="9" stroke-linecap="round"></path>
+    <ellipse cx="136" cy="240" rx="16" ry="10" fill="#FF8FA3"></ellipse>
+    <ellipse cx="264" cy="240" rx="16" ry="10" fill="#FF8FA3"></ellipse>
+    <path d="M180 250 Q205 266 232 244" fill="none" stroke="#1B1F3B" stroke-width="9" stroke-linecap="round"></path>
+    <g transform="rotate(-18 200 210)"><ellipse cx="200" cy="210" rx="178" ry="56" fill="none" stroke="#3DDCFF" stroke-width="12" clip-path="url(#mf)"></ellipse><circle cx="80" cy="251" r="17" fill="#FFFFFF" stroke="#3DDCFF" stroke-width="6"></circle></g>
+  </symbol>
+
+  <!-- Generic phones, centred on 0,0 : 300 x 620. No logos. -->
+  <g id="ipF">
+    <rect x="-150" y="-310" width="300" height="620" rx="58" fill="#8A90A6"></rect>
+    <rect x="-142" y="-302" width="284" height="604" rx="51" fill="#14172C"></rect>
+    <rect x="-130" y="-290" width="260" height="580" rx="42" fill="#2B2F45"></rect>
+    <rect x="-40" y="-272" width="80" height="24" rx="12" fill="#000000"></rect>
+  </g>
+  <g id="ipB">
+    <rect x="-150" y="-310" width="300" height="620" rx="58" fill="#8A90A6"></rect>
+    <rect x="-142" y="-302" width="284" height="604" rx="51" fill="#3A4170"></rect>
+    <rect x="-142" y="-302" width="284" height="170" rx="51" fill="#2B2F45"></rect>
+    <rect x="-142" y="-200" width="284" height="68" fill="#2B2F45"></rect>
+    <g fill="#14172C" stroke="#8A90A6" stroke-width="7">
+      <circle cx="-88" cy="-250" r="36"></circle><circle cx="-88" cy="-170" r="36"></circle><circle cx="-24" cy="-210" r="36"></circle>
+    </g>
+    <g fill="#3A4170"><circle cx="-88" cy="-250" r="14"></circle><circle cx="-88" cy="-170" r="14"></circle><circle cx="-24" cy="-210" r="14"></circle></g>
+    <circle cx="80" cy="-250" r="14" fill="#FFF3C4"></circle>
+    <circle cx="80" cy="-180" r="10" fill="#14172C"></circle>
+  </g>
+  <g id="anF">
+    <rect x="-150" y="-310" width="300" height="620" rx="34" fill="#3A4170"></rect>
+    <rect x="-140" y="-300" width="280" height="600" rx="26" fill="#2B2F45"></rect>
+    <circle cx="0" cy="-272" r="12" fill="#000000"></circle>
+  </g>
+  <g id="anB">
+    <rect x="-150" y="-310" width="300" height="620" rx="34" fill="#3A4170"></rect>
+    <rect x="-140" y="-300" width="280" height="600" rx="26" fill="#2FB088"></rect>
+    <rect x="-120" y="-270" width="240" height="96" rx="48" fill="#14172C"></rect>
+    <g fill="#2B2F45" stroke="#8A90A6" stroke-width="6"><circle cx="-72" cy="-222" r="30"></circle><circle cx="0" cy="-222" r="30"></circle><circle cx="72" cy="-222" r="30"></circle></g>
+  </g>
+  <!-- chip 0,0 centred, 140 x 140 -->
+  <g id="chipG">
+    <g stroke="#F2C14E" stroke-width="8" stroke-linecap="round">
+      <path d="M -45 -70 v -22 M -15 -70 v -22 M 15 -70 v -22 M 45 -70 v -22 M -45 70 v 22 M -15 70 v 22 M 15 70 v 22 M 45 70 v 22 M -70 -45 h -22 M -70 -15 h -22 M -70 15 h -22 M -70 45 h -22 M 70 -45 h 22 M 70 -15 h 22 M 70 15 h 22 M 70 45 h 22"></path>
+    </g>
+    <rect x="-70" y="-70" width="140" height="140" rx="16" fill="#14172C" stroke="#3DDCFF" stroke-width="6"></rect>
+    <rect x="-44" y="-44" width="88" height="88" rx="8" fill="#3A4170"></rect>
+  </g>
+  <!-- battery 0,0 centred, 220 x 380 -->
+  <g id="batG">
+    <rect x="-110" y="-190" width="220" height="380" rx="26" fill="#B9C0CF"></rect>
+    <rect x="-110" y="-60" width="220" height="120" fill="#3DDCFF"></rect>
+    <path d="M 0 -30 V 30 M -30 0 H 30" stroke="#14172C" stroke-width="14" stroke-linecap="round"></path>
+    <rect x="-50" y="-206" width="100" height="26" rx="8" fill="#8A90A6"></rect>
+  </g>
+<!--DEFS-->
+</defs>
+
+<g id="traces" fill="none" stroke="#2A3060" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M0 150 H180 L240 210 H330"></path>
+  <path d="M0 900 H150 L210 840 H300"></path>
+  <path d="M1920 230 H1760 L1700 290 H1610"></path>
+  <path d="M1920 960 H1720 L1660 900 H1580"></path>
+  <path d="M760 0 V30 L800 70 H880"></path>
+  <path d="M1160 1080 V1040 L1120 1000 H1040"></path>
+</g>
+<g id="pads" fill="#2A3060"><circle cx="330" cy="210" r="11"></circle><circle cx="300" cy="840" r="11"></circle><circle cx="1610" cy="290" r="11"></circle><circle cx="1580" cy="900" r="11"></circle><circle cx="880" cy="70" r="10"></circle><circle cx="1040" cy="1000" r="10"></circle></g>
+<!--SVG-->
+</svg>
+<!--OV-->
+<div id="cap"></div>
+<div id="guide"></div>
+</div>
+<script>
+const DATA = __TIMING__;
+const TIMING = DATA.chunks;
+const S = DATA.scenes;
+const END = DATA.end;
+const $ = (id) => document.getElementById(id);
+const clamp = (x) => Math.max(0, Math.min(1, x));
+const prog = (t, a, b) => clamp((t - a) / (b - a));
+const outBack = (x) => { const c1 = 1.70158, c3 = c1 + 1; return 1 + c3 * Math.pow(x - 1, 3) + c1 * Math.pow(x - 1, 2); };
+const outCubic = (x) => 1 - Math.pow(1 - x, 3);
+const inOut = (x) => x < 0.5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2;
+const smooth = (x) => x * x * (3 - 2 * x);
+const bump = (x) => Math.sin(Math.PI * clamp(x));
+const tf = (el, s) => el.setAttribute('transform', s);
+const about = (cx, cy, s) => `translate(${cx} ${cy}) scale(${s}) translate(${-cx} ${-cy})`;
+const pop = (el, k) => { el.style.opacity = k > 0 ? 1 : 0; el.style.transform = `scale(${outBack(k)})`; };
+const popS = (el, k, cx, cy, extra = '') => { el.style.opacity = k > 0 ? 1 : 0; tf(el, about(cx, cy, Math.max(0.0001, outBack(k))) + ' ' + extra); };
+const fade = (el, k) => { el.style.opacity = k; };
+const slideIn = (el, k, dx, dy = 0) => { const e = outCubic(k); el.style.opacity = k > 0 ? 1 : 0; el.style.transform = `translate(${(1 - e) * dx}px, ${(1 - e) * dy}px)`; };
+const lerp = (a, b, k) => a + (b - a) * k;
+const at = (el, x, y, s = 1, r = 0) => tf(el, `translate(${x} ${y}) rotate(${r}) scale(${s})`);
+const wob = (u, f = 3, a = 1) => a * Math.sin(u * f);
+const NS = 'http://www.w3.org/2000/svg';
+const mk = (parent, tag, attrs) => { const e = document.createElementNS(NS, tag); for (const k in attrs) e.setAttribute(k, attrs[k]); parent.appendChild(e); return e; };
+const use = (parent, href, attrs = {}) => { const u = mk(parent, 'use', attrs); u.setAttribute('href', href); return u; };
+const dash = (el) => { const L = el.getTotalLength(); el.style.strokeDasharray = L; el.dataset.len = L; };
+const draw = (el, k) => { if (!el.dataset.len) dash(el); el.style.strokeDashoffset = el.dataset.len * (1 - k); el.style.opacity = k > 0 ? 1 : 0; };
+const num = (el, k, v, fmt) => { el.textContent = fmt(Math.round(v * outCubic(k))); };
+const comma = (n) => n.toLocaleString('en-US');
+function pathOf(fn, x0, x1, n, upto = 1) {
+  let d = ''; const m = Math.max(1, Math.round(n * upto));
+  for (let i = 0; i <= m; i++) { const xn = i / n; const x = x0 + (x1 - x0) * xn; d += (i ? ' L' : 'M') + x.toFixed(1) + ' ' + fn(xn).toFixed(1); }
+  return d;
+}
+function letters(container, text) {
+  return [...text].map((ch) => { const s = document.createElement('span'); s.textContent = ch === ' ' ? ' ' : ch; container.appendChild(s); return s; });
+}
+const lettersIn = (L, t0, step = 0.04) => (t) => L.forEach((el, i) => { const k = prog(t, t0 + i * step, t0 + 0.3 + i * step); el.style.transform = `translateY(${(1 - outCubic(k)) * 30}px) scale(${outBack(k)})`; el.style.opacity = k > 0 ? 1 : 0; });
+let SEED = 11; const rnd = () => { SEED = (SEED * 16807) % 2147483647; return (SEED - 1) / 2147483646; };
+
+const WORDS = [];
+TIMING.forEach((c) => c.words.forEach((w) => WORDS.push({ k: w.w.toLowerCase().replace(/^[^\w]+|[.,:?!]+$/g, '').replace(/[.,:?!…]+$/g, ''), t: w.t })));
+function T(word, n = 1) { let c = 0; for (const w of WORDS) if (w.k === word && ++c === n) return w.t; throw new Error('anchor ' + word + n); }
+const traces = [...document.querySelectorAll('#traces path')];
+traces.forEach((p) => { const L = p.getTotalLength(); p.style.strokeDasharray = L; p.dataset.len = L; });
+let CHAPTER = null;
+if (location.hash === '#guide') $('guide').style.display = 'block';
+<!--JS-->
+// captions
+const cap = $('cap');
+const CH = TIMING.map((c) => {
+  const div = document.createElement('div'); div.className = 'chunk'; cap.appendChild(div);
+  const spans = c.words.map((w) => { const s = document.createElement('span'); s.textContent = w.w; div.appendChild(s); return s; });
+  return { div, spans, c };
+});
+function captions(t) {
+  CH.forEach((ch, i) => {
+    const next = i + 1 < CH.length ? CH[i + 1].c.start : END + 1;
+    const on = t >= ch.c.start && t < next;
+    ch.div.style.display = on ? 'block' : 'none';
+    if (!on) return;
+    let cur = -1;
+    ch.c.words.forEach((w, j) => { if (t >= w.t) cur = j; });
+    ch.spans.forEach((s, j) => {
+      const w = ch.c.words[j];
+      const k = prog(t, w.t, w.t + 0.12);
+      s.style.opacity = t >= w.t ? 1 : 0;
+      s.style.color = j === cur ? '#FFD23F' : '#FFFFFF';
+      s.style.transform = `scale(${0.8 + 0.2 * outBack(k)})`;
+    });
+  });
+}
+<!--F-->
+if (CHAPTER) { $('wingL').textContent = CHAPTER.num; $('wingR').textContent = 'LITTLE ELECTRON · ' + CHAPTER.name; }
+function render(t) {
+  $('wingL').style.opacity = 0.5 + 0.5 * outCubic(prog(t, 0, 0.8)); $('wingL').style.transform = `translateY(${8 * Math.sin(t * 0.8)}px)`;
+  traces.forEach((p, i) => { const k = outCubic(prog(t, 0.05 * i, 0.7 + 0.05 * i)); p.style.strokeDashoffset = p.dataset.len * (1 - k); });
+  $('pads').style.opacity = prog(t, 0.6, 0.8);
+  for (let i = 0; i < S.length; i++) {
+    const a = S[i], b = i + 1 < S.length ? S[i + 1] : END + 10;
+    const on = t >= a && t < b;
+    const g = $('s' + (i + 1)), o = $('o' + (i + 1));
+    if (g) g.style.display = on ? 'inline' : 'none';
+    if (o) o.style.display = on ? 'block' : 'none';
+    if (!on) continue;
+    const u = t - a;
+    const e = i === 0 ? 1 : outCubic(prog(u, 0, 0.22));
+    const sc = 1.05 - 0.05 * e;
+    if (g) { tf(g, about(960, 540, sc)); g.style.opacity = e; }
+    if (o) { o.style.transform = `scale(${sc})`; o.style.opacity = e; }
+    F[i](u, t);
+  }
+  if (typeof ALWAYS === 'function') ALWAYS(t);
+  captions(t);
+}
+render(0);
+</script>
+</body>
+</html>

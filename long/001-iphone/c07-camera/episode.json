@@ -1,0 +1,82 @@
+{
+ "title": "What's inside an iPhone? \u2014 c07-camera",
+ "voice": "am_puck",
+ "speed": 0.96,
+ "segments": [
+  {
+   "text": "Why does the new iPhone camera have... blades?",
+   "scene": true,
+   "split": [
+    4
+   ]
+  },
+  {
+   "text": "The iPhone 18 Pro main camera has a variable aperture:",
+   "scene": true,
+   "split": [
+    5
+   ]
+  },
+  {
+   "text": "six tiny blades that open and close,"
+  },
+  {
+   "text": "like the pupil of your eye."
+  },
+  {
+   "text": "Each blade is barely a millimeter wide at the tip,",
+   "scene": true,
+   "split": [
+    4
+   ]
+  },
+  {
+   "text": "moved by electromagnets."
+  },
+  {
+   "text": "Wide open, it lets in about seven times more light.",
+   "scene": true,
+   "split": [
+    4
+   ]
+  },
+  {
+   "text": "Closed down, more of the picture stays sharp.",
+   "split": [
+    4
+   ]
+  },
+  {
+   "text": "Android did it first:",
+   "scene": true
+  },
+  {
+   "text": "the Galaxy S9 had two apertures in 2018.",
+   "say": "the Galaxy S nine had two apertures in twenty eighteen.",
+   "split": [
+    4
+   ]
+  },
+  {
+   "text": "The catch?",
+   "scene": true,
+   "pause": 0.25
+  },
+  {
+   "text": "If one blade gets stuck, you replace the whole camera.",
+   "split": [
+    5
+   ]
+  },
+  {
+   "text": "During iFixit's teardown, a blade flew away.",
+   "scene": true,
+   "split": [
+    3
+   ]
+  },
+  {
+   "text": "Somewhere out there, a blade is free."
+  }
+ ]
+}

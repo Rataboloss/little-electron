@@ -1,0 +1,81 @@
+{
+ "title": "What's inside an iPhone? \u2014 c06-taptic",
+ "voice": "am_puck",
+ "speed": 0.96,
+ "segments": [
+  {
+   "text": "Remember the home button on the iPhone 7?",
+   "scene": true,
+   "say": "Remember the home button on the iPhone seven?",
+   "split": [
+    4
+   ]
+  },
+  {
+   "text": "It never moved.",
+   "scene": true
+  },
+  {
+   "text": "Not even one millimeter."
+  },
+  {
+   "text": "The click you felt?",
+   "pause": 0.2
+  },
+  {
+   "text": "Fake."
+  },
+  {
+   "text": "It came from the Taptic Engine:",
+   "scene": true
+  },
+  {
+   "text": "a little weight, pushed back and forth by a magnet and a coil.",
+   "split": [
+    5
+   ]
+  },
+  {
+   "text": "Precise enough to fool your finger."
+  },
+  {
+   "text": "Many cheap phones use a tiny spinning motor instead.",
+   "scene": true,
+   "split": [
+    4
+   ]
+  },
+  {
+   "text": "It buzzes like an angry bee."
+  },
+  {
+   "text": "The Taptic Engine taps.",
+   "scene": true
+  },
+  {
+   "text": "Short. Sharp. Controlled."
+  },
+  {
+   "text": "It's still inside every iPhone,",
+   "scene": true
+  },
+  {
+   "text": "faking keyboard clicks and scrolling ticks.",
+   "split": [
+    3
+   ]
+  },
+  {
+   "text": "So yes:",
+   "scene": true,
+   "pause": 0.15
+  },
+  {
+   "text": "since 2016, your phone has been lying to your finger.",
+   "say": "since twenty sixteen, your phone has been lying to your finger.",
+   "split": [
+    4
+   ]
+  }
+ ]
+}

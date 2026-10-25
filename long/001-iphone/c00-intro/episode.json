@@ -1,0 +1,63 @@
+{
+ "title": "What's inside an iPhone? \u2014 c00-intro",
+ "voice": "am_puck",
+ "speed": 0.96,
+ "segments": [
+  {
+   "text": "This is an iPhone 18 Pro.",
+   "scene": true
+  },
+  {
+   "text": "It costs twelve hundred dollars."
+  },
+  {
+   "text": "And today...",
+   "scene": true,
+   "pause": 0.3
+  },
+  {
+   "text": "we're going to open it."
+  },
+  {
+   "text": "Relax.",
+   "scene": true,
+   "pause": 0.25
+  },
+  {
+   "text": "It's a drawing."
+  },
+  {
+   "text": "I'm Little Electron,",
+   "scene": true
+  },
+  {
+   "text": "and in the next few minutes,"
+  },
+  {
+   "text": "we'll see what's really inside,"
+  },
+  {
+   "text": "and what makes it so different from an Android phone.",
+   "split": [
+    5
+   ]
+  },
+  {
+   "text": "We'll find a lasagna,",
+   "scene": true
+  },
+  {
+   "text": "a drop of water,"
+  },
+  {
+   "text": "a fake button,"
+  },
+  {
+   "text": "and a battery with a passport."
+  },
+  {
+   "text": "Let's crack it open.",
+   "scene": true
+  }
+ ]
+}

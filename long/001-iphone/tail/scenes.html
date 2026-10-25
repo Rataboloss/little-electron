@@ -1,0 +1,25 @@
+<!--@title-->Little Electron — Shorts tail<!--@end-->
+<!--@defs--><!--@end-->
+<!--@svg-->
+<g id="s1">
+  <g id="pl1"><circle cx="960" cy="440" r="120" fill="#FF5C5C"></circle><path d="M 925 380 L 1015 440 L 925 500 Z" fill="#FFFFFF"></path></g>
+  <g id="m1"><use href="#m" x="0" y="0" width="400" height="400"></use></g>
+</g>
+<!--@end-->
+<!--@ov-->
+<div class="ov" id="o1">
+  <div class="big" id="h1" style="top: 100px; font-size: 60px">FULL TEARDOWN</div>
+  <div class="sub" id="s1t" style="top: 180px; font-size: 40px">on the channel</div>
+</div>
+<!--@end-->
+<!--@js-->
+CHAPTER = { num: '', name: 'WHAT\'S INSIDE AN IPHONE' };
+<!--@end-->
+<!--@f-->
+const F = [];
+F[0] = (u, t) => {
+  pop($('h1'), prog(u, 0.05, 0.35)); pop($('s1t'), prog(u, 0.25, 0.55));
+  const k = prog(u, 0.15, 0.5); $('pl1').style.opacity = k > 0 ? 1 : 0; tf($('pl1'), about(960, 440, Math.max(0.0001, outBack(k)) * (1 + 0.06 * Math.sin(u * 8))));
+  tf($('m1'), `translate(${lerp(1300, 1010, outBack(prog(u, 0.3, 0.7)))} 470) rotate(${-10 + wob(u, 5, 6)} 200 210) scale(0.55)`);
+};
+<!--@end-->
