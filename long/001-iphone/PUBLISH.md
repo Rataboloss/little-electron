@@ -11,7 +11,19 @@ File: `out/little_electron_whats_inside_an_iphone.mp4` · thumbnail: `out/thumbn
 **Description**
 We crack open an iPhone 18 Pro (in cartoon form, no phones were harmed) to see what's really inside, and what makes it so different from an Android phone: a motherboard lasagna, 30,000 invisible dots, a glue with an off switch, a fake button, camera blades, a drop of water, and a battery with a passport.
 
-__CHAPTERS__
+0:00 Intro
+0:23 How do you open an iPhone?
+1:01 The brain: A20 Pro vs Android chips
+1:37 The lasagna motherboard
+2:12 Face ID: 30,000 invisible dots
+2:55 Battery: iPhone vs Android
+3:45 The fake button (Taptic Engine)
+4:19 Camera blades
+4:57 A drop of water (vapor chamber)
+5:34 Frenemies: Samsung and Brussels
+6:08 Your battery has a passport
+6:43 What are the parts worth?
+7:18 So… is an iPhone better?
 
 Sources: iFixit teardown of the iPhone 18 Pro, Apple, Counterpoint Research, TrendForce, Tom's Guide, Which?. Full list in the pinned comment.
 
