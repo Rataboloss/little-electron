@@ -46,7 +46,9 @@ for quality, structure and art direction: read both `scenes.html` files before w
     - YouTube Short at the next 16:00 (`youtubeData`: type "short", title, tags,
       category "SCIENCE_TECHNOLOGY", madeForKids false), text = description;
     - TikTok at the next 18:00 (`tiktokData`: title, privacyOption "PUBLIC_TO_EVERYONE",
-      isAigc true), text = one-line hook + 5 hashtags.
+      isAigc true), text = one-line hook + 5 hashtags;
+    - Instagram Reel at the next 10:00 (`instagramData`: type "REEL", showReelOnFeed true,
+      isAiGenerated true), text = hook line + 1-2 sentences + a question + 3-5 hashtags.
     `media` = the raw.githubusercontent URL. Check `getScheduledPosts` first so you never post
     twice the same day; if a slot is taken, use the next free day.
 12. **Close the loop** — tick the topic in `topics.md` (with the date), add a line to `log.md`,
