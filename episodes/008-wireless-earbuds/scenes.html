@@ -1,0 +1,442 @@
+<!--@title-->Little Electron — What's inside wireless earbuds<!--@end-->
+<!--@defs-->
+  <!-- earbud (side view), head centred on 540,700 ; stem down to 1180 -->
+  <g id="budG">
+    <rect x="490" y="720" width="100" height="460" rx="50" fill="#EEF0F7"></rect>
+    <circle cx="540" cy="700" r="160" fill="#EEF0F7"></circle>
+    <ellipse cx="420" cy="690" rx="70" ry="95" fill="#B9C0CF"></ellipse>
+    <ellipse cx="400" cy="690" rx="30" ry="48" fill="#8A90A6"></ellipse>
+    <rect x="600" y="580" width="60" height="22" rx="11" fill="#2B2F45"></rect>
+    <rect x="515" y="1140" width="50" height="16" rx="8" fill="#2B2F45"></rect>
+  </g>
+  <!-- small bud for side scenes, same shape, scaled by the caller -->
+  <!-- speaker magnet (cross-section) -->
+  <g id="magG">
+    <rect x="290" y="700" width="20" height="300" rx="8" fill="#3A4170"></rect>
+    <rect x="770" y="700" width="20" height="300" rx="8" fill="#3A4170"></rect>
+    <path d="M 340 790 H 440 V 940 H 640 V 790 H 740 V 1000 H 340 Z" fill="#8A90A6"></path>
+    <rect x="500" y="760" width="80" height="190" rx="6" fill="#8A90A6"></rect>
+    <rect x="340" y="860" width="100" height="80" fill="#FF8FA3"></rect>
+    <rect x="640" y="860" width="100" height="80" fill="#FF8FA3"></rect>
+    <rect x="500" y="860" width="80" height="80" fill="#3DDCFF"></rect>
+  </g>
+  <!-- battery cell (vertical), 0..80 x 0..170 -->
+  <g id="cellG">
+    <rect x="0" y="12" width="80" height="158" rx="22" fill="#B9C0CF"></rect>
+    <rect x="24" y="0" width="32" height="20" rx="6" fill="#8A90A6"></rect>
+    <rect x="0" y="60" width="80" height="40" fill="#3DDCFF"></rect>
+    <path d="M 40 70 V 90 M 30 80 H 50" stroke="#14172C" stroke-width="7" stroke-linecap="round"></path>
+  </g>
+<!--@end-->
+<!--@svg-->
+<!-- Scene 1: hook -->
+<g id="s1">
+  <g id="c1">
+    <g id="m1"><use href="#m" x="0" y="0" width="400" height="400"></use></g>
+    <g transform="translate(420 760) rotate(-14) scale(0.72) translate(-540 -800)"><use href="#budG"></use></g>
+    <g transform="translate(660 760) rotate(14) scale(-0.72 0.72) translate(-540 -800)"><use href="#budG"></use></g>
+    <g id="nt1" fill="#3DDCFF" font-size="80" font-weight="700"><text x="230" y="560">♪</text><text x="790" y="520">♫</text></g>
+  </g>
+</g>
+
+<!-- Scene 2: crack it open -->
+<g id="s2">
+  <g id="in2">
+    <rect x="490" y="720" width="100" height="460" rx="50" fill="#2B2F45" stroke="#3A4170" stroke-width="10"></rect>
+    <circle cx="540" cy="700" r="160" fill="#2B2F45" stroke="#3A4170" stroke-width="10"></circle>
+    <rect x="495" y="725" width="90" height="60" fill="#2B2F45"></rect>
+    <g id="sp2"><circle cx="455" cy="700" r="78" fill="#8A90A6"></circle><circle cx="455" cy="700" r="50" fill="#B9C0CF"></circle><circle cx="455" cy="700" r="18" fill="#3A4170"></circle></g>
+    <g id="ch2"><rect x="560" y="640" width="100" height="100" rx="12" fill="#14172C" stroke="#3DDCFF" stroke-width="5"></rect>
+      <g stroke="#F2C14E" stroke-width="6"><path d="M 580 632 v -14 M 610 632 v -14 M 640 632 v -14 M 580 748 v 14 M 610 748 v 14 M 640 748 v 14"></path></g></g>
+    <g id="bt2" transform="translate(500 840)"><use href="#cellG"></use></g>
+    <path d="M 540 1040 V 1120" stroke="#F2C14E" stroke-width="6"></path>
+    <g id="mc2" fill="#14172C" stroke="#3DDCFF" stroke-width="5"><circle cx="630" cy="590" r="16"></circle><circle cx="540" cy="1145" r="16"></circle></g>
+  </g>
+  <g id="pt2" fill="none" stroke="#3DDCFF" stroke-width="6" stroke-linecap="round">
+    <path id="pbt2" d="M 300 960 L 490 930"></path>
+    <path id="pch2" d="M 790 760 L 670 700"></path>
+    <path id="psp2" d="M 250 560 L 400 640"></path>
+    <path id="pmc2" d="M 800 1070 L 565 1140"></path>
+  </g>
+  <g id="shA2"><path d="M 380 700 A 160 160 0 0 1 700 700 Z" fill="#EEF0F7"></path></g>
+  <g id="shB2"><path d="M 380 700 A 160 160 0 0 0 490 852 V 1130 A 50 50 0 0 0 590 1130 V 852 A 160 160 0 0 0 700 700 Z" fill="#EEF0F7"></path><ellipse cx="420" cy="700" rx="60" ry="40" fill="#B9C0CF"></ellipse></g>
+  <path id="cr2" d="M 380 700 L 440 690 L 480 712 L 540 694 L 600 712 L 650 690 L 700 700" fill="none" stroke="#14172C" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"></path>
+</g>
+
+<!-- Scene 3: safety -->
+<g id="s3">
+  <g id="bat3" transform="translate(540 820) scale(1.6) translate(-40 -85)"><use href="#cellG"></use></g>
+  <g id="fl3">
+    <path id="fA3" d="" fill="#FF5C5C"></path>
+    <path id="fB3" d="" fill="#FFD23F"></path>
+  </g>
+  <g id="no3" fill="none" stroke="#FF8FA3" stroke-width="26" stroke-linecap="round"><circle cx="540" cy="820" r="250"></circle><path d="M 363 643 L 717 997"></path></g>
+  <g id="m3"><use href="#mw" x="790" y="990" width="260" height="260"></use></g>
+</g>
+
+<!-- Scene 4: speaker parts -->
+<g id="s4">
+  <use href="#magG"></use>
+  <g id="co4">
+    <rect x="450" y="700" width="40" height="170" rx="6" fill="#F2C14E"></rect>
+    <rect x="590" y="700" width="40" height="170" rx="6" fill="#F2C14E"></rect>
+    <g stroke="#B88A2E" stroke-width="5"><path d="M 450 730 H 490 M 450 760 H 490 M 450 790 H 490 M 450 820 H 490 M 450 850 H 490 M 590 730 H 630 M 590 760 H 630 M 590 790 H 630 M 590 820 H 630 M 590 850 H 630"></path></g>
+    <rect x="450" y="690" width="180" height="16" rx="6" fill="#F2C14E"></rect>
+  </g>
+  <path id="mb4" d="M 300 700 C 380 700 420 620 540 620 C 660 620 700 700 780 700" fill="none" stroke="#EEF0F7" stroke-width="16" stroke-linecap="round"></path>
+  <g id="gl4" fill="none" stroke="#3DDCFF" stroke-width="5" stroke-dasharray="6 10"><path d="M 470 690 V 650 M 610 690 V 650"></path></g>
+  <path id="pc4" d="M 240 820 L 440 790" fill="none" stroke="#F2C14E" stroke-width="6" stroke-linecap="round"></path>
+  <path id="pm4" d="M 860 600 L 700 660" fill="none" stroke="#EEF0F7" stroke-width="6" stroke-linecap="round"></path>
+  <path id="pg4" d="M 860 1080 L 740 960" fill="none" stroke="#8A90A6" stroke-width="6" stroke-linecap="round"></path>
+</g>
+
+<!-- Scene 5: push and pull -->
+<g id="s5">
+  <use href="#magG"></use>
+  <path id="wi5" d="M 470 870 V 1120 H 180 M 610 870 V 1120 H 900" fill="none" stroke="#3A4170" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"></path>
+  <g id="dt5"></g>
+  <g id="co5">
+    <rect x="450" y="700" width="40" height="170" rx="6" fill="#F2C14E"></rect>
+    <rect x="590" y="700" width="40" height="170" rx="6" fill="#F2C14E"></rect>
+    <rect x="450" y="690" width="180" height="16" rx="6" fill="#F2C14E"></rect>
+  </g>
+  <path id="mb5" d="" fill="none" stroke="#EEF0F7" stroke-width="16" stroke-linecap="round"></path>
+  <g id="ar5" fill="none" stroke="#FFD23F" stroke-width="10" stroke-linecap="round"></g>
+  <g id="sw5" fill="none" stroke="#3DDCFF" stroke-width="10" stroke-linecap="round"></g>
+</g>
+
+<!-- Scene 6: bluetooth radio -->
+<g id="s6">
+  <g id="ph6"><rect x="110" y="520" width="250" height="460" rx="40" fill="#2B2F45" stroke="#3A4170" stroke-width="10"></rect><rect x="132" y="570" width="206" height="360" rx="14" fill="#3A4170"></rect>
+    <text x="235" y="790" text-anchor="middle" font-size="120" font-weight="700" fill="#FFD23F">♫</text></g>
+  <g id="eb6"><g transform="translate(830 690) scale(0.55) translate(-540 -800)"><use href="#budG"></use></g></g>
+  <g id="wv6" fill="none" stroke="#3DDCFF" stroke-width="10" stroke-linecap="round"></g>
+  <g id="bars6"></g>
+</g>
+
+<!-- Scene 7: noise cancelling: listen -->
+<g id="s7">
+  <g id="eb7"><g transform="translate(760 820) scale(0.8) translate(-540 -800)"><use href="#budG"></use></g></g>
+  <circle id="mg7" cx="0" cy="0" r="40" fill="#3DDCFF" opacity="0.35"></circle>
+  <path id="nz7" d="" fill="none" stroke="#FF8FA3" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"></path>
+  <g id="src7"><rect x="60" y="620" width="150" height="110" rx="18" fill="#3A4170"></rect><circle cx="95" cy="745" r="20" fill="#14172C"></circle><circle cx="175" cy="745" r="20" fill="#14172C"></circle><rect x="80" y="640" width="50" height="40" rx="6" fill="#8A90A6"></rect><rect x="140" y="640" width="50" height="40" rx="6" fill="#8A90A6"></rect></g>
+  <path id="pmc7" d="M 820 520 L 760 580" fill="none" stroke="#3DDCFF" stroke-width="6" stroke-linecap="round"></path>
+</g>
+
+<!-- Scene 8: opposite wave -->
+<g id="s8">
+  <path id="wa8" d="" fill="none" stroke="#FF8FA3" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"></path>
+  <path id="wb8" d="" fill="none" stroke="#3DDCFF" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"></path>
+  <path id="wc8" d="" fill="none" stroke="#FFD23F" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"></path>
+  <g id="pl8" fill="#EEF0F7" font-size="90" font-weight="700" text-anchor="middle"><text id="pls8" x="540" y="790">+</text><text id="eq8" x="540" y="1040">=</text></g>
+</g>
+
+<!-- Scene 9: tiny battery vs phone -->
+<g id="s9">
+  <g id="pb9"><rect x="560" y="500" width="380" height="720" rx="30" fill="#2B2F45" stroke="#3A4170" stroke-width="10"></rect><rect x="700" y="478" width="100" height="30" rx="10" fill="#3A4170"></rect></g>
+  <g id="gr9"></g>
+  <g id="tc9" transform="translate(250 720)"><g transform="scale(0.45)"><use href="#cellG"></use></g></g>
+  <circle id="hl9" cx="268" cy="758" r="80" fill="none" stroke="#FFD23F" stroke-width="7"></circle>
+  <g id="m9"><use href="#mw" x="40" y="960" width="260" height="260"></use></g>
+</g>
+
+<!-- Scene 10: Harald Bluetooth -->
+<g id="s10">
+  <g id="kg10">
+    <path d="M 400 560 L 420 470 L 470 530 L 540 450 L 610 530 L 660 470 L 680 560 Z" fill="#F2C14E"></path>
+    <circle cx="470" cy="500" r="12" fill="#FF5C5C"></circle><circle cx="610" cy="500" r="12" fill="#3DDCFF"></circle>
+    <circle cx="540" cy="680" r="140" fill="#F7C9A4"></circle>
+    <rect x="395" y="555" width="290" height="36" rx="12" fill="#F2C14E"></rect>
+    <path d="M 410 700 C 420 880 480 930 540 930 C 600 930 660 880 670 700 C 640 760 600 770 540 770 C 480 770 440 760 410 700 Z" fill="#E3A23C"></path>
+    <circle cx="490" cy="660" r="14" fill="#1B1F3B"></circle><circle cx="590" cy="660" r="14" fill="#1B1F3B"></circle>
+    <path id="mo10" d="M 495 790 Q 540 835 585 790 Z" fill="#14172C"></path>
+    <rect id="tt10" x="528" y="790" width="24" height="22" rx="4" fill="#3DDCFF"></rect>
+  </g>
+  <g id="rn10" fill="none" stroke="#3DDCFF" stroke-width="16" stroke-linecap="round" stroke-linejoin="round">
+    <g id="rH10"><path d="M 360 980 V 1200 M 300 1030 L 420 1150 M 420 1030 L 300 1150"></path></g>
+    <g id="rB10"><path d="M 680 980 V 1200 M 680 980 L 770 1040 L 680 1090 L 770 1145 L 680 1200"></path></g>
+  </g>
+  <text id="pl10" x="540" y="1120" text-anchor="middle" font-size="90" font-weight="700" fill="#EEF0F7">+</text>
+</g>
+
+<!-- Scene 11: teaser, USB flash drive -->
+<g id="s11">
+  <g id="fd11" transform="rotate(-12 540 820)">
+    <rect x="455" y="520" width="170" height="130" rx="10" fill="#B9C0CF"></rect>
+    <rect x="490" y="560" width="35" height="30" rx="4" fill="#3A4170"></rect><rect x="555" y="560" width="35" height="30" rx="4" fill="#3A4170"></rect>
+    <rect x="430" y="640" width="220" height="400" rx="40" fill="#3DDCFF"></rect>
+    <circle cx="540" cy="990" r="20" fill="#1B1F3B"></circle>
+    <rect x="470" y="700" width="140" height="60" rx="14" fill="#1B1F3B" opacity="0.25"></rect>
+    <text id="q11" x="540" y="1200" text-anchor="middle" font-size="200" font-weight="700" fill="#FFD23F">?</text>
+  </g>
+  <g id="m11"><use href="#m" x="20" y="960" width="290" height="290"></use></g>
+</g>
+<!--@end-->
+<!--@ov-->
+<div class="ov" id="o1">
+  <div id="t1" class="ctr letters" style="top: 240px; font-size: 116px; line-height: 1; font-weight: 700; color: #FFD23F"></div>
+  <div id="sub1" class="ctr" style="top: 374px; font-size: 56px; font-weight: 600; color: #3DDCFF">wireless earbuds</div>
+</div>
+<div class="ov" id="o2">
+  <div id="op2" class="ctr" style="top: 250px; font-size: 104px; line-height: 1; font-weight: 700; color: #FFD23F">crack!</div>
+  <p class="lbl" id="bL2" style="left: 40px; top: 920px; width: 270px; text-align: center; font-size: 48px; font-weight: 700; color: #3DDCFF">battery</p>
+  <p class="lbl" id="cL2" style="left: 760px; top: 760px; width: 300px; text-align: center; font-size: 48px; font-weight: 700; color: #3DDCFF">radio chip</p>
+  <p class="lbl" id="sL2" style="left: 40px; top: 490px; width: 280px; text-align: center; font-size: 48px; font-weight: 700; color: #B9C0CF">speaker</p>
+  <p class="lbl" id="mL2" style="left: 760px; top: 1000px; width: 300px; text-align: center; font-size: 48px; font-weight: 700; color: #EEF0F7">mics</p>
+</div>
+<div class="ov" id="o3">
+  <div class="chip"><span>Safety first</span></div>
+  <div id="dn3" class="ctr" style="top: 250px; font-size: 100px; line-height: 1; font-weight: 700; color: #FF8FA3">DON'T OPEN!</div>
+  <div id="li3" class="ctr" style="top: 380px; font-size: 54px; font-weight: 600; color: #3DDCFF">lithium cell inside</div>
+</div>
+<div class="ov" id="o4">
+  <div class="chip"><span>1 · The speaker</span></div>
+  <div id="cm4" class="ctr" style="top: 250px; font-size: 96px; line-height: 1; font-weight: 700; color: #FFD23F">coil + magnet</div>
+  <p class="lbl" id="cL4" style="left: 20px; top: 820px; width: 240px; text-align: center; font-size: 48px; font-weight: 700; color: #F2C14E">coil</p>
+  <p class="lbl" id="mL4" style="left: 760px; top: 520px; width: 300px; text-align: center; font-size: 48px; font-weight: 700; color: #EEF0F7">membrane</p>
+  <p class="lbl" id="gL4" style="left: 770px; top: 1080px; width: 280px; text-align: center; font-size: 48px; font-weight: 700; color: #B9C0CF">magnet</p>
+</div>
+<div class="ov" id="o5">
+  <div class="chip"><span>1 · The speaker</span></div>
+  <div id="pp5" class="ctr" style="top: 250px; font-size: 104px; line-height: 1; font-weight: 700; color: #FFD23F">push · pull</div>
+  <p class="lbl" id="cu5" style="left: 120px; top: 1140px; width: 300px; text-align: center; font-size: 46px; font-weight: 700; color: #3DDCFF">current</p>
+</div>
+<div class="ov" id="o6">
+  <div class="chip"><span>2 · The radio</span></div>
+  <div id="n6" class="ctr" style="top: 250px; font-size: 120px; line-height: 1; font-weight: 700; color: #FFD23F">1,600 / s</div>
+  <div id="hp6" class="ctr" style="top: 390px; font-size: 54px; font-weight: 600; color: #3DDCFF">channel hops</div>
+  <p class="lbl" id="bt6" style="left: 0; top: 985px; width: 1080px; text-align: center; font-size: 46px; font-weight: 700; color: #B9C0CF">2.4 GHz channels</p>
+</div>
+<div class="ov" id="o7">
+  <div class="chip"><span>3 · The trick</span></div>
+  <div id="nc7" class="ctr" style="top: 250px; font-size: 100px; line-height: 1; font-weight: 700; color: #FFD23F">noise cancelling</div>
+  <p class="lbl" id="nL7" style="left: 40px; top: 520px; width: 300px; text-align: center; font-size: 50px; font-weight: 700; color: #FF8FA3">noise</p>
+  <p class="lbl" id="mL7" style="left: 760px; top: 440px; width: 300px; text-align: center; font-size: 48px; font-weight: 700; color: #3DDCFF">microphone</p>
+</div>
+<div class="ov" id="o8">
+  <div class="chip"><span>3 · The trick</span></div>
+  <div id="sh8" class="ctr" style="top: 250px; font-size: 110px; line-height: 1; font-weight: 700; color: #FFD23F">shhh…</div>
+  <p class="lbl" id="aL8" style="left: 60px; top: 470px; width: 400px; font-size: 44px; font-weight: 700; color: #FF8FA3">noise</p>
+  <p class="lbl" id="bL8" style="left: 60px; top: 720px; width: 500px; font-size: 44px; font-weight: 700; color: #3DDCFF">opposite wave</p>
+  <p class="lbl" id="cL8" style="left: 60px; top: 1060px; width: 500px; font-size: 44px; font-weight: 700; color: #FFD23F">silence</p>
+</div>
+<div class="ov" id="o9">
+  <div id="n9" class="ctr" style="top: 240px; font-size: 130px; line-height: 1; font-weight: 700; color: #FFD23F">&lt; 50 mAh</div>
+  <div id="x9" class="ctr" style="top: 390px; font-size: 56px; font-weight: 700; color: #FF8FA3">×100 in a phone</div>
+  <p class="lbl" id="eL9" style="left: 120px; top: 600px; width: 300px; text-align: center; font-size: 46px; font-weight: 700; color: #3DDCFF">earbud</p>
+  <p class="lbl" id="pL9" style="left: 560px; top: 1225px; width: 380px; text-align: center; font-size: 0px; font-weight: 700; color: #B9C0CF"></p>
+</div>
+<div class="ov" id="o10">
+  <div id="hb10" class="ctr" style="top: 170px; font-size: 96px; line-height: 1; font-weight: 700; color: #FFD23F">Harald Bluetooth</div>
+  <div id="vk10" class="ctr" style="top: 290px; font-size: 54px; font-weight: 600; color: #3DDCFF">a Viking king</div>
+  <p class="lbl" id="hL10" style="left: 160px; top: 1150px; width: 120px; text-align: center; font-size: 60px; font-weight: 700; color: #FFD23F">H</p>
+  <p class="lbl" id="bL10" style="left: 800px; top: 1150px; width: 120px; text-align: center; font-size: 60px; font-weight: 700; color: #FFD23F">B</p>
+</div>
+<div class="ov" id="o11">
+  <div id="nx10" class="ctr" style="top: 170px; font-size: 52px; font-weight: 600; color: #3DDCFF">Next time:</div>
+  <div id="t10" class="ctr letters" style="top: 250px; font-size: 110px; line-height: 1; font-weight: 700; color: #FFD23F"></div>
+  <div id="sub10" class="ctr" style="top: 378px; font-size: 56px; font-weight: 600; color: #3DDCFF">a USB flash drive</div>
+  <div id="big7" style="display:none"></div>
+</div>
+<!--@end-->
+<!--@js-->
+let SEED = 8; const rnd = () => { SEED = (SEED * 16807) % 2147483647; return (SEED - 1) / 2147483646; };
+// scene 2
+['pbt2', 'pch2', 'psp2', 'pmc2'].forEach((id) => dash($(id)));
+dash($('cr2'));
+// scene 3: flames
+const flame = (cx, by, w, h, ph) => { const s = Math.sin(ph), c = Math.cos(ph * 1.3); return `M ${cx - w} ${by} C ${cx - w} ${by - h * 0.5} ${cx - w * 0.2 + 8 * s} ${by - h * 0.6} ${cx + 6 * c} ${by - h} C ${cx + w * 0.3} ${by - h * 0.55} ${cx + w} ${by - h * 0.5} ${cx + w} ${by} Z`; };
+// scene 4
+['pc4', 'pm4', 'pg4'].forEach((id) => dash($(id)));
+// scene 5
+const D5 = Array.from({ length: 10 }, () => mk($('dt5'), 'circle', { cx: 0, cy: 0, r: 11, fill: '#3DDCFF' }));
+const W5a = [[180, 1120], [470, 1120], [470, 870]], W5b = [[610, 870], [610, 1120], [900, 1120]];
+const along = (pts, k) => { const seg = []; let tot = 0; for (let i = 1; i < pts.length; i++) { const l = Math.hypot(pts[i][0] - pts[i - 1][0], pts[i][1] - pts[i - 1][1]); seg.push(l); tot += l; } let d = k * tot; for (let i = 0; i < seg.length; i++) { if (d <= seg[i]) { const f = d / seg[i]; return [lerp(pts[i][0], pts[i + 1][0], f), lerp(pts[i][1], pts[i + 1][1], f)]; } d -= seg[i]; } return pts[pts.length - 1]; };
+const memb = (dy) => `M 300 700 C 380 700 420 ${620 + dy} 540 ${620 + dy} C 660 ${620 + dy} 700 700 780 700`;
+const AR5 = [0, 1, 2].map((i) => { const r = 70 + 50 * i; return mk($('sw5'), 'path', { d: `M ${540 - r} ${560 - r * 0.25} Q 540 ${560 - r * 0.9} ${540 + r} ${560 - r * 0.25}` }); });
+const UP5 = mk($('ar5'), 'path', { d: 'M 860 760 V 640 M 825 675 L 860 638 L 895 675' });
+const DN5 = mk($('ar5'), 'path', { d: 'M 860 640 V 760 M 825 725 L 860 762 L 895 725' });
+// scene 6: radio waves + channel bars
+const WV6 = [0, 1, 2, 3].map((i) => mk($('wv6'), 'path', { d: '' }));
+const NB = 20, BW = 36, BX = 130, BY = 1090;
+const B6 = Array.from({ length: NB }, (_, i) => mk($('bars6'), 'rect', { x: BX + i * 42, y: BY, width: BW, height: 120, rx: 8, fill: '#2B2F45' }));
+const HOP = Array.from({ length: 400 }, () => Math.floor(rnd() * NB));
+// scene 7
+const noiseD = (x0, x1, y, amp, ph) => pathOf((k) => y + amp * (Math.sin(k * 30 + ph) * 0.6 + Math.sin(k * 71 + ph * 1.7) * 0.4), x0, x1, 120);
+// scene 8
+const waveD = (y, amp, sign, upto, ph) => pathOf((k) => y + sign * amp * Math.sin(k * Math.PI * 6 + ph), 140, 940, 160, upto);
+// scene 9: 10x10 grid of tiny cells inside phone battery
+const GR9 = [];
+for (let r = 0; r < 10; r++) for (let c = 0; c < 10; c++) {
+  const g = mk($('gr9'), 'g', { transform: `translate(${585 + c * 33.5} ${528 + r * 68.5}) scale(0.36)` });
+  const u = document.createElementNS(NS, 'use'); u.setAttribute('href', '#cellG'); g.appendChild(u); GR9.push({ g, r, c });
+}
+<!--@end-->
+<!--@f-->
+const A = {
+  crack: T('crack'), open: T('open'), battery: T('battery'), radio: T('radio'), chip: T('chip'), speaker: T('speaker'), microphones: T('microphones'),
+  dont: T("don't"), home: T('home'), lithium: T('lithium'), fire: T('fire'),
+  coil: T('coil'), glued: T('glued'), membrane: T('membrane'), magnet: T('magnet'),
+  send: T('send'), current: T('current'), coil2: T('coil', 2), pushes: T('pushes'), pulls: T('pulls'), membrane2: T('membrane', 2), sound: T('sound'),
+  music: T('music'), bluetooth: T('bluetooth'), radio2: T('radio', 2), hops: T('hops'), channels: T('channels'), n1600: T('1,600'), second: T('second'),
+  trick: T('trick'), noise: T('noise'), cancelling: T('cancelling'), microphone: T('microphone'), listens: T('listens'), noise2: T('noise', 2), outside: T('outside'),
+  chip2: T('chip', 2), opposite: T('opposite'), wave: T('wave'), peaks: T('peaks'), valleys: T('valleys'), noise3: T('noise', 3), cancels: T('cancels'), out: T('out'),
+  catch: T('catch'), tiny2: T('tiny', 2), fifty: T('fifty'), hundred: T('hundred'), phone: T('phone'),
+  bluetooth2: T('bluetooth', 2), viking: T('viking'), king: T('king'), harald: T('harald'), logo: T('logo'), initials: T('initials'), runes: T('runes'),
+  whats2: T("what's", 2), usb: T('usb'),
+};
+const F = [];
+F[0] = (u, t) => {
+  const s = 0.55 + 0.45 * outBack(prog(u, 0, 0.55));
+  const bob = Math.sin(u * 2.4) * 10 * prog(u, 0.5, 0.9);
+  tf($('c1'), `translate(540 ${880 + bob}) rotate(${2 * Math.sin(u * 1.8)}) scale(${s}) translate(-540 -820)`);
+  const pk = outBack(prog(u, 1.0, 1.5));
+  tf($('m1'), `translate(${lerp(560, 700, pk)} ${930 - 40 * pk}) rotate(${12 * pk} 200 210) scale(0.6)`);
+  [...$('nt1').children].forEach((n, i) => { n.style.opacity = prog(u, 0.5 + i * 0.3, 0.8 + i * 0.3); n.setAttribute('transform', `translate(0 ${-14 * Math.sin(u * 4 + i * 2)})`); });
+  L1.forEach((el, i) => { const k = prog(u, 0.25 + i * 0.045, 0.55 + i * 0.045); el.style.transform = `translateY(${(1 - outCubic(k)) * 40}px) scale(${outBack(k)})`; el.style.opacity = k > 0 ? 1 : 0; });
+  const sk = outCubic(prog(u, 0.9, 1.25)); $('sub1').style.opacity = sk; $('sub1').style.transform = `translateY(${(1 - sk) * 30}px)`;
+};
+F[1] = (u, t) => {
+  draw($('cr2'), outCubic(prog(t, A.crack - 0.1, A.crack + 0.25)));
+  $('cr2').style.opacity = t < A.open + 0.1 ? 1 : 0;
+  pop($('op2'), prog(t, A.crack - 0.1, A.crack + 0.2));
+  const off = smooth(prog(t, A.open - 0.05, A.open + 0.45));
+  tf($('shA2'), `translate(${-120 * off} ${-620 * off}) rotate(${-25 * off} 540 700)`); $('shA2').style.opacity = 1 - off;
+  tf($('shB2'), `translate(${200 * off} ${700 * off}) rotate(${20 * off} 540 900)`); $('shB2').style.opacity = 1 - off;
+  const part = (lbl, ptr, el, cx, cy, a) => { pop($(lbl), prog(t, a - 0.1, a + 0.2)); draw($(ptr), outCubic(prog(t, a, a + 0.3))); tf($(el), `${el === 'bt2' ? 'translate(500 840) ' : ''}${about(el === 'bt2' ? 40 : cx, el === 'bt2' ? 85 : cy, 1 + 0.12 * bump(prog(t, a - 0.05, a + 0.4)))}`); };
+  part('bL2', 'pbt2', 'bt2', 0, 0, A.battery);
+  part('cL2', 'pch2', 'ch2', 610, 690, A.radio);
+  part('sL2', 'psp2', 'sp2', 455, 700, A.speaker);
+  pop($('mL2'), prog(t, A.microphones - 0.1, A.microphones + 0.2)); draw($('pmc2'), outCubic(prog(t, A.microphones, A.microphones + 0.3)));
+  $('mc2').setAttribute('stroke', t > A.microphones && Math.floor(u * 5) % 2 ? '#FFD23F' : '#3DDCFF');
+};
+F[2] = (u, t) => {
+  popS($('bat3'), prog(u, 0, 0.35), 540, 820);
+  tf($('bat3'), `translate(540 820) scale(${1.6 * Math.max(0.0001, outBack(prog(u, 0, 0.35)))}) translate(-40 -85)`);
+  pop($('dn3'), prog(t, A.dont - 0.1, A.dont + 0.2));
+  pop($('li3'), prog(t, A.lithium - 0.1, A.lithium + 0.2));
+  const fk = outBack(prog(t, A.fire - 0.3, A.fire + 0.05));
+  $('fl3').style.opacity = fk > 0 ? 1 : 0;
+  $('fA3').setAttribute('d', flame(540, 690, 70 * fk, 190 * fk, u * 9));
+  $('fB3').setAttribute('d', flame(540, 690, 38 * fk, 110 * fk, u * 11 + 1));
+  const nk = prog(t, A.home - 0.2, A.home + 0.15); $('no3').style.opacity = nk > 0 ? 1 : 0; tf($('no3'), about(540, 820, Math.max(0.0001, outBack(nk))));
+  popS($('m3'), prog(t, A.fire - 0.2, A.fire + 0.1), 920, 1120);
+  tf($('m3'), `${about(920, 1120, Math.max(0.0001, outBack(prog(t, A.fire - 0.2, A.fire + 0.1))))} translate(${t > A.fire ? 5 * Math.sin(u * 40) : 0} 0)`);
+};
+F[3] = (u, t) => {
+  const k0 = Math.max(0.0001, outBack(prog(u, 0, 0.35)));
+  tf($('s4').children[0], about(540, 850, k0));
+  popS($('co4'), prog(t, A.coil - 0.15, A.coil + 0.15), 540, 780);
+  pop($('cL4'), prog(t, A.coil - 0.1, A.coil + 0.2)); draw($('pc4'), outCubic(prog(t, A.coil, A.coil + 0.3)));
+  const mk4 = outCubic(prog(t, A.membrane - 0.3, A.membrane + 0.1));
+  $('mb4').style.opacity = mk4 > 0 ? 1 : 0; dash($('mb4')); draw($('mb4'), mk4);
+  pop($('mL4'), prog(t, A.membrane - 0.1, A.membrane + 0.2)); draw($('pm4'), outCubic(prog(t, A.membrane, A.membrane + 0.3)));
+  $('gl4').style.opacity = t > A.glued - 0.1 ? 0.5 + 0.5 * Math.sin(u * 8) : 0;
+  pop($('gL4'), prog(t, A.magnet - 0.1, A.magnet + 0.2)); draw($('pg4'), outCubic(prog(t, A.magnet, A.magnet + 0.3)));
+  pop($('cm4'), prog(t, A.magnet - 0.05, A.magnet + 0.25));
+};
+F[4] = (u, t) => {
+  const on = t > A.current - 0.1;
+  $('wi5').setAttribute('stroke', on ? '#2FB088' : '#3A4170');
+  pop($('cu5'), prog(t, A.current - 0.1, A.current + 0.2));
+  D5.forEach((d, i) => { const path = i % 2 ? W5b : W5a; const p = along(path, ((Math.floor(i / 2) / 5) + u * 0.6) % 1); d.setAttribute('cx', p[0]); d.setAttribute('cy', p[1]); d.style.opacity = on ? 1 : 0; });
+  const vib = t > A.pushes - 0.15 ? Math.sin((t - A.pushes) * 2 * Math.PI * (t > A.sound - 0.3 ? 5 : 1.6)) : 0;
+  const amp = t > A.sound - 0.3 ? 14 : 34;
+  const dy = -amp * vib;
+  tf($('co5'), `translate(0 ${dy})`);
+  $('mb5').setAttribute('d', memb(dy));
+  UP5.style.opacity = t > A.pushes - 0.15 && t < A.sound - 0.3 && vib > 0 ? 1 : 0;
+  DN5.style.opacity = t > A.pushes - 0.15 && t < A.sound - 0.3 && vib <= 0 ? 1 : 0;
+  pop($('pp5'), prog(t, A.pushes - 0.1, A.pushes + 0.2));
+  $('pp5').textContent = t > A.sound - 0.15 ? '♪ sound! ♪' : 'push · pull';
+  const sk = t > A.membrane2;
+  AR5.forEach((a, i) => { const ph = ((u * 1.6) - i * 0.33) % 1; a.style.opacity = sk ? Math.max(0, 1 - ph) * prog(t, A.membrane2, A.membrane2 + 0.3) : 0; tf(a, about(540, 600, 0.7 + 0.6 * ph)); });
+};
+F[5] = (u, t) => {
+  popS($('ph6'), prog(u, 0, 0.3), 235, 750);
+  popS($('eb6'), prog(t, A.bluetooth - 0.3, A.bluetooth), 830, 690);
+  const wk = t > A.bluetooth - 0.1;
+  WV6.forEach((p, i) => { const ph = ((u * 1.2) + i * 0.25) % 1; const x = lerp(400, 640, ph); p.setAttribute('d', `M ${x} 640 Q ${x + 40} 720 ${x} 800`); p.style.opacity = wk ? Math.sin(Math.PI * ph) : 0; });
+  const bk = prog(t, A.hops - 0.3, A.hops);
+  B6.forEach((b, i) => { b.style.opacity = bk; });
+  pop($('bt6'), prog(t, A.channels - 0.1, A.channels + 0.2));
+  const hopOn = t > A.hops;
+  const idx = hopOn ? HOP[Math.floor((t - A.hops) * (t > A.n1600 ? 24 : 8)) % HOP.length] : -1;
+  B6.forEach((b, i) => { b.setAttribute('fill', i === idx ? '#3DDCFF' : '#2B2F45'); b.setAttribute('y', i === idx ? BY - 20 : BY); b.setAttribute('height', i === idx ? 140 : 120); });
+  const nk = prog(t, A.n1600 - 0.5, A.n1600 + 0.3);
+  const v = Math.round(1600 * outCubic(nk));
+  $('n6').textContent = nk >= 1 ? '1,600 / s' : v.toLocaleString('en-US');
+  $('n6').style.opacity = nk > 0 ? 1 : 0;
+  $('n6').style.transform = `scale(${1 + 0.12 * bump(prog(t, A.second - 0.1, A.second + 0.3))})`;
+  pop($('hp6'), prog(t, A.second - 0.1, A.second + 0.2));
+};
+F[6] = (u, t) => {
+  popS($('eb7'), prog(u, 0, 0.3), 760, 820);
+  pop($('nc7'), prog(t, A.noise - 0.1, A.noise + 0.2));
+  const sk = prog(t, A.microphone - 0.6, A.microphone - 0.3);
+  popS($('src7'), sk, 135, 690);
+  tf($('src7'), `${about(135, 690, Math.max(0.0001, outBack(sk)))} translate(0 ${3 * Math.sin(u * 30)})`);
+  const nk = prog(t, A.microphone - 0.4, A.listens + 0.2);
+  $('nz7').setAttribute('d', nk > 0 ? noiseD(230, lerp(230, 590, nk), 690, 50, u * 10) : '');
+  pop($('nL7'), prog(t, A.noise2 - 0.15, A.noise2 + 0.15));
+  // mic at the top of the head of the bud: (600..660, 580) in bud space -> scaled 0.8 around 540,800 then moved to 760,820
+  const mx = 760 + (630 - 540) * 0.8, my = 820 + (591 - 800) * 0.8;
+  const lk = t > A.listens - 0.1;
+  $('mg7').setAttribute('cx', mx); $('mg7').setAttribute('cy', my); $('mg7').setAttribute('r', 40 + 14 * Math.sin(u * 10));
+  $('mg7').style.opacity = lk ? 0.45 : 0;
+  pop($('mL7'), prog(t, A.microphone - 0.1, A.microphone + 0.2));
+  dash($('pmc7')); draw($('pmc7'), outCubic(prog(t, A.microphone, A.microphone + 0.3)));
+};
+F[7] = (u, t) => {
+  const ph = u * 3;
+  const ak = outCubic(prog(u, 0, 0.4));
+  $('wa8').setAttribute('d', waveD(600, 70, 1, ak, ph)); pop($('aL8'), prog(u, 0, 0.3));
+  const bk = outCubic(prog(t, A.opposite - 0.2, A.wave + 0.2));
+  $('wb8').setAttribute('d', bk > 0 ? waveD(850, 70, -1, bk, ph) : ''); pop($('bL8'), prog(t, A.opposite - 0.1, A.opposite + 0.2));
+  $('pls8').style.opacity = bk > 0 ? 1 : 0;
+  // peaks meet valleys: highlight with flash
+  const pk = t > A.peaks - 0.1 && t < A.cancels;
+  $('wa8').setAttribute('stroke-width', pk ? 12 + 4 * Math.sin(u * 14) : 12);
+  $('wb8').setAttribute('stroke-width', pk ? 12 + 4 * Math.sin(u * 14 + Math.PI) : 12);
+  const ck = prog(t, A.cancels - 0.2, A.out + 0.1);
+  $('eq8').style.opacity = ck > 0 ? 1 : 0;
+  $('wc8').setAttribute('d', ck > 0 ? pathOf((k) => 1120 + 70 * (1 - ck) * Math.sin(k * Math.PI * 6 + ph), 140, 940, 160) : '');
+  pop($('cL8'), prog(t, A.out - 0.1, A.out + 0.2));
+  pop($('sh8'), prog(t, A.out - 0.1, A.out + 0.2));
+};
+F[8] = (u, t) => {
+  popS($('pb9'), prog(t, A.tiny2 - 0.3, A.tiny2), 750, 860);
+  popS($('tc9'), prog(t, A.tiny2 - 0.2, A.tiny2 + 0.1), 268, 758);
+  tf($('tc9'), `translate(250 720) ${about(18, 38, Math.max(0.0001, outBack(prog(t, A.tiny2 - 0.2, A.tiny2 + 0.1))))}`);
+  $('hl9').style.opacity = t > A.tiny2 ? 0.6 + 0.4 * Math.sin(u * 8) : 0;
+  pop($('eL9'), prog(t, A.tiny2 - 0.1, A.tiny2 + 0.2));
+  pop($('n9'), prog(t, A.fifty - 0.15, A.fifty + 0.15));
+  GR9.forEach(({ g, r, c }) => { const k = prog(t, A.hundred - 0.2 + (r * 10 + c) * 0.012, A.hundred + (r * 10 + c) * 0.012); g.style.opacity = k; });
+  pop($('x9'), prog(t, A.phone - 0.15, A.phone + 0.15));
+  popS($('m9'), prog(t, A.phone - 0.2, A.phone + 0.1), 170, 1090);
+};
+F[9] = (u, t) => {
+  popS($('kg10'), prog(u, 0, 0.35), 540, 700);
+  pop($('vk10'), prog(t, A.viking - 0.1, A.viking + 0.2));
+  pop($('hb10'), prog(t, A.harald - 0.15, A.harald + 0.15));
+  const tk = t > A.harald + 0.3;
+  $('tt10').style.opacity = tk ? 1 : 0; $('mo10').style.opacity = tk ? 1 : 0;
+  tf($('tt10'), about(540, 800, tk ? 1 + 0.15 * Math.sin(u * 8) : 1));
+  const hk = outCubic(prog(t, A.initials - 0.3, A.initials + 0.2));
+  [...$('rH10').children, ...$('rB10').children].forEach((p) => { if (!p.dataset.len) dash(p); draw(p, hk); });
+  pop($('hL10'), prog(t, A.initials, A.initials + 0.3)); pop($('bL10'), prog(t, A.initials + 0.1, A.initials + 0.4));
+  $('pl10').style.opacity = hk > 0.5 ? 1 : 0;
+  const rk = bump(prog(t, A.runes - 0.1, A.runes + 0.5));
+  tf($('rn10'), about(540, 1090, 1 + 0.08 * rk));
+};
+F[10] = (u, t) => {
+  pop($('nx10'), prog(u, 0, 0.25));
+  popS($('fd11'), prog(u, 0.1, 0.5), 540, 820);
+  tf($('fd11'), `${about(540, 820, Math.max(0.0001, outBack(prog(u, 0.1, 0.5))))} rotate(-12 540 820)`);
+  $('q11').setAttribute('font-size', 200 * (1 + 0.08 * Math.sin(u * 8)));
+  const mk2 = outBack(prog(u, 0.4, 0.8));
+  tf($('m11'), `translate(${-420 * (1 - mk2)} 0)`);
+  L10.forEach((el, i) => { const k = prog(t, A.whats2 - 0.05 + i * 0.03, A.whats2 + 0.15 + i * 0.03); el.style.transform = `scale(${outBack(k)})`; el.style.opacity = k > 0 ? 1 : 0; });
+  pop($('sub10'), prog(t, A.usb - 0.5, A.usb - 0.2));
+};
+<!--@end-->
