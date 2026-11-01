@@ -1,0 +1,97 @@
+{
+ "title": "What's inside a USB flash drive?",
+ "voice": "am_puck",
+ "speed": 1.0,
+ "segments": [
+  {
+   "text": "Your USB stick keeps every file as electrons trapped in tiny glass cages.",
+   "say": "Your U S B stick keeps every file as electrons trapped in tiny glass cages.",
+   "split": [
+    7
+   ]
+  },
+  {
+   "text": "Pull off the case:",
+   "scene": true,
+   "pause": 0.15
+  },
+  {
+   "text": "a controller, a memory chip, and a clock crystal.",
+   "split": [
+    2,
+    5
+   ]
+  },
+  {
+   "text": "The memory holds billions of cells.",
+   "scene": true
+  },
+  {
+   "text": "Each has a floating gate,",
+   "scene": true
+  },
+  {
+   "text": "wrapped in silicon dioxide:",
+   "pause": 0.12
+  },
+  {
+   "text": "basically glass."
+  },
+  {
+   "text": "To save a bit,",
+   "scene": true
+  },
+  {
+   "text": "a high voltage pushes electrons right through that glass.",
+   "split": [
+    4
+   ]
+  },
+  {
+   "text": "Electrons inside means zero.",
+   "scene": true
+  },
+  {
+   "text": "Empty means one."
+  },
+  {
+   "text": "They stay put for years, even unplugged."
+  },
+  {
+   "text": "But here's the trick:",
+   "scene": true
+  },
+  {
+   "text": "every push wears the glass down."
+  },
+  {
+   "text": "So the controller spreads your saves across all the cells,",
+   "scene": true,
+   "split": [
+    5
+   ]
+  },
+  {
+   "text": "so none wears out first."
+  },
+  {
+   "text": "Why flash?",
+   "scene": true,
+   "pause": 0.15
+  },
+  {
+   "text": "Its inventor's colleague said erasing a whole block at once looked like a camera flash.",
+   "split": [
+    4,
+    10
+   ]
+  },
+  {
+   "text": "Next time:",
+   "scene": true
+  },
+  {
+   "text": "what's inside an electric toothbrush?"
+  }
+ ]
+}

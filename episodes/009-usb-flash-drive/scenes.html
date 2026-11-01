@@ -1,0 +1,370 @@
+<!--@title-->Little Electron — What's inside a USB flash drive<!--@end-->
+<!--@defs-->
+  <!-- USB stick, cap off, connector up; centre ~ (540, 845) -->
+  <g id="conG">
+    <rect x="460" y="470" width="160" height="170" rx="10" fill="#D5D9E6"></rect>
+    <rect x="460" y="470" width="160" height="170" rx="10" fill="none" stroke="#B9C0CF" stroke-width="6"></rect>
+    <rect x="492" y="505" width="34" height="34" rx="5" fill="#8A90A6"></rect>
+    <rect x="554" y="505" width="34" height="34" rx="5" fill="#8A90A6"></rect>
+  </g>
+  <g id="caseG">
+    <rect x="400" y="620" width="280" height="600" rx="60" fill="#3A4170" stroke="#2B2F45" stroke-width="8"></rect>
+    <rect x="445" y="740" width="190" height="300" rx="28" fill="#2B2F45"></rect>
+    <path d="M 540 800 V 980 M 540 830 L 500 860 V 900 M 540 860 L 580 890 V 930" fill="none" stroke="#3DDCFF" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"></path>
+    <circle cx="500" cy="900" r="13" fill="#3DDCFF"></circle><rect x="567" y="922" width="26" height="26" rx="4" fill="#3DDCFF"></rect><path d="M 520 800 L 540 772 L 560 800 Z" fill="#3DDCFF"></path>
+    <circle cx="540" cy="1150" r="28" fill="#1B1F3B" stroke="#2B2F45" stroke-width="6"></circle>
+    <circle cx="630" cy="680" r="12" fill="#FF5C5C"></circle>
+  </g>
+  <!-- one flash cell, cross-section, local coords centred on 0,0 -->
+  <g id="cellG">
+    <line x1="0" y1="-225" x2="0" y2="-290" stroke="#8A90A6" stroke-width="12" stroke-linecap="round"></line>
+    <rect x="-300" y="140" width="600" height="100" rx="20" fill="#2B2F45" stroke="#3A4170" stroke-width="6"></rect>
+    <rect x="-190" y="-225" width="380" height="70" rx="16" fill="#B9C0CF"></rect>
+  </g>
+  <g id="glassG"><rect x="-240" y="-140" width="480" height="270" rx="30" fill="#3DDCFF" fill-opacity="0.16" stroke="#3DDCFF" stroke-width="8"></rect></g>
+  <g id="fgG"><rect x="-190" y="-40" width="380" height="80" rx="16" fill="#F2C14E"></rect></g>
+<!--@end-->
+<!--@svg-->
+<!-- Scene 1: hook -->
+<g id="s1">
+  <g id="c1">
+    <g id="m1"><use href="#m" x="0" y="0" width="400" height="400"></use></g>
+    <use href="#conG"></use>
+    <use href="#caseG"></use>
+  </g>
+</g>
+
+<!-- Scene 2: case off: controller, memory, crystal -->
+<g id="s2">
+  <g id="pcb2">
+    <use href="#conG"></use>
+    <rect x="410" y="620" width="260" height="600" rx="30" fill="#1F8A6A"></rect>
+    <g fill="none" stroke="#2FB088" stroke-width="6" stroke-linecap="round"><path d="M 505 640 V 690 M 575 640 V 690"></path><path d="M 540 800 V 850"></path><path d="M 440 820 V 1180 M 640 830 V 1100 L 600 1135"></path></g>
+    <g id="ctl2"><rect x="475" y="690" width="130" height="110" rx="10" fill="#14172C"></rect><g fill="#B9C0CF"><rect x="462" y="705" width="13" height="10"></rect><rect x="462" y="740" width="13" height="10"></rect><rect x="462" y="775" width="13" height="10"></rect><rect x="605" y="705" width="13" height="10"></rect><rect x="605" y="740" width="13" height="10"></rect><rect x="605" y="775" width="13" height="10"></rect></g></g>
+    <g id="mem2"><rect x="445" y="850" width="190" height="220" rx="10" fill="#14172C"></rect><circle cx="468" cy="873" r="8" fill="#3A4170"></circle></g>
+    <g id="xt2"><rect x="495" y="1105" width="90" height="56" rx="28" fill="#D5D9E6" stroke="#8A90A6" stroke-width="5"></rect></g>
+    <circle cx="630" cy="660" r="12" fill="#FF5C5C"></circle>
+  </g>
+  <g id="ln2" fill="none" stroke-width="6" stroke-linecap="round">
+    <path id="lc2" d="M 615 745 H 690" stroke="#3DDCFF"></path>
+    <path id="lm2" d="M 440 960 H 400" stroke="#FFD23F"></path>
+    <path id="lx2" d="M 590 1133 H 690" stroke="#D5D9E6"></path>
+  </g>
+  <g id="cs2"><use href="#caseG"></use></g>
+</g>
+
+<!-- Scene 3: billions of cells -->
+<g id="s3">
+  <rect x="170" y="520" width="740" height="660" rx="30" fill="#14172C" stroke="#3A4170" stroke-width="8"></rect>
+  <g id="cl3"></g>
+  <rect id="hl3" x="0" y="0" width="56" height="56" rx="12" fill="none" stroke="#FFD23F" stroke-width="7"></rect>
+</g>
+
+<!-- Scene 4: floating gate wrapped in glass -->
+<g id="s4">
+  <g transform="translate(540 870) scale(1.2)">
+    <g id="cb4"><use href="#cellG"></use></g>
+    <g id="gl4"><use href="#glassG"></use></g>
+    <g id="fg4"><use href="#fgG"></use><text x="0" y="14" text-anchor="middle" font-size="40" font-weight="700" fill="#1B1F3B">floating gate</text></g>
+  </g>
+</g>
+
+<!-- Scene 5: high voltage pushes electrons through -->
+<g id="s5">
+  <g transform="translate(540 870) scale(1.2)">
+    <use href="#cellG"></use>
+    <use href="#glassG"></use>
+    <use href="#fgG"></use>
+    <g id="gf5"><rect x="-240" y="-140" width="480" height="270" rx="30" fill="#3DDCFF"></rect></g>
+    <g id="el5"></g>
+    <path id="bo5" d="M 14 -330 L -22 -268 H 4 L -12 -222 L 30 -286 H 4 L 20 -330 Z" fill="#FFD23F"></path>
+  </g>
+</g>
+
+<!-- Scene 6: 0 / 1, stays for years -->
+<g id="s6">
+  <g id="cA6" transform="translate(290 770) scale(0.5)"><use href="#cellG"></use><use href="#glassG"></use><use href="#fgG"></use><g id="eA6"></g></g>
+  <g id="cB6" transform="translate(790 770) scale(0.5)"><use href="#cellG"></use><use href="#glassG"></use><use href="#fgG"></use></g>
+  <text id="d06" x="290" y="1040" text-anchor="middle" font-size="190" font-weight="700" fill="#FFD23F">0</text>
+  <text id="d16" x="790" y="1040" text-anchor="middle" font-size="190" font-weight="700" fill="#3DDCFF">1</text>
+  <g id="cal6">
+    <rect x="330" y="1080" width="160" height="160" rx="18" fill="#EEF0F7"></rect>
+    <rect x="330" y="1080" width="160" height="42" rx="18" fill="#FF5C5C"></rect><rect x="330" y="1100" width="160" height="22" fill="#FF5C5C"></rect>
+    <text id="cn6" x="410" y="1210" text-anchor="middle" font-size="76" font-weight="700" fill="#2B2F45">1</text>
+  </g>
+  <g id="pl6">
+    <path d="M 700 1250 C 700 1225 650 1225 650 1200" fill="none" stroke="#8A90A6" stroke-width="12" stroke-linecap="round"></path>
+    <rect x="610" y="1110" width="110" height="90" rx="18" fill="#B9C0CF"></rect>
+    <rect x="632" y="1080" width="16" height="34" rx="5" fill="#8A90A6"></rect><rect x="682" y="1080" width="16" height="34" rx="5" fill="#8A90A6"></rect>
+    <g id="px6" stroke="#FF8FA3" stroke-width="16" stroke-linecap="round"><line x1="600" y1="1090" x2="730" y2="1220"></line><line x1="730" y1="1090" x2="600" y2="1220"></line></g>
+  </g>
+</g>
+
+<!-- Scene 7: every push wears the glass -->
+<g id="s7">
+  <g transform="translate(500 790) scale(1.0)">
+    <use href="#cellG"></use>
+    <use href="#glassG"></use>
+    <use href="#fgG"></use>
+    <g id="el7"></g>
+  </g>
+  <g id="ck7" fill="none" stroke="#FF8FA3" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M 290 840 L 320 870 L 305 900 L 340 925"></path>
+    <path d="M 420 835 L 400 870 L 430 895 L 415 925"></path>
+    <path d="M 560 838 L 590 862 L 570 890 L 600 925"></path>
+    <path d="M 700 840 L 680 875 L 712 900"></path>
+    <path d="M 260 700 L 300 680 L 320 705"></path>
+    <path d="M 740 690 L 705 668 L 690 700"></path>
+  </g>
+  <g id="m7"><use href="#mw" x="800" y="1010" width="240" height="240"></use></g>
+</g>
+
+<!-- Scene 8: wear levelling -->
+<g id="s8">
+  <g id="gr8"></g>
+</g>
+
+<!-- Scene 9: why "flash" -->
+<g id="s9">
+  <rect x="215" y="500" width="650" height="490" rx="30" fill="#14172C" stroke="#3A4170" stroke-width="8"></rect>
+  <g id="bk9"></g>
+  <rect id="wf9" x="215" y="500" width="650" height="490" rx="30" fill="#FFFFFF"></rect>
+  <g id="cam9">
+    <rect x="390" y="1060" width="300" height="190" rx="28" fill="#2B2F45" stroke="#3A4170" stroke-width="8"></rect>
+    <rect x="420" y="1030" width="80" height="40" rx="10" fill="#3A4170"></rect>
+    <rect id="fb9" x="600" y="1030" width="60" height="34" rx="8" fill="#FFF3C4"></rect>
+    <circle cx="540" cy="1155" r="64" fill="#14172C" stroke="#B9C0CF" stroke-width="12"></circle>
+    <circle cx="520" cy="1135" r="16" fill="#3A4170"></circle>
+    <g id="fr9" stroke="#FFD23F" stroke-width="10" stroke-linecap="round"></g>
+  </g>
+  <rect id="sf9" x="0" y="0" width="1080" height="1920" fill="#FFFFFF"></rect>
+</g>
+
+<!-- Scene 10: teaser, an electric toothbrush -->
+<g id="s10">
+  <g transform="translate(0 40)"><g id="tb10">
+    <rect x="522" y="470" width="66" height="110" rx="26" fill="#EEF0F7"></rect>
+    <g fill="#3DDCFF"><rect x="492" y="480" width="34" height="14" rx="6"></rect><rect x="492" y="502" width="34" height="14" rx="6"></rect><rect x="492" y="524" width="34" height="14" rx="6"></rect><rect x="492" y="546" width="34" height="14" rx="6"></rect></g>
+    <rect x="530" y="570" width="50" height="140" rx="20" fill="#EEF0F7"></rect>
+    <rect x="490" y="690" width="130" height="500" rx="60" fill="#EEF0F7"></rect>
+    <rect x="490" y="1080" width="130" height="110" rx="50" fill="#D5D9E6"></rect>
+    <circle cx="555" cy="820" r="30" fill="#3DDCFF"></circle>
+    <path d="M 555 805 V 822 M 543 812 A 16 16 0 1 0 567 812" fill="none" stroke="#1B1F3B" stroke-width="5" stroke-linecap="round"></path>
+    <g fill="#3A4170"><circle cx="555" cy="900" r="7"></circle><circle cx="555" cy="925" r="7"></circle><circle cx="555" cy="950" r="7"></circle></g>
+    <text id="q10" x="780" y="960" text-anchor="middle" font-size="200" font-weight="700" fill="#FFD23F">?</text>
+  </g></g>
+  <g id="m10"><use href="#m" x="60" y="960" width="300" height="300"></use></g>
+</g>
+<!--@end-->
+<!--@ov-->
+<div class="ov" id="o1">
+  <div id="t1" class="ctr letters" style="top: 240px; font-size: 116px; line-height: 1; font-weight: 700; color: #FFD23F"></div>
+  <div id="sub1" class="ctr" style="top: 374px; font-size: 56px; font-weight: 600; color: #3DDCFF">a USB flash drive</div>
+</div>
+<div class="ov" id="o2">
+  <p class="lbl" id="cL2" style="left: 705px; top: 712px; font-size: 50px; font-weight: 700; color: #3DDCFF">controller</p>
+  <p class="lbl" id="mL2" style="left: 20px; width: 370px; text-align: right; top: 928px; font-size: 50px; font-weight: 700; color: #FFD23F">memory chip</p>
+  <p class="lbl" id="xL2" style="left: 705px; top: 1100px; font-size: 46px; font-weight: 700; color: #D5D9E6">clock<br>crystal</p>
+</div>
+<div class="ov" id="o3">
+  <div class="chip"><span>1 · The memory</span></div>
+  <div id="bn3" class="ctr" style="top: 260px; font-size: 120px; line-height: 1; font-weight: 700; color: #FFD23F">BILLIONS</div>
+</div>
+<div class="ov" id="o4">
+  <div class="ctr" style="top: 250px; font-size: 104px; line-height: 1; font-weight: 700"><span id="si4" style="display: inline-block; color: #3DDCFF">SiO₂</span> <span id="gs4" style="display: inline-block; color: #FFD23F">= glass</span></div>
+</div>
+<div class="ov" id="o5">
+  <div id="hv5" class="ctr" style="top: 250px; font-size: 96px; line-height: 1; font-weight: 700; color: #FFD23F">HIGH VOLTAGE</div>
+</div>
+<div class="ov" id="o6">
+  <div id="yr6" class="ctr" style="top: 250px; font-size: 96px; line-height: 1; font-weight: 700; color: #FFD23F">for years</div>
+</div>
+<div class="ov" id="o7">
+  <div class="chip"><span>2 · The trick</span></div>
+  <div id="wr7" class="ctr" style="top: 250px; font-size: 104px; line-height: 1; font-weight: 700; color: #FF8FA3">wear &amp; tear</div>
+</div>
+<div class="ov" id="o8">
+  <div id="wl8" class="ctr" style="top: 250px; font-size: 96px; line-height: 1; font-weight: 700; color: #FFD23F">spread it out</div>
+</div>
+<div class="ov" id="o9">
+  <div class="chip"><span>3 · The name</span></div>
+  <div id="fl9" class="ctr" style="top: 250px; font-size: 120px; line-height: 1; font-weight: 700; color: #FFD23F">FLASH?</div>
+  <div id="eb9" class="ctr" style="top: 415px"><span class="pill" style="color: #3DDCFF; border-color: #3DDCFF; font-size: 44px; padding: 12px 34px; background: #1B1F3B">whole block erased</span></div>
+</div>
+<div class="ov" id="o10">
+  <div id="nx10" class="ctr" style="top: 170px; font-size: 52px; font-weight: 600; color: #3DDCFF">Next time:</div>
+  <div id="t10" class="ctr letters" style="top: 250px; font-size: 110px; line-height: 1; font-weight: 700; color: #FFD23F"></div>
+  <div id="sub10" class="ctr" style="top: 378px; font-size: 56px; font-weight: 600; color: #3DDCFF">an electric toothbrush</div>
+  <div id="big7" style="display:none"></div>
+</div>
+<!--@end-->
+<!--@js-->
+const CY = '#3DDCFF', GOLD = '#F2C14E';
+// scene 2 pointer lines
+['lc2', 'lm2', 'lx2'].forEach((id) => dash($(id)));
+// scene 3: 14 x 12 cell grid
+const CL3 = [];
+for (let r = 0; r < 12; r++) for (let c = 0; c < 14; c++) { const x = 195 + c * 50, y = 555 + r * 50; CL3.push({ e: mk($('cl3'), 'rect', { x, y, width: 40, height: 40, rx: 8, fill: '#3A4170' }), x: x + 20, y: y + 20, r, c, h: (r * 7 + c * 13) % 5 }); }
+// electrons (local cell coords)
+const EX = [-150, -100, -50, 0, 50, 100, 150];
+const el = (g, x, y) => { const c = mk(g, 'circle', { cx: x, cy: y, r: 16, fill: CY }); mk(g, 'text', { x, y: y + 9, 'text-anchor': 'middle', 'font-size': 26, 'font-weight': 700, fill: '#1B1F3B' }).textContent = '−'; return c; };
+const E5 = EX.map((x) => { const g = mk($('el5'), 'g', {}); el(g, 0, 0); return { g, x }; });
+const E6 = EX.map((x) => { const g = mk($('eA6'), 'g', {}); el(g, 0, 0); return { g, x }; });
+const E7 = EX.slice(1, 6).map((x) => { const g = mk($('el7'), 'g', {}); el(g, 0, 0); return { g, x }; });
+// scene 7 cracks
+const CK7 = [...$('ck7').children]; CK7.forEach(dash);
+// scene 8: 6 x 5 grid with fill bars
+const G8 = [];
+for (let r = 0; r < 5; r++) for (let c = 0; c < 6; c++) {
+  const x = 135 + c * 140, y = 500 + r * 140;
+  const g = mk($('gr8'), 'g', {});
+  const box = mk(g, 'rect', { x, y, width: 110, height: 110, rx: 16, fill: '#14172C', stroke: '#3A4170', 'stroke-width': 6 });
+  const bar = mk(g, 'rect', { x: x + 12, y: y + 98, width: 86, height: 0, rx: 8, fill: GOLD });
+  G8.push({ g, box, bar, x, y });
+}
+// deterministic order of writes: always the least-used cell, ties broken by a fixed shuffle
+const ORD = G8.map((_, i) => i).sort((a, b) => ((a * 17) % 30) - ((b * 17) % 30));
+// scene 9: block of cells full of electrons
+const B9 = [];
+for (let r = 0; r < 3; r++) for (let c = 0; c < 4; c++) {
+  const x = 255 + c * 150, y = 530 + r * 150;
+  mk($('bk9'), 'rect', { x, y, width: 120, height: 120, rx: 18, fill: '#2B2F45', stroke: '#3A4170', 'stroke-width': 6 });
+  const g = mk($('bk9'), 'g', {});
+  [[-25, -20], [25, -20], [0, 25]].forEach(([dx, dy]) => el(g, x + 60 + dx, y + 60 + dy));
+  B9.push(g);
+}
+const FR9 = rays($('fr9'), 630, 1045, 10, 50, 85);
+<!--@end-->
+<!--@f-->
+const A = {
+  cages: T('cages'), pull: T('pull'), cas: T('case'), controller: T('controller'), memory: T('memory'), crystal: T('crystal'),
+  memory2: T('memory', 2), billions: T('billions'), cells: T('cells'),
+  floating: T('floating'), wrapped: T('wrapped'), silicon: T('silicon'), glass2: T('glass', 2),
+  save: T('save'), voltage: T('voltage'), pushes: T('pushes'), glass3: T('glass', 3),
+  zero: T('zero'), empty: T('empty'), one: T('one'), years: T('years'), unplugged: T('unplugged'),
+  trick: T('trick'), wears: T('wears'), down: T('down'),
+  spreads: T('spreads'), none: T('none'), first: T('first'),
+  flash1: T('flash'), erasing: T('erasing'), block: T('block'), camera: T('camera'), flash2: T('flash', 2),
+  whats: T("what's"), toothbrush: T('toothbrush'),
+};
+const F = [];
+const jig = (u, i) => [5 * Math.sin(u * 9 + i * 1.7), 4 * Math.cos(u * 11 + i * 2.3)];
+F[0] = (u, t) => {
+  const s = 0.5 + 0.35 * outBack(prog(u, 0, 0.55));
+  const bob = Math.sin(u * 2.4) * 10 * prog(u, 0.5, 0.9);
+  tf($('c1'), `translate(540 ${960 + bob}) rotate(${-8 + 3 * Math.sin(u * 1.8)}) scale(${s}) translate(-540 -845)`);
+  const pk = outBack(prog(u, 1.0, 1.5));
+  tf($('m1'), `translate(${lerp(420, 650, pk)} ${640 - 20 * pk}) rotate(${12 * pk} 200 210) scale(0.6)`);
+  L1.forEach((e, i) => { const k = prog(u, 0.25 + i * 0.045, 0.55 + i * 0.045); e.style.transform = `translateY(${(1 - outCubic(k)) * 40}px) scale(${outBack(k)})`; e.style.opacity = k > 0 ? 1 : 0; });
+  const sk = outCubic(prog(u, 0.9, 1.25)); $('sub1').style.opacity = sk; $('sub1').style.transform = `translateY(${(1 - sk) * 30}px)`;
+};
+F[1] = (u, t) => {
+  const off = smooth(prog(t, A.pull - 0.05, A.cas + 0.25));
+  tf($('cs2'), `translate(${60 * off} ${900 * off}) rotate(${12 * off} 540 900)`);
+  $('cs2').style.opacity = 1 - off;
+  popS($('ctl2'), t > A.controller - 0.1 ? 1 + 0.15 * bump(prog(t, A.controller - 0.1, A.controller + 0.3)) : 1, 540, 745);
+  popS($('mem2'), t > A.memory - 0.1 ? 1 + 0.1 * bump(prog(t, A.memory - 0.1, A.memory + 0.3)) : 1, 540, 960);
+  popS($('xt2'), t > A.crystal - 0.1 ? 1 + 0.2 * bump(prog(t, A.crystal - 0.1, A.crystal + 0.3)) : 1, 540, 1133);
+  draw($('lc2'), prog(t, A.controller - 0.2, A.controller));
+  draw($('lm2'), prog(t, A.memory - 0.2, A.memory));
+  draw($('lx2'), prog(t, A.crystal - 0.2, A.crystal));
+  pop($('cL2'), prog(t, A.controller - 0.05, A.controller + 0.2));
+  pop($('mL2'), prog(t, A.memory - 0.05, A.memory + 0.2));
+  pop($('xL2'), prog(t, A.crystal - 0.05, A.crystal + 0.2));
+};
+F[2] = (u, t) => {
+  CL3.forEach((c, i) => {
+    const k = prog(u, 0.05 + (c.r + c.c) * 0.025, 0.3 + (c.r + c.c) * 0.025);
+    popS(c.e, k, c.x, c.y);
+    const lit = t > A.cells - 0.2 && (Math.floor(u * 6) + c.h) % 5 === 0;
+    c.e.setAttribute('fill', lit ? GOLD : '#3A4170');
+  });
+  pop($('bn3'), prog(t, A.billions - 0.1, A.billions + 0.2));
+  const hc = CL3[5 * 14 + 6];
+  $('hl3').setAttribute('x', hc.x - 28); $('hl3').setAttribute('y', hc.y - 28);
+  $('hl3').style.opacity = u > 1.6 ? 1 : 0;
+  tf($('hl3'), about(hc.x, hc.y, 1 + 0.3 * smooth(prog(u, 1.6, 2.2))));
+};
+F[3] = (u, t) => {
+  popS($('cb4'), prog(u, 0, 0.35), 0, 0);
+  const fk = prog(t, A.floating - 0.15, A.floating + 0.15);
+  popS($('fg4'), fk > 0 ? 1 + 0.12 * bump(prog(t, A.floating + 0.15, A.floating + 0.6)) : 0, 0, 0);
+  if (fk > 0 && fk < 1) popS($('fg4'), fk, 0, 0);
+  const gk = smooth(prog(t, A.wrapped - 0.1, A.wrapped + 0.4));
+  $('gl4').style.opacity = gk; tf($('gl4'), about(0, 0, lerp(1.3, 1, gk)));
+  pop($('si4'), prog(t, A.silicon - 0.1, A.silicon + 0.2));
+  pop($('gs4'), prog(t, A.glass2 - 0.1, A.glass2 + 0.2));
+};
+F[4] = (u, t) => {
+  const vk = prog(t, A.voltage - 0.15, A.voltage + 0.15);
+  pop($('hv5'), vk);
+  $('bo5').style.opacity = vk > 0 ? (Math.floor(u * 10) % 2 ? 1 : 0.5) : 0;
+  let crossing = 0;
+  E5.forEach((e, i) => {
+    const a = A.pushes - 0.3 + i * 0.12, b = a + 0.9;
+    const k = smooth(prog(t, a, b));
+    const [jx, jy] = jig(u, i);
+    const y = lerp(190, 0, k);
+    if (k > 0.25 && k < 0.85) crossing = 1;
+    tf(e.g, `translate(${e.x + (k >= 1 ? jx * 0.6 : 0)} ${y + (k >= 1 ? jy * 0.6 : 0)})`);
+    e.g.style.opacity = prog(u, 0.1, 0.4);
+  });
+  $('gf5').style.opacity = crossing ? 0.18 + 0.1 * Math.sin(u * 30) : 0;
+};
+F[5] = (u, t) => {
+  E6.forEach((e, i) => { const [jx, jy] = jig(u, i); tf(e.g, `translate(${e.x + jx} ${jy})`); });
+  popS($('d06'), prog(t, A.zero - 0.1, A.zero + 0.2), 290, 970);
+  popS($('d16'), prog(t, A.one - 0.1, A.one + 0.2), 790, 970);
+  $('cB6').style.opacity = lerp(0.35, 1, smooth(prog(t, A.empty - 0.2, A.empty + 0.1)));
+  pop($('yr6'), prog(t, A.years - 0.15, A.years + 0.15));
+  popS($('cal6'), prog(t, A.years - 0.15, A.years + 0.15), 410, 1160);
+  if (t > A.years) $('cn6').textContent = 1 + (Math.floor((t - A.years) * 12) % 31);
+  popS($('pl6'), prog(t, A.unplugged - 0.25, A.unplugged), 665, 1160);
+  const xk = prog(t, A.unplugged + 0.1, A.unplugged + 0.35);
+  $('px6').style.opacity = xk > 0 ? 1 : 0; tf($('px6'), about(665, 1155, Math.max(0.0001, outBack(xk))));
+};
+F[6] = (u, t) => {
+  pop($('wr7'), prog(t, A.wears - 0.15, A.wears + 0.15));
+  E7.forEach((e, i) => {
+    const per = 0.7, ph = ((u + i * 0.14) % per) / per;
+    tf(e.g, `translate(${e.x} ${lerp(190, 0, smooth(clamp(ph * 1.4)))})`);
+    e.g.style.opacity = u > 0.3 ? 1 - smooth(prog(ph, 0.8, 1)) : 0;
+  });
+  CK7.forEach((c, i) => draw(c, outCubic(prog(t, A.wears + i * 0.15, A.wears + i * 0.15 + 0.3))));
+  popS($('m7'), prog(t, A.down - 0.25, A.down + 0.05), 920, 1130);
+};
+F[7] = (u, t) => {
+  G8.forEach((c, i) => popS(c.g, prog(u, 0.03 * i, 0.03 * i + 0.25), c.x + 55, c.y + 55));
+  pop($('wl8'), prog(t, A.spreads - 0.15, A.spreads + 0.15));
+  const nW = t > A.spreads ? Math.floor((t - A.spreads) * 30) : 0;
+  const cnt = G8.map(() => 0); let last = -1;
+  for (let w = 0; w < Math.min(nW, 90); w++) { const j = ORD[w % 30]; cnt[j]++; last = j; }
+  const done = t > A.none - 0.1;
+  G8.forEach((c, i) => {
+    const h = Math.min(86, cnt[i] * 28.6);
+    c.bar.setAttribute('height', h); c.bar.setAttribute('y', c.y + 98 - h);
+    c.box.setAttribute('stroke', done ? CY : (i === last ? '#FFD23F' : '#3A4170'));
+  });
+};
+F[8] = (u, t) => {
+  pop($('fl9'), prog(t, A.flash1 - 0.15, A.flash1 + 0.15));
+  const ek = prog(t, A.block - 0.1, A.block + 0.15);
+  $('wf9').style.opacity = ek > 0 ? 1 - smooth(prog(t, A.block + 0.15, A.block + 0.7)) : 0;
+  B9.forEach((g) => { g.style.opacity = ek >= 0.8 ? 0 : 1; });
+  pop($('eb9'), prog(t, A.block + 0.2, A.block + 0.45) * (1 - prog(t, A.camera - 0.5, A.camera - 0.3)));
+  popS($('cam9'), prog(t, A.camera - 0.4, A.camera - 0.1), 540, 1140);
+  const fk = prog(t, A.flash2 - 0.05, A.flash2 + 0.1);
+  FR9.forEach((r) => { r.style.opacity = fk > 0 ? 1 - prog(t, A.flash2 + 0.4, A.flash2 + 1.0) : 0; });
+  $('fb9').setAttribute('fill', fk > 0 && t < A.flash2 + 0.6 ? '#FFFFFF' : '#FFF3C4');
+  $('sf9').style.opacity = fk > 0 ? 0.75 * (1 - smooth(prog(t, A.flash2 + 0.05, A.flash2 + 0.5))) : 0;
+};
+F[9] = (u, t) => {
+  pop($('nx10'), prog(u, 0, 0.25));
+  popS($('tb10'), prog(u, 0.1, 0.5), 555, 830);
+  $('q10').setAttribute('font-size', 200 * (1 + 0.08 * Math.sin(u * 8)));
+  const mk2 = outBack(prog(u, 0.4, 0.8));
+  tf($('m10'), `translate(${-420 * (1 - mk2)} 0)`);
+  L10.forEach((e, i) => { const k = prog(t, A.whats - 0.05 + i * 0.03, A.whats + 0.15 + i * 0.03); e.style.transform = `scale(${outBack(k)})`; e.style.opacity = k > 0 ? 1 : 0; });
+  pop($('sub10'), prog(t, A.toothbrush - 0.5, A.toothbrush - 0.2));
+};
+<!--@end-->
