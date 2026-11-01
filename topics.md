@@ -10,7 +10,7 @@ Take the first unchecked item. Each episode's teaser names the next one.
 - [x] TV remote (ep. 6)
 - [x] Computer mouse (ep. 7, 2026-10-24)
 - [x] Wireless earbuds (ep. 8, 2026-10-25)
-- [ ] USB flash drive
+- [x] USB flash drive (ep. 9, 2026-11-01)
 - [ ] Electric toothbrush
 - [ ] Digital kitchen scale
 - [ ] Bike light

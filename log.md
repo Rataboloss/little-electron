@@ -12,3 +12,5 @@
 | 2026-10-25 | 7–8 mouse, earbuds on Instagram | — | — | Instagram Reels 26/10 10:00 (ep7), 27/10 10:00 (ep8) |
 | 2026-10-25 | LONG 001 "What's REALLY Inside a $1,199 iPhone? (vs Android)" (8:02, 16:9) | YouTube video Wed 28/10 16:00 | `videos/long001/` |
 | 2026-10-25 | 11 Shorts from LONG 001 (2/day per network) | YouTube 10:00+16:00, TikTok 12:00+18:00, Instagram 10:00+17:00, 29/10 → 03/11 | `videos/long001/short_*.mp4`; daily pipeline paused until 01/11 |
+| 2026-11-01 | Metricool "account limit" errors 29–31/10 | — | — | 18 posts failed (6 iPhone Shorts × YT/TikTok/IG except vapor-chamber TikTok, + earbuds TikTok 29/10); limit reset on 01/11. Rescheduled 1/day/network: IG 10:00, YT 16:00, TikTok 18:00, 04/11 → 09/11 (TikTok: earbuds 04/11, then parts, Face ID, lasagna, Taptic, Samsung) |
+| 2026-11-01 | 9 USB flash drive | scheduled 10/11 16:00 | scheduled 10/11 18:00 | voice Kokoro am_puck, 43.8 s; Instagram Reel 10/11 10:00 |
