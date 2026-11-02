@@ -1,0 +1,383 @@
+<!--@title-->Little Electron — What's inside an electric toothbrush<!--@end-->
+<!--@defs-->
+  <!-- closed toothbrush, centre ~ (540, 790) -->
+  <g id="tbG">
+    <rect x="508" y="440" width="64" height="120" rx="26" fill="#EEF0F7"></rect>
+    <g fill="#3DDCFF"><rect x="478" y="452" width="34" height="14" rx="6"></rect><rect x="478" y="474" width="34" height="14" rx="6"></rect><rect x="478" y="496" width="34" height="14" rx="6"></rect><rect x="478" y="518" width="34" height="14" rx="6"></rect></g>
+    <rect x="515" y="545" width="50" height="130" rx="20" fill="#EEF0F7"></rect>
+    <rect x="470" y="650" width="140" height="470" rx="62" fill="#EEF0F7"></rect>
+    <rect x="470" y="1010" width="140" height="110" rx="54" fill="#D5D9E6"></rect>
+    <circle cx="540" cy="780" r="30" fill="#3DDCFF"></circle>
+    <path d="M 540 765 V 782 M 528 772 A 16 16 0 1 0 552 772" fill="none" stroke="#1B1F3B" stroke-width="5" stroke-linecap="round"></path>
+    <g fill="#3A4170"><circle cx="540" cy="860" r="7"></circle><circle cx="540" cy="885" r="7"></circle><circle cx="540" cy="910" r="7"></circle></g>
+  </g>
+  <!-- small charger base under it -->
+  <g id="baseG">
+    <rect x="410" y="1095" width="260" height="125" rx="44" fill="#3A4170" stroke="#2B2F45" stroke-width="6"></rect>
+    <circle cx="540" cy="1185" r="9" fill="#2FB088"></circle>
+  </g>
+  <!-- copper coil stripes, local coords (0,0) top-left, w x h -->
+  <g id="cu5"><rect x="0" y="0" width="70" height="140" rx="10" fill="#F2C14E"></rect><g stroke="#C9962E" stroke-width="5"><line x1="4" y1="20" x2="66" y2="20"></line><line x1="4" y1="45" x2="66" y2="45"></line><line x1="4" y1="70" x2="66" y2="70"></line><line x1="4" y1="95" x2="66" y2="95"></line><line x1="4" y1="120" x2="66" y2="120"></line></g></g>
+<!--@end-->
+<!--@svg-->
+<!-- Scene 1: hook -->
+<g id="s1">
+  <g id="c1">
+    <g id="m1"><use href="#m" x="0" y="0" width="400" height="400"></use></g>
+    <g id="wv1" fill="none" stroke="#3DDCFF" stroke-width="8" stroke-linecap="round">
+      <path d="M 455 1075 Q 540 1035 625 1075"></path>
+      <path d="M 425 1045 Q 540 985 655 1045"></path>
+      <path d="M 395 1015 Q 540 935 685 1015"></path>
+    </g>
+    <use href="#tbG"></use>
+    <use href="#baseG"></use>
+  </g>
+</g>
+
+<!-- Scene 2: opened handle -->
+<g id="s2">
+  <g id="in2">
+    <rect x="510" y="450" width="60" height="130" rx="20" fill="#B9C0CF"></rect>
+    <rect x="430" y="560" width="220" height="660" rx="90" fill="#2B2F45" stroke="#EEF0F7" stroke-width="10"></rect>
+    <g id="dr2">
+      <use href="#cu5" transform="translate(455 595) scale(0.93 0.72)"></use>
+      <use href="#cu5" transform="translate(560 595) scale(0.93 0.72)"></use>
+      <rect x="525" y="605" width="30" height="85" rx="8" fill="#FF5C5C"></rect>
+    </g>
+    <g id="pc2"><rect x="465" y="715" width="150" height="165" rx="12" fill="#1F8A6A"></rect>
+      <g fill="none" stroke="#2FB088" stroke-width="5" stroke-linecap="round"><path d="M 480 735 H 600 M 480 860 H 600 M 490 735 V 860"></path></g>
+      <rect x="505" y="760" width="70" height="70" rx="8" fill="#14172C"></rect></g>
+    <g id="bt2"><rect x="465" y="900" width="150" height="175" rx="18" fill="#8A90A6"></rect><rect x="515" y="890" width="50" height="14" rx="5" fill="#B9C0CF"></rect>
+      <rect x="465" y="955" width="150" height="40" fill="#3DDCFF"></rect><text x="540" y="1055" text-anchor="middle" font-size="56" font-weight="700" fill="#2B2F45">+</text>
+      <rect id="bo2" x="458" y="893" width="164" height="189" rx="22" fill="none" stroke="#FF8FA3" stroke-width="9"></rect></g>
+    <g id="ch2">
+      <rect x="505" y="1100" width="70" height="115" rx="12" fill="#14172C"></rect>
+      <use href="#cu5" transform="translate(452 1095) scale(0.7 0.75)"></use>
+      <use href="#cu5" transform="translate(579 1095) scale(0.7 0.75)"></use>
+    </g>
+  </g>
+  <g id="ln2" fill="none" stroke-width="6" stroke-linecap="round">
+    <path id="la2" d="M 640 640 H 700" stroke="#F2C14E"></path>
+    <path id="lb2" d="M 465 795 H 410" stroke="#3DDCFF"></path>
+    <path id="lc2" d="M 620 985 H 700" stroke="#FFD23F"></path>
+    <path id="ld2" d="M 450 1140 H 410" stroke="#F2C14E"></path>
+  </g>
+  <g id="cs2">
+    <rect x="510" y="450" width="60" height="130" rx="20" fill="#EEF0F7"></rect>
+    <rect x="430" y="560" width="220" height="660" rx="90" fill="#EEF0F7"></rect>
+    <rect x="430" y="1090" width="220" height="130" rx="80" fill="#D5D9E6"></rect>
+    <circle cx="540" cy="700" r="40" fill="#3DDCFF"></circle>
+  </g>
+</g>
+
+<!-- Scene 3: the base hides a coil -->
+<g id="s3">
+  <path d="M 790 1060 C 880 1060 900 1150 950 1230" fill="none" stroke="#8A90A6" stroke-width="16" stroke-linecap="round"></path>
+  <rect x="290" y="930" width="500" height="250" rx="70" fill="#3A4170" stroke="#2B2F45" stroke-width="8"></rect>
+  <rect x="465" y="700" width="150" height="250" rx="36" fill="#3A4170" stroke="#2B2F45" stroke-width="8"></rect>
+  <rect x="482" y="720" width="116" height="215" rx="24" fill="#14172C"></rect>
+  <g id="co3"></g>
+  <g id="cv3"><rect x="465" y="700" width="150" height="250" rx="36" fill="#3A4170"></rect><rect x="455" y="934" width="170" height="20" fill="#3A4170"></rect></g>
+  <circle cx="540" cy="1120" r="12" fill="#2FB088"></circle>
+</g>
+
+<!-- Scene 4: current flips, changing magnetic field -->
+<g id="s4">
+  <g id="fl4" fill="none" stroke="#3DDCFF" stroke-width="7"></g>
+  <path d="M 790 1060 C 880 1060 900 1150 950 1230" fill="none" stroke="#8A90A6" stroke-width="16" stroke-linecap="round"></path>
+  <rect x="290" y="930" width="500" height="250" rx="70" fill="#3A4170" stroke="#2B2F45" stroke-width="8"></rect>
+  <rect x="465" y="700" width="150" height="250" rx="36" fill="#3A4170" stroke="#2B2F45" stroke-width="8"></rect>
+  <rect x="482" y="720" width="116" height="215" rx="24" fill="#14172C"></rect>
+  <g id="co4"></g>
+  <g id="dt4"></g>
+  <g id="ar4" fill="#FFD23F"><path d="M 380 1050 L 430 1020 V 1040 H 650 V 1020 L 700 1050 L 650 1080 V 1060 H 430 V 1080 Z"></path></g>
+</g>
+
+<!-- Scene 5: through plastic -->
+<g id="s5">
+  <g id="hd5">
+    <rect x="400" y="470" width="280" height="580" rx="70" fill="#EEF0F7"></rect>
+    <rect x="428" y="498" width="224" height="320" rx="48" fill="#2B2F45"></rect>
+    <rect x="460" y="525" width="160" height="260" rx="18" fill="#8A90A6"></rect>
+    <rect id="bf5" x="472" y="537" width="136" height="0" rx="10" fill="#2FB088"></rect>
+    <rect x="515" y="513" width="50" height="14" rx="5" fill="#B9C0CF"></rect>
+    <rect x="478" y="850" width="124" height="210" rx="20" fill="#1B1F3B"></rect>
+    <g id="hc5"><use href="#cu5" transform="translate(425 860) scale(0.6 1.0)"></use><use href="#cu5" transform="translate(613 860) scale(0.6 1.0)"></use></g>
+    <g id="hg5" fill="none" stroke="#FFD23F" stroke-width="7"><rect x="421" y="856" width="50" height="148" rx="10"></rect><rect x="609" y="856" width="50" height="148" rx="10"></rect></g>
+  </g>
+  <rect x="300" y="1010" width="480" height="210" rx="60" fill="#3A4170" stroke="#2B2F45" stroke-width="8"></rect>
+  <rect x="492" y="866" width="96" height="160" rx="24" fill="#3A4170"></rect>
+  <g id="pc5"></g>
+  <g id="fd5" fill="none" stroke="#3DDCFF" stroke-width="10" stroke-linecap="round"></g>
+  <g id="bz5">
+    <path d="M 352 860 L 318 925 H 345 L 328 980 L 380 905 H 352 L 372 860 Z" fill="#FFD23F"></path>
+    <g id="bx5" stroke="#FF8FA3" stroke-width="14" stroke-linecap="round"><line x1="300" y1="880" x2="400" y2="970"></line><line x1="400" y1="880" x2="300" y2="970"></line></g>
+  </g>
+  <g id="wd5" fill="#3DDCFF"></g>
+  <g id="m5"><use href="#m" x="800" y="1000" width="240" height="240"></use></g>
+</g>
+
+<!-- Scene 6: no spinning motor -->
+<g id="s6">
+  <g id="mo6">
+    <rect x="330" y="700" width="300" height="240" rx="44" fill="#B9C0CF"></rect>
+    <rect x="330" y="760" width="300" height="24" fill="#8A90A6"></rect><rect x="330" y="856" width="300" height="24" fill="#8A90A6"></rect>
+    <rect x="620" y="740" width="50" height="160" rx="16" fill="#8A90A6"></rect>
+    <rect x="668" y="805" width="110" height="30" rx="10" fill="#D5D9E6"></rect>
+    <g id="rt6"><path d="M 760 760 A 60 60 0 1 1 700 820" fill="none" stroke="#3DDCFF" stroke-width="12" stroke-linecap="round"></path><path d="M 760 735 L 790 765 L 750 780 Z" fill="#3DDCFF"></path></g>
+  </g>
+  <g id="mx6" stroke="#FF8FA3" stroke-width="22" stroke-linecap="round"><line x1="320" y1="640" x2="820" y2="1000"></line><line x1="820" y1="640" x2="320" y2="1000"></line></g>
+  <g id="m6"><use href="#mw" x="780" y="990" width="250" height="250"></use></g>
+</g>
+
+<!-- Scene 7: coil swings a magnet -->
+<g id="s7">
+  <g id="os7">
+    <rect x="525" y="560" width="30" height="440" rx="10" fill="#B9C0CF"></rect>
+    <rect x="505" y="455" width="70" height="140" rx="28" fill="#EEF0F7"></rect>
+    <g fill="#3DDCFF"><rect x="472" y="468" width="36" height="16" rx="6"></rect><rect x="472" y="494" width="36" height="16" rx="6"></rect><rect x="472" y="520" width="36" height="16" rx="6"></rect><rect x="472" y="546" width="36" height="16" rx="6"></rect></g>
+    <rect x="460" y="972" width="80" height="56" rx="14" fill="#FF5C5C"></rect>
+    <rect x="540" y="972" width="80" height="56" rx="14" fill="#3DDCFF"></rect>
+    <text x="500" y="1012" text-anchor="middle" font-size="36" font-weight="700" fill="#1B1F3B">N</text>
+    <text x="580" y="1012" text-anchor="middle" font-size="36" font-weight="700" fill="#1B1F3B">S</text>
+  </g>
+  <circle cx="540" cy="1000" r="10" fill="#14172C"></circle>
+  <g id="cl7"><use href="#cu5" transform="translate(300 930) scale(1.5 1.0)"></use></g>
+  <g id="cr7"><use href="#cu5" transform="translate(675 930) scale(1.5 1.0)"></use></g>
+  <g id="gl7" fill="none" stroke="#FFD23F" stroke-width="8"><rect id="gL7" x="294" y="924" width="117" height="152" rx="14"></rect><rect id="gR7" x="669" y="924" width="117" height="152" rx="14"></rect></g>
+  <g id="sw7" fill="none" stroke="#3DDCFF" stroke-width="8" stroke-linecap="round"><path d="M 420 470 Q 400 520 420 570"></path><path d="M 660 470 Q 680 520 660 570"></path></g>
+</g>
+
+<!-- Scene 8: chip times two minutes -->
+<g id="s8">
+  <circle cx="540" cy="850" r="260" fill="none" stroke="#2B2F45" stroke-width="44"></circle>
+  <circle id="rg8" cx="540" cy="850" r="260" fill="none" stroke="#3DDCFF" stroke-width="44" transform="rotate(-90 540 850)"></circle>
+  <g stroke="#1B1F3B" stroke-width="12"><line x1="540" y1="565" x2="540" y2="640"></line><line x1="825" y1="850" x2="750" y2="850"></line><line x1="540" y1="1135" x2="540" y2="1060"></line><line x1="255" y1="850" x2="330" y2="850"></line></g>
+  <g id="ic8">
+    <g fill="#B9C0CF"><rect x="425" y="760" width="22" height="16"></rect><rect x="425" y="810" width="22" height="16"></rect><rect x="425" y="860" width="22" height="16"></rect><rect x="425" y="910" width="22" height="16"></rect><rect x="633" y="760" width="22" height="16"></rect><rect x="633" y="810" width="22" height="16"></rect><rect x="633" y="860" width="22" height="16"></rect><rect x="633" y="910" width="22" height="16"></rect></g>
+    <rect x="445" y="745" width="190" height="200" rx="16" fill="#14172C"></rect>
+    <circle cx="470" cy="770" r="8" fill="#3A4170"></circle>
+    <text id="tm8" x="540" y="875" text-anchor="middle" font-size="64" font-weight="700" fill="#FFD23F">0:00</text>
+  </g>
+</g>
+
+<!-- Scene 9: 1954, plugged into the wall -->
+<g id="s9">
+  <path id="cd9" d="M 420 1110 C 420 1240 640 1240 690 1120 S 760 960 795 930" fill="none" stroke="#8A90A6" stroke-width="16" stroke-linecap="round"></path>
+  <g transform="rotate(-12 420 830)">
+    <rect x="395" y="470" width="50" height="160" rx="18" fill="#EEF0F7"></rect>
+    <g fill="#FFD23F"><rect x="362" y="485" width="36" height="14" rx="5"></rect><rect x="362" y="507" width="36" height="14" rx="5"></rect><rect x="362" y="529" width="36" height="14" rx="5"></rect></g>
+    <rect x="340" y="610" width="160" height="510" rx="40" fill="#D5D9E6"></rect>
+    <rect x="340" y="700" width="160" height="34" fill="#F2C14E"></rect>
+    <rect x="340" y="1000" width="160" height="34" fill="#F2C14E"></rect>
+    <rect x="390" y="780" width="60" height="110" rx="14" fill="#8A90A6"></rect>
+  </g>
+  <rect x="770" y="820" width="180" height="220" rx="28" fill="#EEF0F7" stroke="#B9C0CF" stroke-width="6"></rect>
+  <g fill="#2B2F45"><rect x="822" y="880" width="18" height="44" rx="6"></rect><rect x="880" y="880" width="18" height="44" rx="6"></rect><circle cx="860" cy="975" r="13"></circle></g>
+  <g id="pg9"><rect x="790" y="890" width="70" height="80" rx="14" fill="#B9C0CF"></rect></g>
+  <g id="zp9" stroke="#FFD23F" stroke-width="10" stroke-linecap="round"></g>
+</g>
+
+<!-- Scene 10: teaser, a digital kitchen scale -->
+<g id="s10">
+  <g id="sc10">
+    <rect x="380" y="880" width="420" height="40" rx="18" fill="#D5D9E6"></rect>
+    <rect x="400" y="920" width="380" height="200" rx="34" fill="#3A4170"></rect>
+    <rect x="470" y="960" width="240" height="90" rx="14" fill="#14172C"></rect>
+    <text id="dg10" x="590" y="1027" text-anchor="middle" font-size="62" font-weight="700" fill="#3DDCFF">0 g</text>
+    <circle cx="460" cy="1085" r="14" fill="#2FB088"></circle><circle cx="720" cy="1085" r="14" fill="#FF8FA3"></circle>
+    <text id="q10" x="880" y="820" text-anchor="middle" font-size="200" font-weight="700" fill="#FFD23F">?</text>
+  </g>
+  <g id="m10"><use href="#m" x="40" y="980" width="280" height="280"></use></g>
+</g>
+<!--@end-->
+<!--@ov-->
+<div class="ov" id="o1">
+  <div id="t1" class="ctr letters" style="top: 240px; font-size: 116px; line-height: 1; font-weight: 700; color: #FFD23F"></div>
+  <div id="sub1" class="ctr" style="top: 374px; font-size: 56px; font-weight: 600; color: #3DDCFF">an electric toothbrush</div>
+  <div id="nc1" class="ctr" style="top: 370px"><span class="pill" style="font-size: 50px; padding: 10px 36px; background: #1B1F3B">no metal contacts!</span></div>
+</div>
+<div class="ov" id="o2">
+  <p class="lbl" id="aL2" style="left: 712px; top: 605px; font-size: 50px; font-weight: 700; color: #F2C14E">coil</p>
+  <p class="lbl" id="bL2" style="left: 20px; width: 380px; text-align: right; top: 740px; font-size: 48px; line-height: 1.05; font-weight: 700; color: #3DDCFF">circuit<br>board</p>
+  <p class="lbl" id="cL2" style="left: 712px; top: 952px; font-size: 50px; font-weight: 700; color: #FFD23F">battery</p>
+  <p class="lbl" id="dL2" style="left: 20px; width: 380px; text-align: right; top: 1105px; font-size: 50px; font-weight: 700; color: #F2C14E">coil</p>
+  <div id="pw2" class="ctr" style="top: 250px; font-size: 92px; line-height: 1; font-weight: 700; color: #FF8FA3">don't puncture!</div>
+</div>
+<div class="ov" id="o3">
+  <div class="chip"><span>1 · The charger</span></div>
+  <div id="cw3" class="ctr" style="top: 250px; font-size: 110px; line-height: 1; font-weight: 700; color: #FFD23F">a coil, too</div>
+</div>
+<div class="ov" id="o4">
+  <div id="bf4" class="ctr" style="top: 250px; font-size: 100px; line-height: 1; font-weight: 700; color: #FFD23F">back &amp; forth</div>
+  <div id="mf4" class="ctr" style="top: 250px; font-size: 96px; line-height: 1; font-weight: 700; color: #3DDCFF">magnetic field</div>
+</div>
+<div class="ov" id="o5">
+  <div id="el5" class="ctr" style="top: 250px; font-size: 100px; line-height: 1; font-weight: 700; color: #FF8FA3; text-decoration: line-through; text-decoration-thickness: 10px">electricity</div>
+  <div id="mg5" class="ctr" style="top: 250px; font-size: 100px; line-height: 1; font-weight: 700; color: #3DDCFF">magnetism: yes</div>
+  <div id="nh5" class="ctr" style="top: 250px; font-size: 104px; line-height: 1; font-weight: 700; color: #FFD23F">no holes</div>
+</div>
+<div class="ov" id="o6">
+  <div class="chip"><span>2 · The trick</span></div>
+  <div id="nm6" class="ctr" style="top: 250px; font-size: 110px; line-height: 1; font-weight: 700; color: #FF8FA3">no motor?!</div>
+</div>
+<div class="ov" id="o7">
+  <div id="n7" class="ctr" style="top: 236px; font-size: 130px; line-height: 1; font-weight: 700; color: #FFD23F">31,000</div>
+  <div id="ns7" class="ctr" style="top: 372px; font-size: 50px; font-weight: 600; color: #3DDCFF">strokes per minute</div>
+</div>
+<div class="ov" id="o8">
+  <div id="tw8" class="ctr" style="top: 250px; font-size: 110px; line-height: 1; font-weight: 700; color: #FFD23F">2 minutes</div>
+</div>
+<div class="ov" id="o9">
+  <div class="chip"><span>3 · History</span></div>
+  <div id="yr9" class="ctr" style="top: 240px; font-size: 140px; line-height: 1; font-weight: 700; color: #FFD23F">1954</div>
+</div>
+<div class="ov" id="o10">
+  <div id="nx10" class="ctr" style="top: 170px; font-size: 52px; font-weight: 600; color: #3DDCFF">Next time:</div>
+  <div id="t10" class="ctr letters" style="top: 250px; font-size: 110px; line-height: 1; font-weight: 700; color: #FFD23F"></div>
+  <div id="sub10" class="ctr" style="top: 378px; font-size: 56px; font-weight: 600; color: #3DDCFF">a digital kitchen scale</div>
+  <div id="big7" style="display:none"></div>
+</div>
+<!--@end-->
+<!--@js-->
+const CY = '#3DDCFF', GOLD = '#F2C14E';
+const WV1 = [...$('wv1').children]; WV1.forEach(dash);
+['la2', 'lb2', 'lc2', 'ld2'].forEach((id) => dash($(id)));
+// base coil stripes (scenes 3, 4)
+const coil = (g, n) => { const out = []; for (let i = 0; i < n; i++) out.push(mk(g, 'rect', { x: 492, y: 735 + i * 30, width: 96, height: 18, rx: 9, fill: GOLD })); return out; };
+const CO3 = coil($('co3'), 6), CO4 = coil($('co4'), 6);
+// scene 4 field loops + current dots
+const FL4 = [[150, 200], [230, 300], [320, 400]].map(([rx, ry]) => mk($('fl4'), 'ellipse', { cx: 540, cy: 830, rx, ry }));
+const DT4 = []; for (let i = 0; i < 6; i++) for (let j = 0; j < 3; j++) DT4.push({ e: mk($('dt4'), 'circle', { cx: 0, cy: 744 + i * 30, r: 7, fill: '#FFFFFF' }), j, i });
+// scene 5: post coil, field loops, water drops
+for (let i = 0; i < 5; i++) mk($('pc5'), 'rect', { x: 506, y: 884 + i * 26, width: 68, height: 14, rx: 7, fill: GOLD });
+const FD5 = [[70, 105], [110, 140], [150, 175]].map(([rx, ry]) => mk($('fd5'), 'ellipse', { cx: 540, cy: 945, rx, ry, 'stroke-dasharray': '22 18' }));
+const drop = (g) => mk(g, 'path', { d: 'M 0 -26 C 12 -8 18 2 18 10 A 18 18 0 0 1 -18 10 C -18 2 -12 -8 0 -26 Z' });
+const WD5 = [0, 1, 2, 3, 4].map((i) => ({ e: drop($('wd5')), i }));
+// scene 7 ring length
+const RG8 = $('rg8'); const RL = 2 * Math.PI * 260; RG8.style.strokeDasharray = RL;
+dash($('cd9'));
+const ZP9 = rays($('zp9'), 860, 930, 8, 125, 165);
+<!--@end-->
+<!--@f-->
+const A = {
+  plastic: T('plastic'), contacts: T('contacts'),
+  open: T('open'), battery: T('battery'), circuit: T('circuit'), two: T('two'), coils: T('coils'), puncture: T('puncture'),
+  charger: T('charger'), hides: T('hides'), coil: T('coil'),
+  flips: T('flips'), changing: T('changing'), magnetic: T('magnetic'),
+  electricity: T('electricity'), cant: T("can't"), magnetism: T('magnetism'), current2: T('current', 2), flow: T('flow'), holes: T('holes'), water: T('water'), gets: T('gets'),
+  trick: T('trick'), spinning: T('spinning'), motor: T('motor'),
+  second: T('second'), pushes: T('pushes'), magnet: T('magnet'), n31: T('31,000'), strokes: T('strokes'),
+  chip: T('chip'), two2: T('two', 2), minutes: T('minutes'),
+  y1954: T('1954'), plugged: T('plugged'), wall: T('wall'),
+  whats: T("what's"), scale: T('scale'),
+};
+const F = [];
+F[0] = (u, t) => {
+  const s = 0.45 + 0.4 * outBack(prog(u, 0, 0.55));
+  const bob = Math.sin(u * 2.4) * 10 * prog(u, 0.5, 0.9);
+  tf($('c1'), `translate(540 ${880 + bob}) rotate(${-6 + 3 * Math.sin(u * 1.8)}) scale(${s}) translate(-540 -830)`);
+  const pk = outBack(prog(u, 1.0, 1.5));
+  tf($('m1'), `translate(${lerp(400, 640, pk)} ${600 - 20 * pk}) rotate(${12 * pk} 200 210) scale(0.6)`);
+  L1.forEach((e, i) => { const k = prog(u, 0.25 + i * 0.045, 0.55 + i * 0.045); e.style.transform = `translateY(${(1 - outCubic(k)) * 40}px) scale(${outBack(k)})`; e.style.opacity = k > 0 ? 1 : 0; });
+  const sk = outCubic(prog(u, 0.9, 1.25)) * (1 - prog(t, A.contacts - 0.6, A.contacts - 0.4));
+  $('sub1').style.opacity = sk; $('sub1').style.transform = `translateY(${(1 - sk) * 30}px)`;
+  pop($('nc1'), prog(t, A.contacts - 0.4, A.contacts - 0.1));
+  WV1.forEach((w, i) => { const ph = ((t - A.plastic + 0.3) * 1.6 - i * 0.25); draw(w, t > A.plastic - 0.3 ? clamp((ph % 1.2) * 1.6) : 0); });
+};
+F[1] = (u, t) => {
+  const off = smooth(prog(t, A.open - 0.05, A.open + 0.6));
+  tf($('cs2'), `translate(${80 * off} ${950 * off}) rotate(${14 * off} 540 900)`);
+  $('cs2').style.opacity = 1 - off;
+  const pp = (id, a, cx, cy) => popS($(id), t > a - 0.1 ? 1 + 0.12 * bump(prog(t, a - 0.1, a + 0.3)) : 1, cx, cy);
+  pp('bt2', A.battery, 540, 990); pp('pc2', A.circuit, 540, 800); pp('dr2', A.coils, 540, 645); pp('ch2', A.coils + 0.1, 540, 1150);
+  draw($('lc2'), prog(t, A.battery - 0.2, A.battery)); pop($('cL2'), prog(t, A.battery - 0.05, A.battery + 0.2));
+  draw($('lb2'), prog(t, A.circuit - 0.2, A.circuit)); pop($('bL2'), prog(t, A.circuit - 0.05, A.circuit + 0.2));
+  draw($('la2'), prog(t, A.two - 0.1, A.two + 0.1)); pop($('aL2'), prog(t, A.two, A.two + 0.25));
+  draw($('ld2'), prog(t, A.coils - 0.1, A.coils + 0.1)); pop($('dL2'), prog(t, A.coils, A.coils + 0.25));
+  pop($('pw2'), prog(t, A.puncture - 0.25, A.puncture));
+  $('bo2').style.opacity = t > A.puncture - 0.25 ? (Math.floor(u * 6) % 2 ? 1 : 0.25) : 0;
+};
+F[2] = (u, t) => {
+  const ck = smooth(prog(t, A.hides - 0.1, A.hides + 0.4));
+  $('cv3').style.opacity = 1 - ck;
+  CO3.forEach((c, i) => popS(c, prog(t, A.hides + 0.1 + i * 0.07, A.hides + 0.35 + i * 0.07), 540, 744 + i * 30));
+  pop($('cw3'), prog(t, A.coil - 0.15, A.coil + 0.15));
+};
+F[3] = (u, t) => {
+  const per = 0.5, dir = Math.floor((u + 0.001) / per) % 2 ? -1 : 1;
+  DT4.forEach((d) => { const ph = ((u * 1.6 + d.j / 3 + d.i * 0.1) % 1); const x = dir > 0 ? lerp(500, 580, ph) : lerp(580, 500, ph); d.e.setAttribute('cx', x); d.e.style.opacity = u > 0.25 ? 1 : 0; });
+  tf($('ar4'), `translate(540 1050) scale(${dir} 1) translate(-540 -1050)`);
+  $('ar4').style.opacity = t > A.flips - 0.2 ? 1 : 0;
+  pop($('bf4'), prog(t, A.flips - 0.15, A.flips + 0.15) * (1 - prog(t, A.magnetic - 0.35, A.magnetic - 0.2)));
+  pop($('mf4'), prog(t, A.magnetic - 0.2, A.magnetic + 0.1));
+  const fk = smooth(prog(t, A.changing - 0.3, A.changing + 0.3));
+  const pulse = Math.sin(u * Math.PI / per);
+  FL4.forEach((f, i) => { f.style.opacity = fk * (0.45 + 0.55 * Math.abs(pulse)); tf(f, about(540, 830, 0.55 + 0.45 * Math.abs(pulse))); });
+};
+F[4] = (u, t) => {
+  const bk = prog(t, A.electricity - 0.2, A.electricity + 0.1);
+  popS($('bz5'), bk * (1 - prog(t, A.magnetism - 0.3, A.magnetism - 0.1)), 350, 920);
+  const xk = prog(t, A.cant - 0.05, A.cant + 0.2); $('bx5').style.opacity = xk > 0 ? 1 : 0; tf($('bx5'), about(350, 925, Math.max(0.0001, outBack(xk))));
+  pop($('el5'), bk * (1 - prog(t, A.magnetism - 0.3, A.magnetism - 0.15)));
+  pop($('mg5'), prog(t, A.magnetism - 0.15, A.magnetism + 0.15) * (1 - prog(t, A.holes - 0.3, A.holes - 0.15)));
+  pop($('nh5'), prog(t, A.holes - 0.15, A.holes + 0.15));
+  const mk5 = smooth(prog(t, A.magnetism - 0.2, A.magnetism + 0.3));
+  FD5.forEach((f, i) => { f.style.opacity = mk5 * (0.6 + 0.4 * Math.sin(u * 10 + i)); f.style.strokeDashoffset = -u * 120; });
+  const ck = smooth(prog(t, A.flow - 0.3, A.flow + 0.1));
+  $('hg5').style.opacity = ck * (0.5 + 0.5 * Math.abs(Math.sin(u * 8)));
+  const h = 236 * smooth(prog(t, A.flow, A.holes + 0.5)); $('bf5').setAttribute('height', h); $('bf5').setAttribute('y', 773 - h);
+  WD5.forEach((d) => {
+    const a = A.holes - 0.2 + d.i * 0.22, k = prog(t, a, a + 1.0);
+    const side = d.i % 2 ? 1 : -1, x0 = 540 + side * (30 + d.i * 22);
+    let x, y;
+    if (k < 0.35) { x = x0; y = lerp(380, 470, k / 0.35); } else { const q = (k - 0.35) / 0.65; x = lerp(x0, 540 + side * 160, smooth(Math.min(1, q * 2))); y = lerp(470, 1000, q * q); }
+    tf(d.e, `translate(${x} ${y})`); d.e.style.opacity = k > 0 && k < 1 ? 1 : 0;
+  });
+  popS($('m5'), prog(t, A.gets - 0.2, A.gets + 0.1), 920, 1120);
+};
+F[5] = (u, t) => {
+  popS($('mo6'), prog(u, 0, 0.35), 550, 820);
+  tf($('rt6'), `rotate(${u * 420} 730 820)`);
+  const xk = prog(t, A.spinning - 0.1, A.spinning + 0.15);
+  $('mx6').style.opacity = xk > 0 ? 1 : 0; tf($('mx6'), about(570, 820, Math.max(0.0001, outBack(xk))));
+  $('mo6').style.opacity = xk > 0 ? 0.55 : 1;
+  pop($('nm6'), prog(t, A.motor - 0.2, A.motor + 0.1));
+  popS($('m6'), prog(t, A.motor - 0.1, A.motor + 0.2), 905, 1115);
+};
+F[6] = (u, t) => {
+  const amp = 7 * smooth(prog(t, A.pushes - 0.2, A.pushes + 0.3));
+  const ph = Math.sin(u * 2 * Math.PI * 5);
+  tf($('os7'), `rotate(${amp * ph} 540 1000)`);
+  $('gL7').style.opacity = amp > 0 ? (ph > 0 ? 1 : 0.15) : 0; $('gR7').style.opacity = amp > 0 ? (ph > 0 ? 0.15 : 1) : 0;
+  popS($('cl7'), prog(u, 0, 0.3), 352, 1000); popS($('cr7'), prog(u, 0.08, 0.38), 728, 1000);
+  $('sw7').style.opacity = amp > 3 ? 0.6 + 0.4 * Math.abs(ph) : 0;
+  const nk = prog(t, A.n31 - 0.3, A.n31 + 0.6);
+  pop($('n7'), prog(t, A.n31 - 0.3, A.n31 - 0.05)); $('n7').textContent = Math.round(31000 * outCubic(nk)).toLocaleString('en-US');
+  pop($('ns7'), prog(t, A.strokes - 0.1, A.strokes + 0.2));
+};
+F[7] = (u, t) => {
+  popS($('ic8'), prog(u, 0, 0.3), 540, 850);
+  const k = prog(t, A.chip, S[8] - 0.1);
+  RG8.style.strokeDashoffset = RL * (1 - k);
+  const sec = Math.round(120 * k); $('tm8').textContent = Math.floor(sec / 60) + ':' + String(sec % 60).padStart(2, '0');
+  pop($('tw8'), prog(t, A.two2 - 0.15, A.two2 + 0.15));
+};
+F[8] = (u, t) => {
+  pop($('yr9'), prog(t, A.y1954 - 0.3, A.y1954));
+  draw($('cd9'), smooth(prog(t, A.plugged - 0.3, A.wall - 0.1)));
+  popS($('pg9'), prog(t, A.wall - 0.25, A.wall), 825, 930);
+  const zk = prog(t, A.wall, A.wall + 0.15);
+  ZP9.forEach((r) => { r.style.opacity = zk > 0 ? 1 - prog(t, A.wall + 0.5, A.wall + 1.1) : 0; });
+};
+F[9] = (u, t) => {
+  pop($('nx10'), prog(u, 0, 0.25));
+  popS($('sc10'), prog(u, 0.1, 0.5), 590, 1000);
+  $('q10').setAttribute('font-size', 200 * (1 + 0.08 * Math.sin(u * 8)));
+  const gk = prog(u, 1.2, 2.4); $('dg10').textContent = gk > 0 ? Math.round(250 * outCubic(gk)) + ' g' : '0 g';
+  const mk2 = outBack(prog(u, 0.4, 0.8));
+  tf($('m10'), `translate(${-420 * (1 - mk2)} 0)`);
+  L10.forEach((e, i) => { const k = prog(t, A.whats - 0.05 + i * 0.03, A.whats + 0.15 + i * 0.03); e.style.transform = `scale(${outBack(k)})`; e.style.opacity = k > 0 ? 1 : 0; });
+  pop($('sub10'), prog(t, A.scale - 0.5, A.scale - 0.2));
+};
+<!--@end-->

@@ -1,0 +1,28 @@
+{
+ "title": "What's inside an electric toothbrush?",
+ "voice": "am_puck",
+ "speed": 1.0,
+ "segments": [
+  {"text": "Your electric toothbrush charges through solid plastic."},
+  {"text": "No metal contacts at all."},
+  {"text": "Open up a sonic brush:", "scene": true, "pause": 0.15},
+  {"text": "a battery, a circuit board, and two copper coils.", "split": [2, 5]},
+  {"text": "Never puncture the battery."},
+  {"text": "The charger base hides a coil too.", "scene": true},
+  {"text": "Its current flips back and forth,", "scene": true},
+  {"text": "making a changing magnetic field."},
+  {"text": "Electricity can't cross plastic,", "scene": true},
+  {"text": "but magnetism can."},
+  {"text": "It makes current flow in the handle's coil.", "split": [4]},
+  {"text": "No holes, so no water gets in."},
+  {"text": "But here's the trick:", "scene": true},
+  {"text": "there's no spinning motor."},
+  {"text": "The second coil pushes a magnet back and forth,", "scene": true, "split": [5]},
+  {"text": "up to 31,000 strokes a minute.", "say": "up to thirty-one thousand strokes a minute."},
+  {"text": "A tiny chip times your two minutes.", "scene": true},
+  {"text": "An early electric toothbrush, from 1954,", "say": "An early electric toothbrush, from nineteen fifty-four,", "scene": true, "split": [3]},
+  {"text": "plugged straight into the wall."},
+  {"text": "Next time:", "scene": true},
+  {"text": "what's inside a digital kitchen scale?"}
+ ]
+}
